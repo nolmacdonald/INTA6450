@@ -1,0 +1,44 @@
+# Module 3 - Software Trends
+
+### Overview
+
+In order to handle large amounts of data, computers require software. How do computers actually deal with all that data? We start by discussing data storage and retrieval technologies and show how software or algorithmic “tricks” can substantially speed up computations. Then we talk about the fundamental drivers of cost and performance in software systems.
+
+- Discuss how software fits into analyzing large amounts of data 
+- Use python to count the number of words and the most common word in a book 
+- Discuss tradeoffs in distributed algorithms
+
+### Resources
+
+\[1]. [Apache Lucene](https://lucene.apache.org/) - Free, open-source search engine library that provides full-text search capabilities
+
+\[2]. [Elastic Search](https://www.elastic.co/) - Distributed search and analytics engine that stores and indexes data for fast search, analytics, and relevancy
+
+\[3]. [Elastic Search Guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) - Search and analytics engine that powers the Elastic Stack
+
+## The Importance of Software
+
+*Module 3.1 - The Importance of Software: An Example of Search Engines (8:47)*
+
+### How Would You Make a Search Engine?
+
+### Indexing
+
+### Relevance Rankings
+
+### Relevance + Indexing
+
+**Relevance + Indexing = Modern Search**
+
+### Purpose
+
+### Summary
+
+## Big Data or Just Data
+
+*Module 3.2 - Big Data or Just Data (12:54)*
+
+## Programming Languages and Tradeoffs
+
+*Module 3.3 - Programming Languages and Tradeoffs (8:19)*
+

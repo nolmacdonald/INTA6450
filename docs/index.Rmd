@@ -1,0 +1,29 @@
+---
+title: "Course Notes - Data Analytics and Security"
+author: "Nolan MacDonald"
+date: "Fall 2024" # "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: ["references/references.bib"]
+csl: "references/ieee.csl"
+link-citations: yes
+# github-repo: rstudio/bookdown-demo
+description: "Course notes for Data Analytics and Security (INTA 6450)"
+output:
+  bookdown::gitbook:  # For HTML output
+    split_by: chapter
+  bookdown::pdf_book: # For PDF output
+    latex_engine: xelatex
+    keep_tex: yes
+    highlight: tango
+    includes:
+      in_header: preamble.tex
+---
+
+<!-- By default, all bookdown merges all Rmd files by order of filenames e.g., 01-intro, 02-literature -->
+
+<!-- If certain code chunks in your R Markdown documents
+are time-consuming to run, you may cache them  -->
+<!-- ```{r important-computing, cache=TRUE} -->
+
+<!-- Setup code chunk to set current working directory -->

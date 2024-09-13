@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Course Notes - Data Analytics and Security</title>
+  <meta name="description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Course Notes - Data Analytics and Security" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Course Notes - Data Analytics and Security" />
+  
+  <meta name="twitter:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+<meta name="author" content="Nolan MacDonald" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="module-2---hardware-trends.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="module-1---introduction.html"><a href="module-1---introduction.html"><i class="fa fa-check"></i><b>1</b> Module 1 - Introduction</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#overview"><i class="fa fa-check"></i><b>1.0.1</b> Overview</a></li>
+<li class="chapter" data-level="1.0.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#resources"><i class="fa fa-check"></i><b>1.0.2</b> Resources</a></li>
+<li class="chapter" data-level="1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#what-is-big-data"><i class="fa fa-check"></i><b>1.1</b> What is Big Data?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#three-organizing-questions"><i class="fa fa-check"></i><b>1.1.1</b> Three Organizing Questions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---3-vs"><i class="fa fa-check"></i><b>1.1.2</b> Big Data - “3 V’s”</a></li>
+<li class="chapter" data-level="1.1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data"><i class="fa fa-check"></i><b>1.1.3</b> Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#volume"><i class="fa fa-check"></i><b>1.1.4</b> Volume</a></li>
+<li class="chapter" data-level="1.1.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#units-of-data"><i class="fa fa-check"></i><b>1.1.5</b> Units of Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#server-rack"><i class="fa fa-check"></i><b>1.1.6</b> Server Rack</a></li>
+<li class="chapter" data-level="1.1.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-center"><i class="fa fa-check"></i><b>1.1.7</b> Data Center</a></li>
+<li class="chapter" data-level="1.1.8" data-path="module-1---introduction.html"><a href="module-1---introduction.html#variety"><i class="fa fa-check"></i><b>1.1.8</b> Variety</a></li>
+<li class="chapter" data-level="1.1.9" data-path="module-1---introduction.html"><a href="module-1---introduction.html#aspects-of-life-recorded-in-2020"><i class="fa fa-check"></i><b>1.1.9</b> Aspects of life recorded in 2020</a></li>
+<li class="chapter" data-level="1.1.10" data-path="module-1---introduction.html"><a href="module-1---introduction.html#velocity"><i class="fa fa-check"></i><b>1.1.10</b> Velocity</a></li>
+<li class="chapter" data-level="1.1.11" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-in-real-time"><i class="fa fa-check"></i><b>1.1.11</b> Data in Real Time</a></li>
+<li class="chapter" data-level="1.1.12" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---a-broad-term"><i class="fa fa-check"></i><b>1.1.12</b> Big Data - A Broad Term</a></li>
+<li class="chapter" data-level="1.1.13" data-path="module-1---introduction.html"><a href="module-1---introduction.html#concepts-that-underlie-big-data"><i class="fa fa-check"></i><b>1.1.13</b> Concepts that underlie big data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends"><i class="fa fa-check"></i><b>1.2</b> Google Flu Trends</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends-gft"><i class="fa fa-check"></i><b>1.2.1</b> Google Flu Trends (GFT)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#number-of-top-queries-and-correlation"><i class="fa fa-check"></i><b>1.2.2</b> Number of top queries and correlation</a></li>
+<li class="chapter" data-level="1.2.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#issues"><i class="fa fa-check"></i><b>1.2.3</b> Issues</a></li>
+<li class="chapter" data-level="1.2.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#assumptions-and-issues"><i class="fa fa-check"></i><b>1.2.4</b> Assumptions and Issues</a></li>
+<li class="chapter" data-level="1.2.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#summary"><i class="fa fa-check"></i><b>1.2.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#required-reading-notes"><i class="fa fa-check"></i><b>1.3</b> Required Reading Notes</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#introduction"><i class="fa fa-check"></i><b>1.3.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.3.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data-hubris"><i class="fa fa-check"></i><b>1.3.2</b> Big data hubris</a></li>
+<li class="chapter" data-level="1.3.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#algorithm-dynamics"><i class="fa fa-check"></i><b>1.3.3</b> Algorithm Dynamics</a></li>
+<li class="chapter" data-level="1.3.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#transparency-granularity-and-all-data"><i class="fa fa-check"></i><b>1.3.4</b> Transparency, Granularity and All-Data</a></li>
+<li class="chapter" data-level="1.3.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#bytes"><i class="fa fa-check"></i><b>1.3.5</b> Bytes</a></li>
+<li class="chapter" data-level="1.3.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#vs"><i class="fa fa-check"></i><b>1.3.6</b> 5 “V’s”</a></li>
+<li class="chapter" data-level="1.3.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-analytics-types"><i class="fa fa-check"></i><b>1.3.7</b> Data analytics types</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html"><i class="fa fa-check"></i><b>2</b> Module 2 - Hardware Trends</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#overview-1"><i class="fa fa-check"></i><b>2.0.1</b> Overview</a></li>
+<li class="chapter" data-level="2.0.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#resources-1"><i class="fa fa-check"></i><b>2.0.2</b> Resources</a></li>
+<li class="chapter" data-level="2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#trends-in-computer-hardware"><i class="fa fa-check"></i><b>2.1</b> Trends in Computer Hardware</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#parts-of-a-computer"><i class="fa fa-check"></i><b>2.1.1</b> Parts of a Computer</a></li>
+<li class="chapter" data-level="2.1.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu"><i class="fa fa-check"></i><b>2.1.2</b> CPU</a></li>
+<li class="chapter" data-level="2.1.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#storing-information"><i class="fa fa-check"></i><b>2.1.3</b> Storing Information</a></li>
+<li class="chapter" data-level="2.1.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#level-of-closeness-to-look-up-a-byte"><i class="fa fa-check"></i><b>2.1.4</b> Level of closeness to look up a byte</a></li>
+<li class="chapter" data-level="2.1.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu-limits"><i class="fa fa-check"></i><b>2.1.5</b> CPU Limits</a></li>
+<li class="chapter" data-level="2.1.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#memory-physical-limits"><i class="fa fa-check"></i><b>2.1.6</b> Memory Physical Limits</a></li>
+<li class="chapter" data-level="2.1.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#hard-disk-physical-limits"><i class="fa fa-check"></i><b>2.1.7</b> Hard Disk Physical Limits</a></li>
+<li class="chapter" data-level="2.1.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-1"><i class="fa fa-check"></i><b>2.1.8</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#computer-architecture-for-big-data"><i class="fa fa-check"></i><b>2.2</b> Computer Architecture for Big Data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#big-data-performance"><i class="fa fa-check"></i><b>2.2.1</b> Big Data Performance</a></li>
+<li class="chapter" data-level="2.2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#discussion-questions"><i class="fa fa-check"></i><b>2.2.2</b> Discussion Questions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#strategies"><i class="fa fa-check"></i><b>2.2.3</b> Strategies</a></li>
+<li class="chapter" data-level="2.2.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#load-balancing"><i class="fa fa-check"></i><b>2.2.4</b> Load Balancing</a></li>
+<li class="chapter" data-level="2.2.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-masterworker-architecture"><i class="fa fa-check"></i><b>2.2.5</b> Databases for Big Data: Master/Worker Architecture</a></li>
+<li class="chapter" data-level="2.2.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-eventual-consistency"><i class="fa fa-check"></i><b>2.2.6</b> Databases for Big Data: Eventual Consistency</a></li>
+<li class="chapter" data-level="2.2.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#serving-multiple-customers"><i class="fa fa-check"></i><b>2.2.7</b> Serving Multiple Customers</a></li>
+<li class="chapter" data-level="2.2.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#sorting-a-big-list"><i class="fa fa-check"></i><b>2.2.8</b> Sorting a Big List</a></li>
+<li class="chapter" data-level="2.2.9" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-2"><i class="fa fa-check"></i><b>2.2.9</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#software-architecture-for-big-data"><i class="fa fa-check"></i><b>2.3</b> Software Architecture for Big Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html"><i class="fa fa-check"></i><b>3</b> Module 3 - Software Trends</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#overview-2"><i class="fa fa-check"></i><b>3.0.1</b> Overview</a></li>
+<li class="chapter" data-level="3.0.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#resources-2"><i class="fa fa-check"></i><b>3.0.2</b> Resources</a></li>
+<li class="chapter" data-level="3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#the-importance-of-software"><i class="fa fa-check"></i><b>3.1</b> The Importance of Software</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#how-would-you-make-a-search-engine"><i class="fa fa-check"></i><b>3.1.1</b> How Would You Make a Search Engine?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#indexing"><i class="fa fa-check"></i><b>3.1.2</b> Indexing</a></li>
+<li class="chapter" data-level="3.1.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-rankings"><i class="fa fa-check"></i><b>3.1.3</b> Relevance Rankings</a></li>
+<li class="chapter" data-level="3.1.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-indexing"><i class="fa fa-check"></i><b>3.1.4</b> Relevance + Indexing</a></li>
+<li class="chapter" data-level="3.1.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#purpose"><i class="fa fa-check"></i><b>3.1.5</b> Purpose</a></li>
+<li class="chapter" data-level="3.1.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-3"><i class="fa fa-check"></i><b>3.1.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-or-just-data"><i class="fa fa-check"></i><b>3.2</b> Big Data or Just Data</a></li>
+<li class="chapter" data-level="3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-and-tradeoffs"><i class="fa fa-check"></i><b>3.3</b> Programming Languages and Tradeoffs</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes - Data Analytics and Security</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Course Notes - Data Analytics and Security</h1>
+<p class="author"><em>Nolan MacDonald</em></p>
+<p class="date"><em>Fall 2024</em></p>
+</div>
+<div id="module-1---introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Module 1 - Introduction<a href="module-1---introduction.html#module-1---introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview" class="section level3 hasAnchor" number="1.0.1">
+<h3><span class="header-section-number">1.0.1</span> Overview<a href="module-1---introduction.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Big data has become a buzzword. Its hype has risen, peaked, and now fallen a bit. But in the wake of the hype cycle, there are a number of enduring changes to the technological and social landscape. Where do these changes come from? What are the underlying technical features that made this happen?</p>
+<ul>
+<li>Name underlying technical and social aspects underlying big data</li>
+<li>Define big data</li>
+</ul>
+</div>
+<div id="resources" class="section level3 hasAnchor" number="1.0.2">
+<h3><span class="header-section-number">1.0.2</span> Resources<a href="module-1---introduction.html#resources" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>[1.] <a href="https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf">The Parable of Google Flu: Traps in Big Data Analysis</a></p>
+</div>
+<div id="what-is-big-data" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> What is Big Data?<a href="module-1---introduction.html#what-is-big-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Module 1.1 – What is Big Data? (9:36)</em></p>
+<div id="three-organizing-questions" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Three Organizing Questions<a href="module-1---introduction.html#three-organizing-questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Who uses big data?</li>
+<li>What does big data do for them (as opposed to regular data)?</li>
+<li>What are some other associated topics or buzzwords?</li>
+</ul>
+</div>
+<div id="big-data---3-vs" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Big Data - “3 V’s”<a href="module-1---introduction.html#big-data---3-vs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Big Data is known by “3 V’s” and is also a catch all buzz word</p>
+<ul>
+<li>Volume, Velocity, Variety</li>
+<li>Aggregation of data all in one place</li>
+<li>Strong implications for international affairs e.g., Election interference</li>
+<li>Wiki: 4th concept, veracity – quality or insightfulness of the data, errors in data</li>
+</ul>
+</div>
+<div id="data" class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Data<a href="module-1---introduction.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Data is information encoded in a series of bits</p>
+<ul>
+<li>Bits can take a value of 0 or 1 integers</li>
+<li>Bits are encoded as a series of 0s and 1s (typically 32)</li>
+<li>Text is also a series of 0s and 1s, but the schemes are more complicated</li>
+<li>ASCII is a 7 bit scheme for Latin alphabet (upper and lower case), punctuation and digits</li>
+<li>Unicode is more complex, variable length scheme for characters in many languages, plus emoji-like characters</li>
+<li>Example: “Jeffrey” has 7 characters, at 7 bits each in ASCII, total 49 bits</li>
+</ul>
+</div>
+<div id="volume" class="section level3 hasAnchor" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Volume<a href="module-1---introduction.html#volume" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>How much data is there? 12 zetabytes (1.2E22)</li>
+<li>Data is growing at an increasing rate: 90% of data was created in the last 2 years</li>
+</ul>
+</div>
+<div id="units-of-data" class="section level3 hasAnchor" number="1.1.5">
+<h3><span class="header-section-number">1.1.5</span> Units of Data<a href="module-1---introduction.html#units-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>1 bit is one piece of binary information (zero or one)</li>
+<li>1 byte is a set of 8 bits – Can be one of 256 combinations (28)</li>
+<li>104 (10 kilobytes) – Couple pages of text, long email</li>
+<li>106 (1 megabyte) – Roughly 1 min. of compressed music</li>
+<li>109 (1 gigabyte) – Roughly a compressed but decent hour video</li>
+<li>3.2E9 bytes (3.2 gigabytes) – Amount of data in your DNA</li>
+<li>All text on Wikipedia is about 9.5GB</li>
+<li>1012 bytes (1 terabyte) is about the size of an external hard drive (in 2014)</li>
+<li>3E12 bytes (3 TB) is the approximate amount of storage in your brain</li>
+</ul>
+</div>
+<div id="server-rack" class="section level3 hasAnchor" number="1.1.6">
+<h3><span class="header-section-number">1.1.6</span> Server Rack<a href="module-1---introduction.html#server-rack" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>4E14 bytes (400 TB) is about as much data that can be housed in a server rack</li>
+<li>Can be up to a petabyte</li>
+<li>400 TB is the amount of data in all books ever written</li>
+</ul>
+</div>
+<div id="data-center" class="section level3 hasAnchor" number="1.1.7">
+<h3><span class="header-section-number">1.1.7</span> Data Center<a href="module-1---introduction.html#data-center" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>1018 bytes (1 exabyte) is how much could be stored in a data center</li>
+<li>5E18 bytes (5 exabytes) would be the size of all words ever spoken, if transcribed</li>
+</ul>
+</div>
+<div id="variety" class="section level3 hasAnchor" number="1.1.8">
+<h3><span class="header-section-number">1.1.8</span> Variety<a href="module-1---introduction.html#variety" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Aspects of life recorded in 1980
+- Plane tickets, taxes, interactions with the largest companies
+- Major companies had mainframe computers to keep records of specific interactions</p>
+</div>
+<div id="aspects-of-life-recorded-in-2020" class="section level3 hasAnchor" number="1.1.9">
+<h3><span class="header-section-number">1.1.9</span> Aspects of life recorded in 2020<a href="module-1---introduction.html#aspects-of-life-recorded-in-2020" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Location (from cell phones)</li>
+<li>Attitudes on social media (from posts, likes, etc.)</li>
+<li>For some people, “big data” is nearly synonymous with social media/internet technologies</li>
+<li>Workflow and interactions (from emails, internet search logs)</li>
+<li>Speech – From smart devices like Alexa and Siri</li>
+</ul>
+<p>By combining different types of information, lots of different possibilities to impact society</p>
+</div>
+<div id="velocity" class="section level3 hasAnchor" number="1.1.10">
+<h3><span class="header-section-number">1.1.10</span> Velocity<a href="module-1---introduction.html#velocity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Primary example: Twitter/X</li>
+<li>Twitter saves a tweet and sends it to mobile devices, browsers, etc.</li>
+<li>Twitter has to manage multiple tweets before it’s done with saving and sending</li>
+</ul>
+</div>
+<div id="data-in-real-time" class="section level3 hasAnchor" number="1.1.11">
+<h3><span class="header-section-number">1.1.11</span> Data in Real Time<a href="module-1---introduction.html#data-in-real-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Some web related technologies need to keep up with data in real time, even as it comes faster</p>
+<ul>
+<li>Is a web request part of a denial of service attack?</li>
+<li>Is the email spam or phishing?</li>
+<li>High peak loads – What is Healthcare.gov needs to serve 10 million people in 1 day?</li>
+<li>Number of people per day visiting a site can vary widely creating issues with velocity</li>
+<li>Outside of the web, there is threat monitoring software</li>
+<li>Catalog all the threats or sources in real time</li>
+</ul>
+</div>
+<div id="big-data---a-broad-term" class="section level3 hasAnchor" number="1.1.12">
+<h3><span class="header-section-number">1.1.12</span> Big Data - A Broad Term<a href="module-1---introduction.html#big-data---a-broad-term" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Think of big data as something broader than just data size and data type</p>
+<ul>
+<li>“Big Data” will include things that big data might enable or portend as it enables society at large</li>
+<li>Power to collect (and lose) personal info</li>
+<li>Power to predict</li>
+<li>Artificial intelligence (AI) and how it relates to the power of prediction</li>
+<li>Driverless cars</li>
+</ul>
+</div>
+<div id="concepts-that-underlie-big-data" class="section level3 hasAnchor" number="1.1.13">
+<h3><span class="header-section-number">1.1.13</span> Concepts that underlie big data<a href="module-1---introduction.html#concepts-that-underlie-big-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Computing – Changes in computing, key technologies</li>
+<li>Statistics – Make predictions and inferences of something that might happen</li>
+<li>Applications – What are the new things that big data enables that allow us to change the world and what does it mean for the rest of the world</li>
+</ul>
+</div>
+</div>
+<div id="google-flu-trends" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Google Flu Trends<a href="module-1---introduction.html#google-flu-trends" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Module 1.2 – Google Flu Trends (7:03)</em></p>
+<div id="google-flu-trends-gft" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Google Flu Trends (GFT)<a href="module-1---introduction.html#google-flu-trends-gft" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Google Flu Trends (GFT) – Predicted flu based on search queries</p>
+<ul>
+<li>Original paper (2008) – Launched in 2008, lecture says 2009 put in production</li>
+<li>Starts with CDC’s system of cataloguing Influenza-Like-Illness (ILI)</li>
+<li>Weekly, state-level number of incident account</li>
+<li>Reported how many people got the flu at the doctor’s office</li>
+<li>Aggregates data at state-level and uses statistics to estimate relative prevalence between the different doctors</li>
+<li>Lag real-time by a few weeks</li>
+<li>Calculate weekly, state-level search term prevalence</li>
+<li>Used top 50 million terms like cough, aching, terms related to the flu</li>
+<li>Each state in each week and matched to CDC ILI data</li>
+<li>Tried a lot of combinations of these terms to pick the group which best matched inputs</li>
+</ul>
+</div>
+<div id="number-of-top-queries-and-correlation" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Number of top queries and correlation<a href="module-1---introduction.html#number-of-top-queries-and-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Use the top 45 queries able to predict the ILI data variation between state and time</li>
+<li>Mean correlation above 0.90 (very high)</li>
+<li>Calculations in real-time, faster frequency, more up to date</li>
+<li>Produce data at a smaller level – Not just Georgia but Atlanta or subsections of Atlanta</li>
+</ul>
+</div>
+<div id="issues" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Issues<a href="module-1---introduction.html#issues" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Had trouble in 2008-2009 with the onset of H1N1 (new flu strain), model was refit</li>
+<li>Did well for a couple years</li>
+<li>Trouble in 2012-2013 season due to high press coverage of flu</li>
+</ul>
+</div>
+<div id="assumptions-and-issues" class="section level3 hasAnchor" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Assumptions and Issues<a href="module-1---introduction.html#assumptions-and-issues" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Flu trends depend on CDC ILI reporting</li>
+<li>There is no Google Flu Trends without actual measured flu trends</li>
+<li>The relationship between search behavior and flu is the same over time</li>
+<li>Google grew quickly from 2003-2008 - Biggest issue with the 94% correlation model</li>
+<li>2000 – 22B (22E9) searches</li>
+<li>2007 – 438B (438E9) searches</li>
+<li>2008 – 637.2B (637.2E9) searches</li>
+<li>2009 – 953.7B (953.7E9) searches</li>
+<li>Search behavior and searches changed over time – was not stable</li>
+<li>Search behavior and searches is a common problem with big data</li>
+<li>GFT could not have been made without CDC data</li>
+<li>Made it quicker and more granular but did not make anything new</li>
+</ul>
+<p><strong>Shut down in 2015 and provided to researchers at CDC</strong></p>
+<p><strong>Continuing experiments to incorporate GFT but CDC does not really use GFT</strong></p>
+</div>
+<div id="summary" class="section level3 hasAnchor" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Summary<a href="module-1---introduction.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>GFT is big data – Depends on search queries, primary example of big data (1 trillion per year)
+Benefit – Finer granularity of place and time
+Set of key assumptions – The way that people search for IFI and searches should not change over time
+End result – Not a useful product, not able to latch onto any trends because searches changed over time (search behavior, queries, number of searches)
+GFT represents an interesting and useful new product of big data but shows how insights and products on big data might be fragile</p>
+</div>
+</div>
+<div id="required-reading-notes" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Required Reading Notes<a href="module-1---introduction.html#required-reading-notes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>[1]. <a href="https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf">The Parable of Google Flu: Traps in Big Data Analysis</a></p>
+<div id="introduction" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Introduction<a href="module-1---introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>February 2013 - Google Flu Trends (GFT) predicted more than double doctor visits for the flu compared to the Centers for Disease - Control and Prevention (CDC)</li>
+<li>Estimates based on surveillance reports across the US</li>
+<li>GFT was built to predict CDC reports</li>
+<li>Research on whether search or social media can predict x has become commonplace and is often put in sharp contrast with traditional methods and hypotheses</li>
+<li>Search or social media is far from supplanting more traditional methods or theories</li>
+<li>GFT mistakes – Big data hubris (exaggerated self-confidence) and algorithm dynamics</li>
+</ul>
+</div>
+<div id="big-data-hubris" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Big data hubris<a href="module-1---introduction.html#big-data-hubris" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Big data hubris is the Implicit assumption that big data is a substitute not a supplement to traditional data collection and analysis</li>
+<li>Enormous scientific possibilities in big data</li>
+<li>Quantity of data doesn’t mean you can ignore issues of measurement, construct validity, reliability and dependencies among data</li>
+<li>GFT problematic using big and small data – Find best matches among 50 million search terms to fit 1152 data points</li>
+<li>Flu data structurally unrelated – weed out seasonal search terms such as high school basketball</li>
+<li>Big data was overfitting the small number of cases – a standard concern in data analysis</li>
+<li>GFT became a part flu detector, part winter detector</li>
+<li>GFT had to update algorithm in 2009 and noted a few changes in October 2013</li>
+<li>GFT study in 2010 demonstrated GFT was not much better than a simple projection forward using CDC data (on a 2-week lag)</li>
+<li>Lagged models over time significantly outperforming GFT</li>
+<li>Still useful if combined with other near-real-time health data</li>
+</ul>
+</div>
+<div id="algorithm-dynamics" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Algorithm Dynamics<a href="module-1---introduction.html#algorithm-dynamics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Algorithm dynamics – Changes made by engineers to improve the commercial service and by consumers in using that service</p></li>
+<li><p>GFT was an unstable reflection of the prevalence of the flu because of algorithm dynamics affecting Google’s search algorithm</p></li>
+<li><p>Missed by large amount in 2011-2012 Flu season</p></li>
+<li><p>GFT issues may be from changes to Google’s search algorithm, which is constantly testing and improving search</p></li>
+<li><p>Replicating original algorithm is difficult – GFT never documented the 45 search terms used</p></li>
+<li><p>GFT errors are closely aligned with searches for flu treatments and information on differentiating the cold from the flu</p></li>
+<li><p>“Blue Team” Dyanmics – Algorithm producing the data (and user utilization) has been modified by the service provider in accordance with their business model</p></li>
+<li><p>GFT search model changes to support Google’s business model – Providing information quickly and to promote more advertising revenue (e.g., Recommended searches)</p></li>
+<li><p>“Red Team” Dynamics – Occur when research subjects (e.g., web searchers) attempt to manipulate the date-generating process to meet their own goals</p>
+<ul>
+<li>E.g., economic or political gain, twitter polling, using tactics to make sure their candidate or product is trending, twitter or FB spreading rumprs about stock prices and markets</li>
+</ul></li>
+</ul>
+</div>
+<div id="transparency-granularity-and-all-data" class="section level3 hasAnchor" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> Transparency, Granularity and All-Data<a href="module-1---introduction.html#transparency-granularity-and-all-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Hard to replicate GFT without core search terms, collection of searches</p></li>
+<li><p>Using Google Correlate with concepts on how GFT was built will not replicate their findings</p></li>
+<li><p>The few search terms in the GFT papers do not seem to be strongly related with either GFT or CDC data</p></li>
+<li><p>Use Big Data to Understand the Unknown</p></li>
+<li><p>Valuable to understand the prevalence of flu at very local levels, not practical for CDC to produce</p></li>
+<li><p>Constantly changing algorithms need to be better understood how they change over time</p></li>
+<li><p>Need to replicate findings across time and use other data sources to ensure they are observing robust patterns and not evanescent trends (quickly fading trends)</p></li>
+<li><p>Big data offers possibilities for understanding human interactions at a societal scale</p></li>
+<li><p>We should focus on big and small data through innovative analytics using data from traditional and new sources</p></li>
+</ul>
+</div>
+<div id="bytes" class="section level3 hasAnchor" number="1.3.5">
+<h3><span class="header-section-number">1.3.5</span> Bytes<a href="module-1---introduction.html#bytes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Byte, Kilobyte (kb), Megabyte (mb), Gigabyte (gb), Terrabyte (tb), Petabyte (pb)</li>
+<li>1 yottabyte – Storage capacity of NASA datacenter</li>
+<li>Structured data can contain unstructured components</li>
+<li>Data growth comes from unstructured data</li>
+</ul>
+</div>
+<div id="vs" class="section level3 hasAnchor" number="1.3.6">
+<h3><span class="header-section-number">1.3.6</span> 5 “V’s”<a href="module-1---introduction.html#vs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Volume, Variety, Velocity, Veracity, Value</li>
+<li>Velocity – Increasing speed of which data is created and the speed at which it can be processed, stored, and analyzed</li>
+<li>Veracity – quality or insightfulness of the data, errors in data</li>
+</ul>
+</div>
+<div id="data-analytics-types" class="section level3 hasAnchor" number="1.3.7">
+<h3><span class="header-section-number">1.3.7</span> Data analytics types<a href="module-1---introduction.html#data-analytics-types" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Descriptive – What happened? Requires most amount of human input</li>
+<li>Diagnostic – Why did it happen?</li>
+<li>Predictive – What will happen?</li>
+<li>Prescriptive – How can we make it happen? No human input, most value, optimization, decision support and decision automation, most difficult</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="module-2---hardware-trends.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+book_filename: "INTA6450-Notes-Fall2024"
+output_dir: "./"  # Directory where the output will be saved
+delete_merged_file: true
+language:
+  label:
+    fig: "Figure"
+    tab: "Table"
+    eq: "Equation"
+    thm: "Theorem"
+
+bibliography: ["references/references.bib"]
+csl: "references/ieee.csl"
+
+rmd_files:
+  - "index.Rmd"
+  - "m1-intro.Rmd"
+  - "m2-hardware-trends.Rmd"
+  - "m3-software-trends.Rmd"
+  

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Module 2 - Hardware Trends | Course Notes - Data Analytics and Security</title>
+  <meta name="description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Module 2 - Hardware Trends | Course Notes - Data Analytics and Security" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Module 2 - Hardware Trends | Course Notes - Data Analytics and Security" />
+  
+  <meta name="twitter:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+<meta name="author" content="Nolan MacDonald" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="module-1---introduction.html"/>
+<link rel="next" href="module-3---software-trends.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="module-1---introduction.html"><a href="module-1---introduction.html"><i class="fa fa-check"></i><b>1</b> Module 1 - Introduction</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#overview"><i class="fa fa-check"></i><b>1.0.1</b> Overview</a></li>
+<li class="chapter" data-level="1.0.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#resources"><i class="fa fa-check"></i><b>1.0.2</b> Resources</a></li>
+<li class="chapter" data-level="1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#what-is-big-data"><i class="fa fa-check"></i><b>1.1</b> What is Big Data?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#three-organizing-questions"><i class="fa fa-check"></i><b>1.1.1</b> Three Organizing Questions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---3-vs"><i class="fa fa-check"></i><b>1.1.2</b> Big Data - “3 V’s”</a></li>
+<li class="chapter" data-level="1.1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data"><i class="fa fa-check"></i><b>1.1.3</b> Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#volume"><i class="fa fa-check"></i><b>1.1.4</b> Volume</a></li>
+<li class="chapter" data-level="1.1.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#units-of-data"><i class="fa fa-check"></i><b>1.1.5</b> Units of Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#server-rack"><i class="fa fa-check"></i><b>1.1.6</b> Server Rack</a></li>
+<li class="chapter" data-level="1.1.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-center"><i class="fa fa-check"></i><b>1.1.7</b> Data Center</a></li>
+<li class="chapter" data-level="1.1.8" data-path="module-1---introduction.html"><a href="module-1---introduction.html#variety"><i class="fa fa-check"></i><b>1.1.8</b> Variety</a></li>
+<li class="chapter" data-level="1.1.9" data-path="module-1---introduction.html"><a href="module-1---introduction.html#aspects-of-life-recorded-in-2020"><i class="fa fa-check"></i><b>1.1.9</b> Aspects of life recorded in 2020</a></li>
+<li class="chapter" data-level="1.1.10" data-path="module-1---introduction.html"><a href="module-1---introduction.html#velocity"><i class="fa fa-check"></i><b>1.1.10</b> Velocity</a></li>
+<li class="chapter" data-level="1.1.11" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-in-real-time"><i class="fa fa-check"></i><b>1.1.11</b> Data in Real Time</a></li>
+<li class="chapter" data-level="1.1.12" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---a-broad-term"><i class="fa fa-check"></i><b>1.1.12</b> Big Data - A Broad Term</a></li>
+<li class="chapter" data-level="1.1.13" data-path="module-1---introduction.html"><a href="module-1---introduction.html#concepts-that-underlie-big-data"><i class="fa fa-check"></i><b>1.1.13</b> Concepts that underlie big data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends"><i class="fa fa-check"></i><b>1.2</b> Google Flu Trends</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends-gft"><i class="fa fa-check"></i><b>1.2.1</b> Google Flu Trends (GFT)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#number-of-top-queries-and-correlation"><i class="fa fa-check"></i><b>1.2.2</b> Number of top queries and correlation</a></li>
+<li class="chapter" data-level="1.2.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#issues"><i class="fa fa-check"></i><b>1.2.3</b> Issues</a></li>
+<li class="chapter" data-level="1.2.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#assumptions-and-issues"><i class="fa fa-check"></i><b>1.2.4</b> Assumptions and Issues</a></li>
+<li class="chapter" data-level="1.2.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#summary"><i class="fa fa-check"></i><b>1.2.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#required-reading-notes"><i class="fa fa-check"></i><b>1.3</b> Required Reading Notes</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#introduction"><i class="fa fa-check"></i><b>1.3.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.3.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data-hubris"><i class="fa fa-check"></i><b>1.3.2</b> Big data hubris</a></li>
+<li class="chapter" data-level="1.3.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#algorithm-dynamics"><i class="fa fa-check"></i><b>1.3.3</b> Algorithm Dynamics</a></li>
+<li class="chapter" data-level="1.3.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#transparency-granularity-and-all-data"><i class="fa fa-check"></i><b>1.3.4</b> Transparency, Granularity and All-Data</a></li>
+<li class="chapter" data-level="1.3.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#bytes"><i class="fa fa-check"></i><b>1.3.5</b> Bytes</a></li>
+<li class="chapter" data-level="1.3.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#vs"><i class="fa fa-check"></i><b>1.3.6</b> 5 “V’s”</a></li>
+<li class="chapter" data-level="1.3.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-analytics-types"><i class="fa fa-check"></i><b>1.3.7</b> Data analytics types</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html"><i class="fa fa-check"></i><b>2</b> Module 2 - Hardware Trends</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#overview-1"><i class="fa fa-check"></i><b>2.0.1</b> Overview</a></li>
+<li class="chapter" data-level="2.0.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#resources-1"><i class="fa fa-check"></i><b>2.0.2</b> Resources</a></li>
+<li class="chapter" data-level="2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#trends-in-computer-hardware"><i class="fa fa-check"></i><b>2.1</b> Trends in Computer Hardware</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#parts-of-a-computer"><i class="fa fa-check"></i><b>2.1.1</b> Parts of a Computer</a></li>
+<li class="chapter" data-level="2.1.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu"><i class="fa fa-check"></i><b>2.1.2</b> CPU</a></li>
+<li class="chapter" data-level="2.1.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#storing-information"><i class="fa fa-check"></i><b>2.1.3</b> Storing Information</a></li>
+<li class="chapter" data-level="2.1.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#level-of-closeness-to-look-up-a-byte"><i class="fa fa-check"></i><b>2.1.4</b> Level of closeness to look up a byte</a></li>
+<li class="chapter" data-level="2.1.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu-limits"><i class="fa fa-check"></i><b>2.1.5</b> CPU Limits</a></li>
+<li class="chapter" data-level="2.1.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#memory-physical-limits"><i class="fa fa-check"></i><b>2.1.6</b> Memory Physical Limits</a></li>
+<li class="chapter" data-level="2.1.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#hard-disk-physical-limits"><i class="fa fa-check"></i><b>2.1.7</b> Hard Disk Physical Limits</a></li>
+<li class="chapter" data-level="2.1.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-1"><i class="fa fa-check"></i><b>2.1.8</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#computer-architecture-for-big-data"><i class="fa fa-check"></i><b>2.2</b> Computer Architecture for Big Data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#big-data-performance"><i class="fa fa-check"></i><b>2.2.1</b> Big Data Performance</a></li>
+<li class="chapter" data-level="2.2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#discussion-questions"><i class="fa fa-check"></i><b>2.2.2</b> Discussion Questions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#strategies"><i class="fa fa-check"></i><b>2.2.3</b> Strategies</a></li>
+<li class="chapter" data-level="2.2.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#load-balancing"><i class="fa fa-check"></i><b>2.2.4</b> Load Balancing</a></li>
+<li class="chapter" data-level="2.2.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-masterworker-architecture"><i class="fa fa-check"></i><b>2.2.5</b> Databases for Big Data: Master/Worker Architecture</a></li>
+<li class="chapter" data-level="2.2.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-eventual-consistency"><i class="fa fa-check"></i><b>2.2.6</b> Databases for Big Data: Eventual Consistency</a></li>
+<li class="chapter" data-level="2.2.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#serving-multiple-customers"><i class="fa fa-check"></i><b>2.2.7</b> Serving Multiple Customers</a></li>
+<li class="chapter" data-level="2.2.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#sorting-a-big-list"><i class="fa fa-check"></i><b>2.2.8</b> Sorting a Big List</a></li>
+<li class="chapter" data-level="2.2.9" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-2"><i class="fa fa-check"></i><b>2.2.9</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#software-architecture-for-big-data"><i class="fa fa-check"></i><b>2.3</b> Software Architecture for Big Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html"><i class="fa fa-check"></i><b>3</b> Module 3 - Software Trends</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#overview-2"><i class="fa fa-check"></i><b>3.0.1</b> Overview</a></li>
+<li class="chapter" data-level="3.0.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#resources-2"><i class="fa fa-check"></i><b>3.0.2</b> Resources</a></li>
+<li class="chapter" data-level="3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#the-importance-of-software"><i class="fa fa-check"></i><b>3.1</b> The Importance of Software</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#how-would-you-make-a-search-engine"><i class="fa fa-check"></i><b>3.1.1</b> How Would You Make a Search Engine?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#indexing"><i class="fa fa-check"></i><b>3.1.2</b> Indexing</a></li>
+<li class="chapter" data-level="3.1.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-rankings"><i class="fa fa-check"></i><b>3.1.3</b> Relevance Rankings</a></li>
+<li class="chapter" data-level="3.1.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-indexing"><i class="fa fa-check"></i><b>3.1.4</b> Relevance + Indexing</a></li>
+<li class="chapter" data-level="3.1.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#purpose"><i class="fa fa-check"></i><b>3.1.5</b> Purpose</a></li>
+<li class="chapter" data-level="3.1.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-3"><i class="fa fa-check"></i><b>3.1.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-or-just-data"><i class="fa fa-check"></i><b>3.2</b> Big Data or Just Data</a></li>
+<li class="chapter" data-level="3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-and-tradeoffs"><i class="fa fa-check"></i><b>3.3</b> Programming Languages and Tradeoffs</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes - Data Analytics and Security</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-2---hardware-trends" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Module 2 - Hardware Trends<a href="module-2---hardware-trends.html#module-2---hardware-trends" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-1" class="section level3 hasAnchor" number="2.0.1">
+<h3><span class="header-section-number">2.0.1</span> Overview<a href="module-2---hardware-trends.html#overview-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The improvements in computer hardware technology in the last 50 years have been incredible.
+We identify which aspects of computing have evolved quickly and which have not, and trace what this means for big data technologies.</p>
+</div>
+<div id="resources-1" class="section level3 hasAnchor" number="2.0.2">
+<h3><span class="header-section-number">2.0.2</span> Resources<a href="module-2---hardware-trends.html#resources-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>[1]. <a href="https://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/">Understanding Hadoop Clusters and the Network</a></p>
+<p>[2]. <a href="https://hadoop.apache.org/">Apache Hadoop</a></p>
+<p>[3]. <a href="https://spark.apache.org/">Apache Spark</a></p>
+<p>[4]. <a href="https://vimeo.com/274266764">Developing for the Intelligent Cloud and Intelligent Edge Rohan Kumar (Microsoft)</a></p>
+</div>
+<div id="trends-in-computer-hardware" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Trends in Computer Hardware<a href="module-2---hardware-trends.html#trends-in-computer-hardware" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Module 2.1 - Trends in Computer Hardware (9:58)</em></p>
+<p><em>How trends in computer hardware are shaping what Big Data is</em></p>
+<div id="parts-of-a-computer" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Parts of a Computer<a href="module-2---hardware-trends.html#parts-of-a-computer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>CPU – executes instructions</li>
+<li>Memory – store information “for a little while” during computation</li>
+<li>This is RAM, temporary storage</li>
+<li>Disk – Store information for longer periods of time</li>
+<li>Motherboard architecture driven by heat dissipation</li>
+</ul>
+</div>
+<div id="cpu" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> CPU<a href="module-2---hardware-trends.html#cpu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Read an instruction from memory and decode it</li>
+<li>Find any associated data that is needed to process the instruction</li>
+<li>Process the insruction</li>
+<li>Write the results out</li>
+<li>CPU implementation process is called microarchitectures e.g., Xeon, Whiskey Lake</li>
+<li>Key Challenges: Waiting for data to complete an instruction, conditional execution/branches</li>
+<li>Key Solution: Multiple queues, guess at what branches will be followed</li>
+</ul>
+</div>
+<div id="storing-information" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Storing Information<a href="module-2---hardware-trends.html#storing-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>To work quickly, computers need to access information quicklu</li>
+<li>Physical constraunts: you can’t store all your data right next to your CPU</li>
+</ul>
+</div>
+<div id="level-of-closeness-to-look-up-a-byte" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Level of closeness to look up a byte<a href="module-2---hardware-trends.html#level-of-closeness-to-look-up-a-byte" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>L1 cache – 0.5 ns</li>
+<li>L2 cache – 7 ns</li>
+<li>Memory – 100 ns</li>
+<li>Disk – 10 million ns</li>
+<li>In memory elsewhere in data center – 500,000 ns</li>
+<li>Solid state hard drives – 500,000 ns</li>
+<li>Note: A 1 ghz CPU executes an instruction ever nanosecond, including potentially looking up data</li>
+</ul>
+<p><strong>Moore’s Law:</strong> The number of transistors per unit area can double every 18 months
+<strong>Kryder’s Law:</strong> Storage density on magnetic disks doubles every 18 months</p>
+<p>Processing and storage is getting cheaper and faster
+Accessing hard disks is NOT getting faster (bottleneck of Big Data)
+Increasing processor performance is exponentially more costly</p>
+</div>
+<div id="cpu-limits" class="section level3 hasAnchor" number="2.1.5">
+<h3><span class="header-section-number">2.1.5</span> CPU Limits<a href="module-2---hardware-trends.html#cpu-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Moore’s Law</li>
+<li>Power Dissipation – If you shrunk transistors, power dissipation would decrease</li>
+<li>Typically processors do more, so power per area increases</li>
+<li>Single cores can’t go faster without taking too much power</li>
+<li>Instead of more speed – Multiple cores, more cache</li>
+</ul>
+</div>
+<div id="memory-physical-limits" class="section level3 hasAnchor" number="2.1.6">
+<h3><span class="header-section-number">2.1.6</span> Memory Physical Limits<a href="module-2---hardware-trends.html#memory-physical-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Also depends on Moore’s law-like progress</li>
+<li>Doesn’t have acute overheating problems like CPUs – Capacity just keeps growing</li>
+</ul>
+</div>
+<div id="hard-disk-physical-limits" class="section level3 hasAnchor" number="2.1.7">
+<h3><span class="header-section-number">2.1.7</span> Hard Disk Physical Limits<a href="module-2---hardware-trends.html#hard-disk-physical-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Kryder’s law suggests total storage will increase</li>
+<li>Platters can only spin so fast - accessing this large amount of data is a bottleneck</li>
+<li>One Exception</li>
+<li>Sequential reads will get faster since the head can read more data in a single rotation</li>
+<li>This can benefit performance of massive data operations which often need lots of sequential data</li>
+</ul>
+</div>
+<div id="summary-1" class="section level3 hasAnchor" number="2.1.8">
+<h3><span class="header-section-number">2.1.8</span> Summary<a href="module-2---hardware-trends.html#summary-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Computer has 3 components – CPU, Memory, Disk</p>
+<p>Major technological trends
+- CPU is growing cheaper but not faster
+- Memory/Disk space is growing
+- Disk access is NOT growing</p>
+</div>
+</div>
+<div id="computer-architecture-for-big-data" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Computer Architecture for Big Data<a href="module-2---hardware-trends.html#computer-architecture-for-big-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="big-data-performance" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Big Data Performance<a href="module-2---hardware-trends.html#big-data-performance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Module 2.2 - Big Data Performance (10:10)</em></p>
+<ul>
+<li>Many computations are fixed size</li>
+<li>Some things may grow faster than computational resources
+o Aspects of social network data
+o Log data</li>
+<li>As disk space in particular gets cheaper, new things that were previously not storable will be stored on disk</li>
+</ul>
+</div>
+<div id="discussion-questions" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Discussion Questions<a href="module-2---hardware-trends.html#discussion-questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>How would you build a system which can handle more data than fits on a single hard drive?</li>
+<li>What if you need a system which will serve a website to more customers at once?</li>
+<li>How would you sort a list which doesn’t fit on one computer?</li>
+</ul>
+</div>
+<div id="strategies" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Strategies<a href="module-2---hardware-trends.html#strategies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Better Hardware - Supercomputers</li>
+<li>Exponentially more expensive</li>
+<li>Petabytes of memory, 10,000s of CPU/GPU cores</li>
+<li>Cost: $100M+</li>
+<li>Distributed Architectures – Using multiple computers together</li>
+</ul>
+</div>
+<div id="load-balancing" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Load Balancing<a href="module-2---hardware-trends.html#load-balancing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Using computer architectures in parallel</li>
+<li>The best way to distribute work depends on what the work is</li>
+</ul>
+</div>
+<div id="databases-for-big-data-masterworker-architecture" class="section level3 hasAnchor" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> Databases for Big Data: Master/Worker Architecture<a href="module-2---hardware-trends.html#databases-for-big-data-masterworker-architecture" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Master has list of which data is on which computers</li>
+<li>When requesting the data the workers provide their parts (other computers)</li>
+<li>Issues</li>
+<li>What is the master gets overloaded?</li>
+<li>What if the master fails?</li>
+</ul>
+</div>
+<div id="databases-for-big-data-eventual-consistency" class="section level3 hasAnchor" number="2.2.6">
+<h3><span class="header-section-number">2.2.6</span> Databases for Big Data: Eventual Consistency<a href="module-2---hardware-trends.html#databases-for-big-data-eventual-consistency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>What happens if the leader node gets overwhelmed?</li>
+<li>We could have multiple leaders, each of which can task worker nodes</li>
+<li>Eventual consistency</li>
+<li>Leaders know what other works are doing by sending messages</li>
+<li>Messages are not instant, so first leader can be requested data information that the second knows changed but the first hasn’t been notified</li>
+<li>This is OK in many contexts but not in things like e.g., banking</li>
+</ul>
+</div>
+<div id="serving-multiple-customers" class="section level3 hasAnchor" number="2.2.7">
+<h3><span class="header-section-number">2.2.7</span> Serving Multiple Customers<a href="module-2---hardware-trends.html#serving-multiple-customers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Each computer receives requests, but can only process so many per unit time</li>
+<li>Multiple machines can handle more requests</li>
+<li>But what if you’re a website which needs to look up information about a customer?</li>
+<li>If many servers deal with the same database it can be overloaded</li>
+<li>If just reading data you can have many copies of the database</li>
+<li>If you sometimes change data, you need to make sure there aren’t multiple changes at the same time</li>
+</ul>
+</div>
+<div id="sorting-a-big-list" class="section level3 hasAnchor" number="2.2.8">
+<h3><span class="header-section-number">2.2.8</span> Sorting a Big List<a href="module-2---hardware-trends.html#sorting-a-big-list" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>A loose algorithm for sorting a list on N computers</strong></p>
+<ul>
+<li><p>On computer 1, sort the data and take each 1/N partition and assign it to a computer</p></li>
+<li><p>Tell each computer to send its values less than 1/N to the first computer, those between 1/N and 2/N to the second, etc.</p></li>
+<li><p>Now we know each computer has data which is either all greater or all less than the data on each other computer</p></li>
+<li><p>So we just sort the data on each computer, and we’re done!</p></li>
+<li><p>We have ways of sorting large amounts of data</p></li>
+<li><p>What probably slows this down?</p></li>
+<li><p>Sending data from one computer to another</p></li>
+<li><p>Reading data from disk – This always was going to happen</p></li>
+</ul>
+</div>
+<div id="summary-2" class="section level3 hasAnchor" number="2.2.9">
+<h3><span class="header-section-number">2.2.9</span> Summary<a href="module-2---hardware-trends.html#summary-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Supercomputers v. Software Architecture</li>
+<li>Introduction of Big Data architectural elements</li>
+<li>Load balancing</li>
+<li>Master/Worker</li>
+<li>Eventual consistency</li>
+<li>Custom algorithms</li>
+</ul>
+</div>
+</div>
+<div id="software-architecture-for-big-data" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Software Architecture for Big Data<a href="module-2---hardware-trends.html#software-architecture-for-big-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Module 2.3 - Software Architecture for Big Data (11:39)</em></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-1---introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-3---software-trends.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

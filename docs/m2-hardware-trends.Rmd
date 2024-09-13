@@ -1,0 +1,178 @@
+# Module 2 - Hardware Trends
+
+### Overview
+
+The improvements in computer hardware technology in the last 50 years have been incredible. 
+We identify which aspects of computing have evolved quickly and which have not, and trace what this means for big data technologies.
+
+### Resources
+
+\[1]. [Understanding Hadoop Clusters and the Network](https://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/)
+
+\[2]. [Apache Hadoop](https://hadoop.apache.org/)
+
+\[3]. [Apache Spark](https://spark.apache.org/)
+
+\[4]. [Developing for the Intelligent Cloud and Intelligent Edge Rohan Kumar (Microsoft)](https://vimeo.com/274266764)
+
+
+## Trends in Computer Hardware
+
+*Module 2.1 - Trends in Computer Hardware (9:58)*
+
+*How trends in computer hardware are shaping what Big Data is*
+
+### Parts of a Computer
+
+- CPU – executes instructions
+-	Memory – store information “for a little while” during computation 
+-	This is RAM, temporary storage
+-	Disk – Store information for longer periods of time
+-	Motherboard architecture driven by heat dissipation
+
+### CPU
+
+-	Read an instruction from memory and decode it
+-	Find any associated data that is needed to process the instruction
+-	Process the insruction
+-	Write the results out
+-	CPU implementation process is called microarchitectures e.g., Xeon, Whiskey Lake
+-	Key Challenges: Waiting for data to complete an instruction, conditional execution/branches
+-	Key Solution: Multiple queues, guess at what branches will be followed
+
+### Storing Information
+
+-	To work quickly, computers need to access information quicklu
+-	Physical constraunts: you can’t store all your data right next to your CPU
+
+### Level of closeness to look up a byte
+
+-	L1 cache – 0.5 ns
+-	L2 cache – 7 ns
+-	Memory – 100 ns
+-	Disk – 10 million ns
+-	In memory elsewhere in data center – 500,000 ns
+-	Solid state hard drives – 500,000 ns
+-	Note: A 1 ghz CPU executes an instruction ever nanosecond, including potentially looking up data
+
+**Moore’s Law:** The number of transistors per unit area can double every 18 months
+**Kryder’s Law:** Storage density on magnetic disks doubles every 18 months
+
+Processing and storage is getting cheaper and faster
+Accessing hard disks is NOT getting faster (bottleneck of Big Data)
+Increasing processor performance is exponentially more costly
+
+### CPU Limits
+-	Moore’s Law
+-	Power Dissipation – If you shrunk transistors, power dissipation would decrease
+-	Typically processors do more, so power per area increases
+-	Single cores can’t go faster without taking too much power
+-	Instead of more speed – Multiple cores, more cache
+
+### Memory Physical Limits
+-	Also depends on Moore’s law-like progress
+-	Doesn’t have acute overheating problems like CPUs – Capacity just keeps growing
+
+### Hard Disk Physical Limits
+-	Kryder’s law suggests total storage will increase
+-	Platters can only spin so fast - accessing this large amount of data is a bottleneck
+-	One Exception
+  -	Sequential reads will get faster since the head can read more data in a single rotation
+  -	This can benefit performance of massive data operations which often need lots of sequential data
+
+### Summary
+
+Computer has 3 components – CPU, Memory, Disk
+
+Major technological trends
+-	CPU is growing cheaper but not faster
+-	Memory/Disk space is growing
+-	Disk access is NOT growing
+
+## Computer Architecture for Big Data
+
+### Big Data Performance
+
+*Module 2.2 - Big Data Performance (10:10)*
+
+-	Many computations are fixed size
+-	Some things may grow faster than computational resources
+o	Aspects of social network data
+o	Log data
+-	As disk space in particular gets cheaper, new things that were previously not storable will be stored on disk
+
+### Discussion Questions
+
+-	How would you build a system which can handle more data than fits on a single hard drive? 
+-	What if you need a system which will serve a website to more customers at once? 
+-	How would you sort a list which doesn’t fit on one computer? 
+
+### Strategies
+
+-	Better Hardware - Supercomputers
+  - Exponentially more expensive 
+  - Petabytes of memory, 10,000s of CPU/GPU cores
+  - Cost: $100M+
+-	Distributed Architectures – Using multiple computers together
+
+### Load Balancing
+
+-	Using computer architectures in parallel
+-	The best way to distribute work depends on what the work is
+
+### Databases for Big Data: Master/Worker Architecture
+
+-	Master has list of which data is on which computers
+-	When requesting the data the workers provide their parts (other computers)
+-	Issues
+  - What is the master gets overloaded?
+  - What if the master fails?
+
+### Databases for Big Data: Eventual Consistency
+
+-	What happens if the leader node gets overwhelmed?
+-	We could have multiple leaders, each of which can task worker nodes
+-	Eventual consistency
+  - Leaders know what other works are doing by sending messages
+  - Messages are not instant, so first leader can be requested data information that the second knows changed but the first hasn’t been notified
+-	This is OK in many contexts but not in things like e.g., banking
+
+
+### Serving Multiple Customers
+
+-	Each computer receives requests, but can only process so many per unit time
+-	Multiple machines can handle more requests
+-	But what if you’re a website which needs to look up information about a customer?
+  - If many servers deal with the same database it can be overloaded
+  - If just reading data you can have many copies of the database
+  - If you sometimes change data, you need to make sure there aren’t multiple changes at the same time
+
+### Sorting a Big List
+
+**A loose algorithm for sorting a list on N computers**
+
+-	On computer 1, sort the data and take each 1/N partition and assign it to a computer 
+-	Tell each computer to send its values less than 1/N to the first computer, those between 1/N and 2/N to the second, etc. 
+-	Now we know each computer has data which is either all greater or all less than the data on each other computer 
+-	So we just sort the data on each computer, and we’re done! 
+
+-	We have ways of sorting large amounts of data
+-	What probably slows this down?
+  - Sending data from one computer to another
+  - Reading data from disk – This always was going to happen
+
+### Summary
+-	Supercomputers v. Software Architecture
+-	Introduction of Big Data architectural elements
+  - Load balancing
+  - Master/Worker
+  - Eventual consistency
+  - Custom algorithms
+
+
+
+## Software Architecture for Big Data
+
+*Module 2.3 - Software Architecture for Big Data (11:39)*
+
+

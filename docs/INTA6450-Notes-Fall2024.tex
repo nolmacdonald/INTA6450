@@ -1,0 +1,905 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Ensure text is aligned to the left margin
+\usepackage{geometry}
+\geometry{
+  left=1in,    % Adjust these margins as necessary
+  right=1in,
+  top=1in,
+  bottom=1in,
+  bindingoffset=0in
+}
+
+% Disable paragraph indentation
+\setlength{\parindent}{0pt}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Course Notes - Data Analytics and Security},
+  pdfauthor={Nolan MacDonald},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Course Notes - Data Analytics and Security}
+\author{Nolan MacDonald}
+\date{Fall 2024}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Module 1 - Introduction}\label{module-1---introduction}
+
+\subsection{Overview}\label{overview}
+
+Big data has become a buzzword. Its hype has risen, peaked, and now fallen a bit. But in the wake of the hype cycle, there are a number of enduring changes to the technological and social landscape. Where do these changes come from? What are the underlying technical features that made this happen?
+
+\begin{itemize}
+\tightlist
+\item
+  Name underlying technical and social aspects underlying big data
+\item
+  Define big data
+\end{itemize}
+
+\subsection{Resources}\label{resources}
+
+{[}1.{]} \href{https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf}{The Parable of Google Flu: Traps in Big Data Analysis}
+
+\section{What is Big Data?}\label{what-is-big-data}
+
+\emph{Module 1.1 -- What is Big Data? (9:36)}
+
+\subsection{Three Organizing Questions}\label{three-organizing-questions}
+
+\begin{itemize}
+\tightlist
+\item
+  Who uses big data?
+\item
+  What does big data do for them (as opposed to regular data)?
+\item
+  What are some other associated topics or buzzwords?
+\end{itemize}
+
+\subsection{Big Data - ``3 V's''}\label{big-data---3-vs}
+
+Big Data is known by ``3 V's'' and is also a catch all buzz word
+
+\begin{itemize}
+\tightlist
+\item
+  Volume, Velocity, Variety
+\item
+  Aggregation of data all in one place
+\item
+  Strong implications for international affairs e.g., Election interference
+\item
+  Wiki: 4th concept, veracity -- quality or insightfulness of the data, errors in data
+\end{itemize}
+
+\subsection{Data}\label{data}
+
+Data is information encoded in a series of bits
+
+\begin{itemize}
+\tightlist
+\item
+  Bits can take a value of 0 or 1 integers
+\item
+  Bits are encoded as a series of 0s and 1s (typically 32)
+\item
+  Text is also a series of 0s and 1s, but the schemes are more complicated
+\item
+  ASCII is a 7 bit scheme for Latin alphabet (upper and lower case), punctuation and digits
+\item
+  Unicode is more complex, variable length scheme for characters in many languages, plus emoji-like characters
+\item
+  Example: ``Jeffrey'' has 7 characters, at 7 bits each in ASCII, total 49 bits
+\end{itemize}
+
+\subsection{Volume}\label{volume}
+
+\begin{itemize}
+\tightlist
+\item
+  How much data is there? 12 zetabytes (1.2E22)
+\item
+  Data is growing at an increasing rate: 90\% of data was created in the last 2 years
+\end{itemize}
+
+\subsection{Units of Data}\label{units-of-data}
+
+\begin{itemize}
+\tightlist
+\item
+  1 bit is one piece of binary information (zero or one)
+\item
+  1 byte is a set of 8 bits -- Can be one of 256 combinations (28)
+\item
+  104 (10 kilobytes) -- Couple pages of text, long email
+\item
+  106 (1 megabyte) -- Roughly 1 min. of compressed music
+\item
+  109 (1 gigabyte) -- Roughly a compressed but decent hour video
+\item
+  3.2E9 bytes (3.2 gigabytes) -- Amount of data in your DNA
+\item
+  All text on Wikipedia is about 9.5GB
+\item
+  1012 bytes (1 terabyte) is about the size of an external hard drive (in 2014)
+\item
+  3E12 bytes (3 TB) is the approximate amount of storage in your brain
+\end{itemize}
+
+\subsection{Server Rack}\label{server-rack}
+
+\begin{itemize}
+\tightlist
+\item
+  4E14 bytes (400 TB) is about as much data that can be housed in a server rack
+\item
+  Can be up to a petabyte
+\item
+  400 TB is the amount of data in all books ever written
+\end{itemize}
+
+\subsection{Data Center}\label{data-center}
+
+\begin{itemize}
+\tightlist
+\item
+  1018 bytes (1 exabyte) is how much could be stored in a data center
+\item
+  5E18 bytes (5 exabytes) would be the size of all words ever spoken, if transcribed
+\end{itemize}
+
+\subsection{Variety}\label{variety}
+
+Aspects of life recorded in 1980
+- Plane tickets, taxes, interactions with the largest companies
+- Major companies had mainframe computers to keep records of specific interactions
+
+\subsection{Aspects of life recorded in 2020}\label{aspects-of-life-recorded-in-2020}
+
+\begin{itemize}
+\tightlist
+\item
+  Location (from cell phones)
+\item
+  Attitudes on social media (from posts, likes, etc.)
+\item
+  For some people, ``big data'' is nearly synonymous with social media/internet technologies
+\item
+  Workflow and interactions (from emails, internet search logs)
+\item
+  Speech -- From smart devices like Alexa and Siri
+\end{itemize}
+
+By combining different types of information, lots of different possibilities to impact society
+
+\subsection{Velocity}\label{velocity}
+
+\begin{itemize}
+\tightlist
+\item
+  Primary example: Twitter/X
+\item
+  Twitter saves a tweet and sends it to mobile devices, browsers, etc.
+\item
+  Twitter has to manage multiple tweets before it's done with saving and sending
+\end{itemize}
+
+\subsection{Data in Real Time}\label{data-in-real-time}
+
+Some web related technologies need to keep up with data in real time, even as it comes faster
+
+\begin{itemize}
+\tightlist
+\item
+  Is a web request part of a denial of service attack?
+\item
+  Is the email spam or phishing?
+\item
+  High peak loads -- What is Healthcare.gov needs to serve 10 million people in 1 day?
+\item
+  Number of people per day visiting a site can vary widely creating issues with velocity
+\item
+  Outside of the web, there is threat monitoring software
+\item
+  Catalog all the threats or sources in real time
+\end{itemize}
+
+\subsection{Big Data - A Broad Term}\label{big-data---a-broad-term}
+
+Think of big data as something broader than just data size and data type
+
+\begin{itemize}
+\tightlist
+\item
+  ``Big Data'' will include things that big data might enable or portend as it enables society at large
+\item
+  Power to collect (and lose) personal info
+\item
+  Power to predict
+\item
+  Artificial intelligence (AI) and how it relates to the power of prediction
+\item
+  Driverless cars
+\end{itemize}
+
+\subsection{Concepts that underlie big data}\label{concepts-that-underlie-big-data}
+
+\begin{itemize}
+\tightlist
+\item
+  Computing -- Changes in computing, key technologies
+\item
+  Statistics -- Make predictions and inferences of something that might happen
+\item
+  Applications -- What are the new things that big data enables that allow us to change the world and what does it mean for the rest of the world
+\end{itemize}
+
+\section{Google Flu Trends}\label{google-flu-trends}
+
+\emph{Module 1.2 -- Google Flu Trends (7:03)}
+
+\subsection{Google Flu Trends (GFT)}\label{google-flu-trends-gft}
+
+Google Flu Trends (GFT) -- Predicted flu based on search queries
+
+\begin{itemize}
+\tightlist
+\item
+  Original paper (2008) -- Launched in 2008, lecture says 2009 put in production
+\item
+  Starts with CDC's system of cataloguing Influenza-Like-Illness (ILI)
+\item
+  Weekly, state-level number of incident account
+\item
+  Reported how many people got the flu at the doctor's office
+\item
+  Aggregates data at state-level and uses statistics to estimate relative prevalence between the different doctors
+\item
+  Lag real-time by a few weeks
+\item
+  Calculate weekly, state-level search term prevalence
+\item
+  Used top 50 million terms like cough, aching, terms related to the flu
+\item
+  Each state in each week and matched to CDC ILI data
+\item
+  Tried a lot of combinations of these terms to pick the group which best matched inputs
+\end{itemize}
+
+\subsection{Number of top queries and correlation}\label{number-of-top-queries-and-correlation}
+
+\begin{itemize}
+\tightlist
+\item
+  Use the top 45 queries able to predict the ILI data variation between state and time
+\item
+  Mean correlation above 0.90 (very high)
+\item
+  Calculations in real-time, faster frequency, more up to date
+\item
+  Produce data at a smaller level -- Not just Georgia but Atlanta or subsections of Atlanta
+\end{itemize}
+
+\subsection{Issues}\label{issues}
+
+\begin{itemize}
+\tightlist
+\item
+  Had trouble in 2008-2009 with the onset of H1N1 (new flu strain), model was refit
+\item
+  Did well for a couple years
+\item
+  Trouble in 2012-2013 season due to high press coverage of flu
+\end{itemize}
+
+\subsection{Assumptions and Issues}\label{assumptions-and-issues}
+
+\begin{itemize}
+\tightlist
+\item
+  Flu trends depend on CDC ILI reporting
+\item
+  There is no Google Flu Trends without actual measured flu trends
+\item
+  The relationship between search behavior and flu is the same over time
+\item
+  Google grew quickly from 2003-2008 - Biggest issue with the 94\% correlation model
+\item
+  2000 -- 22B (22E9) searches
+\item
+  2007 -- 438B (438E9) searches
+\item
+  2008 -- 637.2B (637.2E9) searches
+\item
+  2009 -- 953.7B (953.7E9) searches
+\item
+  Search behavior and searches changed over time -- was not stable
+\item
+  Search behavior and searches is a common problem with big data
+\item
+  GFT could not have been made without CDC data
+\item
+  Made it quicker and more granular but did not make anything new
+\end{itemize}
+
+\textbf{Shut down in 2015 and provided to researchers at CDC}
+
+\textbf{Continuing experiments to incorporate GFT but CDC does not really use GFT}
+
+\subsection{Summary}\label{summary}
+
+GFT is big data -- Depends on search queries, primary example of big data (1 trillion per year)
+Benefit -- Finer granularity of place and time
+Set of key assumptions -- The way that people search for IFI and searches should not change over time
+End result -- Not a useful product, not able to latch onto any trends because searches changed over time (search behavior, queries, number of searches)
+GFT represents an interesting and useful new product of big data but shows how insights and products on big data might be fragile
+
+\section{Required Reading Notes}\label{required-reading-notes}
+
+{[}1{]}. \href{https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf}{The Parable of Google Flu: Traps in Big Data Analysis}
+
+\subsection{Introduction}\label{introduction}
+
+\begin{itemize}
+\tightlist
+\item
+  February 2013 - Google Flu Trends (GFT) predicted more than double doctor visits for the flu compared to the Centers for Disease - Control and Prevention (CDC)
+\item
+  Estimates based on surveillance reports across the US
+\item
+  GFT was built to predict CDC reports
+\item
+  Research on whether search or social media can predict x has become commonplace and is often put in sharp contrast with traditional methods and hypotheses
+\item
+  Search or social media is far from supplanting more traditional methods or theories
+\item
+  GFT mistakes -- Big data hubris (exaggerated self-confidence) and algorithm dynamics
+\end{itemize}
+
+\subsection{Big data hubris}\label{big-data-hubris}
+
+\begin{itemize}
+\tightlist
+\item
+  Big data hubris is the Implicit assumption that big data is a substitute not a supplement to traditional data collection and analysis
+\item
+  Enormous scientific possibilities in big data
+\item
+  Quantity of data doesn't mean you can ignore issues of measurement, construct validity, reliability and dependencies among data
+\item
+  GFT problematic using big and small data -- Find best matches among 50 million search terms to fit 1152 data points
+\item
+  Flu data structurally unrelated -- weed out seasonal search terms such as high school basketball
+\item
+  Big data was overfitting the small number of cases -- a standard concern in data analysis
+\item
+  GFT became a part flu detector, part winter detector
+\item
+  GFT had to update algorithm in 2009 and noted a few changes in October 2013
+\item
+  GFT study in 2010 demonstrated GFT was not much better than a simple projection forward using CDC data (on a 2-week lag)
+\item
+  Lagged models over time significantly outperforming GFT
+\item
+  Still useful if combined with other near-real-time health data
+\end{itemize}
+
+\subsection{Algorithm Dynamics}\label{algorithm-dynamics}
+
+\begin{itemize}
+\item
+  Algorithm dynamics -- Changes made by engineers to improve the commercial service and by consumers in using that service
+\item
+  GFT was an unstable reflection of the prevalence of the flu because of algorithm dynamics affecting Google's search algorithm
+\item
+  Missed by large amount in 2011-2012 Flu season
+\item
+  GFT issues may be from changes to Google's search algorithm, which is constantly testing and improving search
+\item
+  Replicating original algorithm is difficult -- GFT never documented the 45 search terms used
+\item
+  GFT errors are closely aligned with searches for flu treatments and information on differentiating the cold from the flu
+\item
+  ``Blue Team'' Dyanmics -- Algorithm producing the data (and user utilization) has been modified by the service provider in accordance with their business model
+\item
+  GFT search model changes to support Google's business model -- Providing information quickly and to promote more advertising revenue (e.g., Recommended searches)
+\item
+  ``Red Team'' Dynamics -- Occur when research subjects (e.g., web searchers) attempt to manipulate the date-generating process to meet their own goals
+
+  \begin{itemize}
+  \tightlist
+  \item
+    E.g., economic or political gain, twitter polling, using tactics to make sure their candidate or product is trending, twitter or FB spreading rumprs about stock prices and markets
+  \end{itemize}
+\end{itemize}
+
+\subsection{Transparency, Granularity and All-Data}\label{transparency-granularity-and-all-data}
+
+\begin{itemize}
+\item
+  Hard to replicate GFT without core search terms, collection of searches
+\item
+  Using Google Correlate with concepts on how GFT was built will not replicate their findings
+\item
+  The few search terms in the GFT papers do not seem to be strongly related with either GFT or CDC data
+\item
+  Use Big Data to Understand the Unknown
+\item
+  Valuable to understand the prevalence of flu at very local levels, not practical for CDC to produce
+\item
+  Constantly changing algorithms need to be better understood how they change over time
+\item
+  Need to replicate findings across time and use other data sources to ensure they are observing robust patterns and not evanescent trends (quickly fading trends)
+\item
+  Big data offers possibilities for understanding human interactions at a societal scale
+\item
+  We should focus on big and small data through innovative analytics using data from traditional and new sources
+\end{itemize}
+
+\subsection{Bytes}\label{bytes}
+
+\begin{itemize}
+\tightlist
+\item
+  Byte, Kilobyte (kb), Megabyte (mb), Gigabyte (gb), Terrabyte (tb), Petabyte (pb)
+\item
+  1 yottabyte -- Storage capacity of NASA datacenter
+\item
+  Structured data can contain unstructured components
+\item
+  Data growth comes from unstructured data
+\end{itemize}
+
+\subsection{5 ``V's''}\label{vs}
+
+\begin{itemize}
+\tightlist
+\item
+  Volume, Variety, Velocity, Veracity, Value
+\item
+  Velocity -- Increasing speed of which data is created and the speed at which it can be processed, stored, and analyzed
+\item
+  Veracity -- quality or insightfulness of the data, errors in data
+\end{itemize}
+
+\subsection{Data analytics types}\label{data-analytics-types}
+
+\begin{itemize}
+\tightlist
+\item
+  Descriptive -- What happened? Requires most amount of human input
+\item
+  Diagnostic -- Why did it happen?
+\item
+  Predictive -- What will happen?
+\item
+  Prescriptive -- How can we make it happen? No human input, most value, optimization, decision support and decision automation, most difficult
+\end{itemize}
+
+\chapter{Module 2 - Hardware Trends}\label{module-2---hardware-trends}
+
+\subsection{Overview}\label{overview-1}
+
+The improvements in computer hardware technology in the last 50 years have been incredible.
+We identify which aspects of computing have evolved quickly and which have not, and trace what this means for big data technologies.
+
+\subsection{Resources}\label{resources-1}
+
+{[}1{]}. \href{https://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/}{Understanding Hadoop Clusters and the Network}
+
+{[}2{]}. \href{https://hadoop.apache.org/}{Apache Hadoop}
+
+{[}3{]}. \href{https://spark.apache.org/}{Apache Spark}
+
+{[}4{]}. \href{https://vimeo.com/274266764}{Developing for the Intelligent Cloud and Intelligent Edge Rohan Kumar (Microsoft)}
+
+\section{Trends in Computer Hardware}\label{trends-in-computer-hardware}
+
+\emph{Module 2.1 - Trends in Computer Hardware (9:58)}
+
+\emph{How trends in computer hardware are shaping what Big Data is}
+
+\subsection{Parts of a Computer}\label{parts-of-a-computer}
+
+\begin{itemize}
+\tightlist
+\item
+  CPU -- executes instructions
+\item
+  Memory -- store information ``for a little while'' during computation
+\item
+  This is RAM, temporary storage
+\item
+  Disk -- Store information for longer periods of time
+\item
+  Motherboard architecture driven by heat dissipation
+\end{itemize}
+
+\subsection{CPU}\label{cpu}
+
+\begin{itemize}
+\tightlist
+\item
+  Read an instruction from memory and decode it
+\item
+  Find any associated data that is needed to process the instruction
+\item
+  Process the insruction
+\item
+  Write the results out
+\item
+  CPU implementation process is called microarchitectures e.g., Xeon, Whiskey Lake
+\item
+  Key Challenges: Waiting for data to complete an instruction, conditional execution/branches
+\item
+  Key Solution: Multiple queues, guess at what branches will be followed
+\end{itemize}
+
+\subsection{Storing Information}\label{storing-information}
+
+\begin{itemize}
+\tightlist
+\item
+  To work quickly, computers need to access information quicklu
+\item
+  Physical constraunts: you can't store all your data right next to your CPU
+\end{itemize}
+
+\subsection{Level of closeness to look up a byte}\label{level-of-closeness-to-look-up-a-byte}
+
+\begin{itemize}
+\tightlist
+\item
+  L1 cache -- 0.5 ns
+\item
+  L2 cache -- 7 ns
+\item
+  Memory -- 100 ns
+\item
+  Disk -- 10 million ns
+\item
+  In memory elsewhere in data center -- 500,000 ns
+\item
+  Solid state hard drives -- 500,000 ns
+\item
+  Note: A 1 ghz CPU executes an instruction ever nanosecond, including potentially looking up data
+\end{itemize}
+
+\textbf{Moore's Law:} The number of transistors per unit area can double every 18 months
+\textbf{Kryder's Law:} Storage density on magnetic disks doubles every 18 months
+
+Processing and storage is getting cheaper and faster
+Accessing hard disks is NOT getting faster (bottleneck of Big Data)
+Increasing processor performance is exponentially more costly
+
+\subsection{CPU Limits}\label{cpu-limits}
+
+\begin{itemize}
+\tightlist
+\item
+  Moore's Law
+\item
+  Power Dissipation -- If you shrunk transistors, power dissipation would decrease
+\item
+  Typically processors do more, so power per area increases
+\item
+  Single cores can't go faster without taking too much power
+\item
+  Instead of more speed -- Multiple cores, more cache
+\end{itemize}
+
+\subsection{Memory Physical Limits}\label{memory-physical-limits}
+
+\begin{itemize}
+\tightlist
+\item
+  Also depends on Moore's law-like progress
+\item
+  Doesn't have acute overheating problems like CPUs -- Capacity just keeps growing
+\end{itemize}
+
+\subsection{Hard Disk Physical Limits}\label{hard-disk-physical-limits}
+
+\begin{itemize}
+\tightlist
+\item
+  Kryder's law suggests total storage will increase
+\item
+  Platters can only spin so fast - accessing this large amount of data is a bottleneck
+\item
+  One Exception
+\item
+  Sequential reads will get faster since the head can read more data in a single rotation
+\item
+  This can benefit performance of massive data operations which often need lots of sequential data
+\end{itemize}
+
+\subsection{Summary}\label{summary-1}
+
+Computer has 3 components -- CPU, Memory, Disk
+
+Major technological trends
+- CPU is growing cheaper but not faster
+- Memory/Disk space is growing
+- Disk access is NOT growing
+
+\section{Computer Architecture for Big Data}\label{computer-architecture-for-big-data}
+
+\subsection{Big Data Performance}\label{big-data-performance}
+
+\emph{Module 2.2 - Big Data Performance (10:10)}
+
+\begin{itemize}
+\tightlist
+\item
+  Many computations are fixed size
+\item
+  Some things may grow faster than computational resources
+  o Aspects of social network data
+  o Log data
+\item
+  As disk space in particular gets cheaper, new things that were previously not storable will be stored on disk
+\end{itemize}
+
+\subsection{Discussion Questions}\label{discussion-questions}
+
+\begin{itemize}
+\tightlist
+\item
+  How would you build a system which can handle more data than fits on a single hard drive?
+\item
+  What if you need a system which will serve a website to more customers at once?
+\item
+  How would you sort a list which doesn't fit on one computer?
+\end{itemize}
+
+\subsection{Strategies}\label{strategies}
+
+\begin{itemize}
+\tightlist
+\item
+  Better Hardware - Supercomputers
+\item
+  Exponentially more expensive
+\item
+  Petabytes of memory, 10,000s of CPU/GPU cores
+\item
+  Cost: \$100M+
+\item
+  Distributed Architectures -- Using multiple computers together
+\end{itemize}
+
+\subsection{Load Balancing}\label{load-balancing}
+
+\begin{itemize}
+\tightlist
+\item
+  Using computer architectures in parallel
+\item
+  The best way to distribute work depends on what the work is
+\end{itemize}
+
+\subsection{Databases for Big Data: Master/Worker Architecture}\label{databases-for-big-data-masterworker-architecture}
+
+\begin{itemize}
+\tightlist
+\item
+  Master has list of which data is on which computers
+\item
+  When requesting the data the workers provide their parts (other computers)
+\item
+  Issues
+\item
+  What is the master gets overloaded?
+\item
+  What if the master fails?
+\end{itemize}
+
+\subsection{Databases for Big Data: Eventual Consistency}\label{databases-for-big-data-eventual-consistency}
+
+\begin{itemize}
+\tightlist
+\item
+  What happens if the leader node gets overwhelmed?
+\item
+  We could have multiple leaders, each of which can task worker nodes
+\item
+  Eventual consistency
+\item
+  Leaders know what other works are doing by sending messages
+\item
+  Messages are not instant, so first leader can be requested data information that the second knows changed but the first hasn't been notified
+\item
+  This is OK in many contexts but not in things like e.g., banking
+\end{itemize}
+
+\subsection{Serving Multiple Customers}\label{serving-multiple-customers}
+
+\begin{itemize}
+\tightlist
+\item
+  Each computer receives requests, but can only process so many per unit time
+\item
+  Multiple machines can handle more requests
+\item
+  But what if you're a website which needs to look up information about a customer?
+\item
+  If many servers deal with the same database it can be overloaded
+\item
+  If just reading data you can have many copies of the database
+\item
+  If you sometimes change data, you need to make sure there aren't multiple changes at the same time
+\end{itemize}
+
+\subsection{Sorting a Big List}\label{sorting-a-big-list}
+
+\textbf{A loose algorithm for sorting a list on N computers}
+
+\begin{itemize}
+\item
+  On computer 1, sort the data and take each 1/N partition and assign it to a computer
+\item
+  Tell each computer to send its values less than 1/N to the first computer, those between 1/N and 2/N to the second, etc.
+\item
+  Now we know each computer has data which is either all greater or all less than the data on each other computer
+\item
+  So we just sort the data on each computer, and we're done!
+\item
+  We have ways of sorting large amounts of data
+\item
+  What probably slows this down?
+\item
+  Sending data from one computer to another
+\item
+  Reading data from disk -- This always was going to happen
+\end{itemize}
+
+\subsection{Summary}\label{summary-2}
+
+\begin{itemize}
+\tightlist
+\item
+  Supercomputers v. Software Architecture
+\item
+  Introduction of Big Data architectural elements
+\item
+  Load balancing
+\item
+  Master/Worker
+\item
+  Eventual consistency
+\item
+  Custom algorithms
+\end{itemize}
+
+\section{Software Architecture for Big Data}\label{software-architecture-for-big-data}
+
+\emph{Module 2.3 - Software Architecture for Big Data (11:39)}
+
+\chapter{Module 3 - Software Trends}\label{module-3---software-trends}
+
+\subsection{Overview}\label{overview-2}
+
+In order to handle large amounts of data, computers require software. How do computers actually deal with all that data? We start by discussing data storage and retrieval technologies and show how software or algorithmic ``tricks'' can substantially speed up computations. Then we talk about the fundamental drivers of cost and performance in software systems.
+
+\begin{itemize}
+\tightlist
+\item
+  Discuss how software fits into analyzing large amounts of data
+\item
+  Use python to count the number of words and the most common word in a book
+\item
+  Discuss tradeoffs in distributed algorithms
+\end{itemize}
+
+\subsection{Resources}\label{resources-2}
+
+{[}1{]}. \href{https://lucene.apache.org/}{Apache Lucene} - Free, open-source search engine library that provides full-text search capabilities
+
+{[}2{]}. \href{https://www.elastic.co/}{Elastic Search} - Distributed search and analytics engine that stores and indexes data for fast search, analytics, and relevancy
+
+{[}3{]}. \href{https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html}{Elastic Search Guide} - Search and analytics engine that powers the Elastic Stack
+
+\section{The Importance of Software}\label{the-importance-of-software}
+
+\emph{Module 3.1 - The Importance of Software: An Example of Search Engines (8:47)}
+
+\subsection{How Would You Make a Search Engine?}\label{how-would-you-make-a-search-engine}
+
+\subsection{Indexing}\label{indexing}
+
+\subsection{Relevance Rankings}\label{relevance-rankings}
+
+\subsection{Relevance + Indexing}\label{relevance-indexing}
+
+\textbf{Relevance + Indexing = Modern Search}
+
+\subsection{Purpose}\label{purpose}
+
+\subsection{Summary}\label{summary-3}
+
+\section{Big Data or Just Data}\label{big-data-or-just-data}
+
+\emph{Module 3.2 - Big Data or Just Data (12:54)}
+
+\section{Programming Languages and Tradeoffs}\label{programming-languages-and-tradeoffs}
+
+\emph{Module 3.3 - Programming Languages and Tradeoffs (8:19)}
+
+\end{document}

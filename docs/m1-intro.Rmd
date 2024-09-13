@@ -1,0 +1,236 @@
+# Module 1 - Introduction
+
+### Overview
+
+Big data has become a buzzword. Its hype has risen, peaked, and now fallen a bit. But in the wake of the hype cycle, there are a number of enduring changes to the technological and social landscape. Where do these changes come from? What are the underlying technical features that made this happen? 
+
+-	Name underlying technical and social aspects underlying big data
+-	Define big data
+
+### Resources
+
+\[1.] [The Parable of Google Flu: Traps in Big Data Analysis](https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf)
+
+## What is Big Data?
+
+*Module 1.1 – What is Big Data? (9:36)*
+
+### Three Organizing Questions
+-	Who uses big data?
+-	What does big data do for them (as opposed to regular data)?
+-	What are some other associated topics or buzzwords?
+
+### Big Data - "3 V's"
+Big Data is known by “3 V’s” and is also a catch all buzz word
+
+-	Volume, Velocity, Variety
+-	Aggregation of data all in one place
+-	Strong implications for international affairs e.g., Election interference
+-	Wiki: 4th concept, veracity – quality or insightfulness of the data, errors in data
+
+### Data
+Data is information encoded in a series of bits
+
+-	Bits can take a value of 0 or 1 integers
+-	Bits are encoded as a series of 0s and 1s (typically 32)
+-	Text is also a series of 0s and 1s, but the schemes are more complicated
+-	ASCII is a 7 bit scheme for Latin alphabet (upper and lower case), punctuation and digits
+-	Unicode is more complex, variable length scheme for characters in many languages, plus emoji-like characters
+-	Example: “Jeffrey” has 7 characters, at 7 bits each in ASCII, total 49 bits
+
+### Volume
+-	How much data is there? 12 zetabytes (1.2E22)
+-	Data is growing at an increasing rate: 90% of data was created in the last 2 years
+
+### Units of Data
+-	1 bit is one piece of binary information (zero or one)
+-	1 byte is a set of 8 bits – Can be one of 256 combinations (28)
+-	104 (10 kilobytes) – Couple pages of text, long email
+-	106 (1 megabyte) – Roughly 1 min. of compressed music
+-	109 (1 gigabyte) – Roughly a compressed but decent hour video
+-	3.2E9 bytes (3.2 gigabytes) – Amount of data in your DNA
+-	All text on Wikipedia is about 9.5GB
+-	1012 bytes (1 terabyte) is about the size of an external hard drive (in 2014)
+-	3E12 bytes (3 TB) is the approximate amount of storage in your brain
+
+### Server Rack
+-	4E14 bytes (400 TB) is about as much data that can be housed in a server rack
+-	Can be up to a petabyte
+-	400 TB is the amount of data in all books ever written
+
+### Data Center
+-	1018 bytes (1 exabyte) is how much could be stored in a data center
+-	5E18 bytes (5 exabytes) would be the size of all words ever spoken, if transcribed
+
+### Variety
+Aspects of life recorded in 1980
+-	Plane tickets, taxes, interactions with the largest companies
+-	Major companies had mainframe computers to keep records of specific interactions
+
+### Aspects of life recorded in 2020
+-	Location (from cell phones)
+-	Attitudes on social media (from posts, likes, etc.)
+  - For some people, “big data” is nearly synonymous with social media/internet technologies
+-	Workflow and interactions (from emails, internet search logs)
+-	Speech – From smart devices like Alexa and Siri
+
+By combining different types of information, lots of different possibilities to impact society
+
+### Velocity
+-	Primary example: Twitter/X
+-	Twitter saves a tweet and sends it to mobile devices, browsers, etc.
+-	Twitter has to manage multiple tweets before it’s done with saving and sending
+
+### Data in Real Time
+
+Some web related technologies need to keep up with data in real time, even as it comes faster
+
+-	Is a web request part of a denial of service attack?
+-	Is the email spam or phishing?
+-	High peak loads – What is Healthcare.gov needs to serve 10 million people in 1 day?
+-	Number of people per day visiting a site can vary widely creating issues with velocity
+-	Outside of the web, there is threat monitoring software
+  - Catalog all the threats or sources in real time
+
+### Big Data - A Broad Term
+Think of big data as something broader than just data size and data type
+
+-	“Big Data” will include things that big data might enable or portend as it enables society at large
+  - Power to collect (and lose) personal info
+  - Power to predict
+  - Artificial intelligence (AI) and how it relates to the power of prediction
+  - Driverless cars
+
+### Concepts that underlie big data
+-	Computing – Changes in computing, key technologies
+-	Statistics – Make predictions and inferences of something that might happen
+-	Applications – What are the new things that big data enables that allow us to change the world and what does it mean for the rest of the world
+
+
+## Google Flu Trends
+
+*Module 1.2 – Google Flu Trends (7:03)*
+
+### Google Flu Trends (GFT)
+Google Flu Trends (GFT) – Predicted flu based on search queries
+
+-	Original paper (2008) – Launched in 2008, lecture says 2009 put in production
+-	Starts with CDC’s system of cataloguing Influenza-Like-Illness (ILI)
+  - Weekly, state-level number of incident account
+  - Reported how many people got the flu at the doctor’s office
+  - Aggregates data at state-level and uses statistics to estimate relative prevalence between the different doctors
+  - Lag real-time by a few weeks
+-	Calculate weekly, state-level search term prevalence
+  - Used top 50 million terms like cough, aching, terms related to the flu
+  - Each state in each week and matched to CDC ILI data
+-	Tried a lot of combinations of these terms to pick the group which best matched inputs
+
+### Number of top queries and correlation
+-	Use the top 45 queries able to predict the ILI data variation between state and time
+-	Mean correlation above 0.90 (very high)
+-	Calculations in real-time, faster frequency, more up to date
+-	Produce data at a smaller level – Not just Georgia but Atlanta or subsections of Atlanta
+
+
+### Issues
+-	Had trouble in 2008-2009 with the onset of H1N1 (new flu strain), model was refit 
+  - Did well for a couple years
+-	Trouble in 2012-2013 season due to high press coverage of flu
+
+### Assumptions and Issues
+-	Flu trends depend on CDC ILI reporting
+  - There is no Google Flu Trends without actual measured flu trends
+-	The relationship between search behavior and flu is the same over time
+  - Google grew quickly from 2003-2008 - Biggest issue with the 94% correlation model
+  - 2000 – 22B (22E9) searches
+  - 2007 – 438B (438E9) searches
+  - 2008 – 637.2B (637.2E9) searches
+  - 2009 – 953.7B (953.7E9) searches
+  - Search behavior and searches changed over time – was not stable
+-	Search behavior and searches is a common problem with big data
+-	GFT could not have been made without CDC data
+  - Made it quicker and more granular but did not make anything new
+
+**Shut down in 2015 and provided to researchers at CDC**
+
+**Continuing experiments to incorporate GFT but CDC does not really use GFT**
+
+### Summary
+GFT is big data – Depends on search queries, primary example of big data (1 trillion per year)
+Benefit – Finer granularity of place and time
+Set of key assumptions – The way that people search for IFI and searches should not change over time
+End result – Not a useful product, not able to latch onto any trends because searches changed over time (search behavior, queries, number of searches)
+GFT represents an interesting and useful new product of big data but shows how insights and products on big data might be fragile
+
+## Required Reading Notes
+
+\[1]. [The Parable of Google Flu: Traps in Big Data Analysis](https://gking.harvard.edu/files/gking/files/0314policyforumff.pdf)
+
+### Introduction
+- February 2013 - Google Flu Trends (GFT) predicted more than double doctor visits for the flu compared to the Centers for Disease - Control and Prevention (CDC)
+- Estimates based on surveillance reports across the US
+- GFT was built to predict CDC reports
+- Research on whether search or social media can predict x has become commonplace and is often put in sharp contrast with traditional methods and hypotheses
+- Search or social media is far from supplanting more traditional methods or theories
+- GFT mistakes – Big data hubris (exaggerated self-confidence) and algorithm dynamics
+
+### Big data hubris
+- Big data hubris is the Implicit assumption that big data is a substitute not a supplement to traditional data collection and analysis
+- Enormous scientific possibilities in big data
+- Quantity of data doesn’t mean you can ignore issues of measurement, construct validity, reliability and dependencies among data
+- GFT problematic using big and small data – Find best matches among 50 million search terms to fit 1152 data points
+- Flu data structurally unrelated – weed out seasonal search terms such as high school basketball
+- Big data was overfitting the small number of cases – a standard concern in data analysis
+- GFT became a part flu detector, part winter detector 
+- GFT had to update algorithm in 2009 and noted a few changes in October 2013
+- GFT study in 2010 demonstrated GFT was not much better than a simple projection forward using CDC data (on a 2-week lag) 
+- Lagged models over time significantly outperforming GFT
+- Still useful if combined with other near-real-time health data
+
+### Algorithm Dynamics
+- Algorithm dynamics – Changes made by engineers to improve the commercial service and by consumers in using that service
+- GFT was an unstable reflection of the prevalence of the flu because of algorithm dynamics affecting Google’s search algorithm
+- Missed by large amount in 2011-2012 Flu season
+- GFT issues may be from changes to Google’s search algorithm, which is constantly testing and improving search
+- Replicating original algorithm is difficult – GFT never documented the 45 search terms used
+- GFT errors are closely aligned with searches for flu treatments and information on differentiating the cold from the flu
+
+- “Blue Team” Dyanmics – Algorithm producing the data (and user utilization) has been modified by the service provider in accordance with their business model
+- GFT search model changes to support Google’s business model – Providing information quickly and to promote more advertising revenue (e.g., Recommended searches)
+
+- “Red Team” Dynamics – Occur when research subjects (e.g., web searchers) attempt to manipulate the date-generating process to meet their own goals
+  - E.g., economic or political gain, twitter polling, using tactics to make sure their candidate or product is trending, twitter or FB spreading rumprs about stock prices and markets
+
+### Transparency, Granularity and All-Data
+- Hard to replicate GFT without core search terms, collection of searches
+- Using Google Correlate with concepts on how GFT was built will not replicate their findings
+- The few search terms in the GFT papers do not seem to be strongly related with either GFT or CDC data
+- Use Big Data to Understand the Unknown
+
+- Valuable to understand the prevalence of flu at very local levels, not practical for CDC to produce
+- Constantly changing algorithms need to be better understood how they change over time
+- Need to replicate findings across time and use other data sources to ensure they are observing robust patterns and not evanescent trends (quickly fading trends)
+- Big data offers possibilities for understanding human interactions at a societal scale
+- We should focus on big and small data through innovative analytics using data from traditional and new sources 
+
+
+### Bytes
+- Byte, Kilobyte (kb), Megabyte (mb), Gigabyte (gb), Terrabyte (tb), Petabyte (pb)
+- 1 yottabyte – Storage capacity of NASA datacenter
+- Structured data can contain unstructured components
+- Data growth comes from unstructured data
+
+### 5 "V's"
+- Volume, Variety, Velocity, Veracity, Value
+- Velocity – Increasing speed of which data is created and the speed at which it can be processed, stored, and analyzed
+- Veracity – quality or insightfulness of the data, errors in data
+
+### Data analytics types
+- Descriptive – What happened? Requires most amount of human input
+- Diagnostic – Why did it happen?
+- Predictive – What will happen?
+- Prescriptive – How can we make it happen? No human input, most value, optimization, decision support and decision automation, most difficult
+
+
+
+
