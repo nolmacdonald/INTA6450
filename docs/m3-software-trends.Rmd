@@ -40,7 +40,7 @@ In order to handle large amounts of data, computers require software. How do com
 
 | Words |      Locations     |
 |:-------:|:------------------:|
-| bear    | Page 1, 12, 14     |
+| Bear    | Page 1, 12, 14     |
 | Cat     | Page 3, 6          |
 
 - This would create a search in ~0.5 seconds
@@ -51,6 +51,7 @@ In order to handle large amounts of data, computers require software. How do com
 **Improving Indexing**
 
 - Utilize a tree
+  - See Fig. Assume left early in alphabet, right late in alphabet
 - Sort all the search terms and put them in a tree node
 - Every tree node has the following property: all the nodes to the left are smaller, and all the nodes to the right are bigger
 - If you do this, you need $\log_2 (1\times10^6) = 20$ operations
@@ -161,6 +162,7 @@ Software plays a critical role in building and optimizing a search engine. The p
 
 -   Optimizing algorithms, alongside technological advancements (like Moore’s Law), plays a significant role in improving system performance, often more than hardware improvements alone.
 
+\newpage
 ## Big Data or Just Data
 
 *Module 3.2 - Big Data or Just Data (12:54)*
@@ -187,7 +189,7 @@ Software plays a critical role in building and optimizing a search engine. The p
 
 - Most database functionality is designed around e.g.commerce:
 customers, transactions, products
-  - High availability
+  - Need high availability
   - Read and write at same time
   - Looking up minimal info
 - Analyzing data is different
@@ -202,7 +204,7 @@ customers, transactions, products
   - Items in tables can be references to other tables
 - Row vs column stores
   - Row stores: Adding new data/looking data up
-  - Column stores: Analyzing data set
+  - Column stores: Analyzing **whole data set**
   - SQL: Structured Query Language
 - "NoSQL" database
   - Databases with less structure
@@ -331,6 +333,7 @@ Big data isn't necessarily different from regular data, but the way it's process
 -   SQL databases provide powerful, structured queries but are more rigid and complex.
 -   NoSQL databases are more flexible and scalable but lack complex querying capabilities across datasets.
 
+\newpage
 ## Programming Languages and Tradeoffs
 
 *Module 3.3 - Programming Languages and Tradeoffs (8:19)*

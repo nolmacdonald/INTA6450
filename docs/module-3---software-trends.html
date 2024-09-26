@@ -248,7 +248,7 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">bear</td>
+<td align="center">Bear</td>
 <td align="center">Page 1, 12, 14</td>
 </tr>
 <tr class="even">
@@ -267,7 +267,10 @@
 </ul>
 <p><strong>Improving Indexing</strong></p>
 <ul>
-<li>Utilize a tree</li>
+<li>Utilize a tree
+<ul>
+<li>See Fig. Assume left early in alphabet, right late in alphabet</li>
+</ul></li>
 <li>Sort all the search terms and put them in a tree node</li>
 <li>Every tree node has the following property: all the nodes to the left are smaller, and all the nodes to the right are bigger</li>
 <li>If you do this, you need <span class="math inline">\(\log_2 (1\times10^6) = 20\)</span> operations</li>
@@ -424,6 +427,7 @@ Figure3.1: Tree Node
 <ul>
 <li>Optimizing algorithms, alongside technological advancements (like Moore’s Law), plays a significant role in improving system performance, often more than hardware improvements alone.</li>
 </ul>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div id="big-data-or-just-data" class="section level2 hasAnchor" number="3.2">
@@ -463,7 +467,7 @@ Figure3.1: Tree Node
 <li>Most database functionality is designed around e.g.commerce:
 customers, transactions, products
 <ul>
-<li>High availability</li>
+<li>Need high availability</li>
 <li>Read and write at same time</li>
 <li>Looking up minimal info</li>
 </ul></li>
@@ -486,7 +490,7 @@ customers, transactions, products
 <li>Row vs column stores
 <ul>
 <li>Row stores: Adding new data/looking data up</li>
-<li>Column stores: Analyzing data set</li>
+<li>Column stores: Analyzing <strong>whole data set</strong></li>
 <li>SQL: Structured Query Language</li>
 </ul></li>
 <li>“NoSQL” database
@@ -657,6 +661,7 @@ customers, transactions, products
 <li>SQL databases provide powerful, structured queries but are more rigid and complex.</li>
 <li>NoSQL databases are more flexible and scalable but lack complex querying capabilities across datasets.</li>
 </ul>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div id="programming-languages-and-tradeoffs" class="section level2 hasAnchor" number="3.3">
