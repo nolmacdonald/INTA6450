@@ -47,3 +47,9 @@ rsconnect/
 
 # macOS
 *.DS_Store
+
+# Large dataset for Enron Corpus
+enron_project/data
+
+# nltk_data for crime and punishment exercise
+exercises/M9_crime_punishment/nltk_data
