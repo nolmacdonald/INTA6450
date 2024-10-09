@@ -115,9 +115,7 @@ even if you do have “all the data” and explain this case as well.
 It can be a comment on just the “All the data is enough” scenario or the 
 “All the data is not enough” scenario. 
 
-### Solution
-
-**Idea of Having All Data:**
+### Discussion: Idea of Having "All Data"
 
 **No Reliance on Sampling and Statistics**
 
@@ -175,9 +173,18 @@ despite having "all the data" from a full season.
 Sampling and statistics are still critical for deeper analysis, 
 adequate comparisons, and future predictions.
 
-**Opinion on another comment:**
+### Discussion: Opinion on Peers Comment for "All Data"
 
-An example could be a business that tracks all its inventory in real-time using a fully integrated and accurate system. The systems can identify each product's exact count and location, providing accurate data for order fulfillment and restocking. Having this data about inventory can eliminate the need for sampling and statistics.
+**Comment:**
+
+An example could be a business that tracks all its inventory in real-time 
+using a fully integrated and accurate system. 
+The systems can identify 
+each product's exact count and location, providing accurate data for order 
+fulfillment and restocking. 
+Having this data about inventory can eliminate the need for sampling and statistics.
+
+**Reply:**
 
 I agree that this is an example of not needing to rely on sampling and statistics.
 This is true because business tracking all inventory in real-time with
