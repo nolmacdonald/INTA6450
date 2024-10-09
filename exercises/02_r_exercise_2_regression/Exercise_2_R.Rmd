@@ -1,0 +1,62 @@
+---
+title: "R Exercise 2: INTA 6450 - Data Analytics and Security"
+output: pdf_document
+bibliography: references/references.bib
+csl: references/ieee.csl
+urlcolor: blue
+# date: "2024-10-02"
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+```
+
+# R Exercise 2
+
+### Prompt
+
+1. Complete the following exercise: 
+  - `exercise_2.r`
+2. You may make changes to the code to explore how they work
+3. Then, submit the output for running these commands. 
+You may copy/paste output from your terminal into a word or text document. 
+You can convert the notebook to PDF submission:File->Compile Report->Report 
+output format as HTML/PDF. 
+4. Write 100-150 words describing one extension you made to the code. 
+You may post the change description as a comment at the beginning of your code, 
+or submit the write-up in a separate document. Make sure to clearly mark 
+where in your code the changes were made either by commenting, highlighting, 
+or noting the command lines where the changes occur. 
+
+### Submissions
+
+You will submit the following:
+
+1. Original code output (R file code and output)
+2. Your code change and output from that code change 
+(comment where your code changes start and end)
+3. Your code change description (this should be between 100 to 150 words)
+
+An example of what the change description should look like:
+```
+#############################
+# CHANGE DESCRIPTION
+# 100-150 words on the changes I’ve made, including a reference to which 
+# initial command I’ve changed >
+# END OF CHANGE DESCRIPTION
+#############################
+```
+
+Files must be in one of the following formats: pdf, doc, html
+
+*Please note some of these exercises have graphs/charts - 
+be sure when you export the original output to also check that the file 
+includes graphs/charts that may have been present. 
+If it does not, you will need to re-export or manually include the graphs in 
+your final pdf, doc or html file*
+
+\newpage
+# Solution
+
+
+

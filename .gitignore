@@ -52,4 +52,8 @@ rsconnect/
 enron_project/data
 
 # nltk_data for crime and punishment exercise
-exercises/M9_crime_punishment/nltk_data
+exercises/00_crime_and_punishment/nltk_data
+
+# Ignore caching in .Rmd files
+*_files/
+*_cache/
