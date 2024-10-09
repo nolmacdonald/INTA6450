@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Appendix A: Discussions | Course Notes - Data Analytics and Security</title>
+  <meta name="description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Appendix A: Discussions | Course Notes - Data Analytics and Security" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Appendix A: Discussions | Course Notes - Data Analytics and Security" />
+  
+  <meta name="twitter:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+<meta name="author" content="Nolan MacDonald" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="module-4-probability.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="module-1---introduction.html"><a href="module-1---introduction.html"><i class="fa fa-check"></i><b>1</b> Module 1 - Introduction</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#overview"><i class="fa fa-check"></i><b>1.0.1</b> Overview</a></li>
+<li class="chapter" data-level="1.0.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#resources"><i class="fa fa-check"></i><b>1.0.2</b> Resources</a></li>
+<li class="chapter" data-level="1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#what-is-big-data"><i class="fa fa-check"></i><b>1.1</b> What is Big Data?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#three-organizing-questions"><i class="fa fa-check"></i><b>1.1.1</b> Three Organizing Questions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---3-vs"><i class="fa fa-check"></i><b>1.1.2</b> Big Data - “3 V’s”</a></li>
+<li class="chapter" data-level="1.1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data"><i class="fa fa-check"></i><b>1.1.3</b> Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#volume"><i class="fa fa-check"></i><b>1.1.4</b> Volume</a></li>
+<li class="chapter" data-level="1.1.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#units-of-data"><i class="fa fa-check"></i><b>1.1.5</b> Units of Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#server-rack"><i class="fa fa-check"></i><b>1.1.6</b> Server Rack</a></li>
+<li class="chapter" data-level="1.1.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-center"><i class="fa fa-check"></i><b>1.1.7</b> Data Center</a></li>
+<li class="chapter" data-level="1.1.8" data-path="module-1---introduction.html"><a href="module-1---introduction.html#variety"><i class="fa fa-check"></i><b>1.1.8</b> Variety</a></li>
+<li class="chapter" data-level="1.1.9" data-path="module-1---introduction.html"><a href="module-1---introduction.html#aspects-of-life-recorded-in-2020"><i class="fa fa-check"></i><b>1.1.9</b> Aspects of life recorded in 2020</a></li>
+<li class="chapter" data-level="1.1.10" data-path="module-1---introduction.html"><a href="module-1---introduction.html#velocity"><i class="fa fa-check"></i><b>1.1.10</b> Velocity</a></li>
+<li class="chapter" data-level="1.1.11" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-in-real-time"><i class="fa fa-check"></i><b>1.1.11</b> Data in Real Time</a></li>
+<li class="chapter" data-level="1.1.12" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---a-broad-term"><i class="fa fa-check"></i><b>1.1.12</b> Big Data - A Broad Term</a></li>
+<li class="chapter" data-level="1.1.13" data-path="module-1---introduction.html"><a href="module-1---introduction.html#concepts-that-underlie-big-data"><i class="fa fa-check"></i><b>1.1.13</b> Concepts that underlie big data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends"><i class="fa fa-check"></i><b>1.2</b> Google Flu Trends</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends-gft"><i class="fa fa-check"></i><b>1.2.1</b> Google Flu Trends (GFT)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#number-of-top-queries-and-correlation"><i class="fa fa-check"></i><b>1.2.2</b> Number of top queries and correlation</a></li>
+<li class="chapter" data-level="1.2.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#issues"><i class="fa fa-check"></i><b>1.2.3</b> Issues</a></li>
+<li class="chapter" data-level="1.2.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#assumptions-and-issues"><i class="fa fa-check"></i><b>1.2.4</b> Assumptions and Issues</a></li>
+<li class="chapter" data-level="1.2.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#summary"><i class="fa fa-check"></i><b>1.2.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#required-reading-notes"><i class="fa fa-check"></i><b>1.3</b> Required Reading Notes</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#introduction"><i class="fa fa-check"></i><b>1.3.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.3.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data-hubris"><i class="fa fa-check"></i><b>1.3.2</b> Big data hubris</a></li>
+<li class="chapter" data-level="1.3.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#algorithm-dynamics"><i class="fa fa-check"></i><b>1.3.3</b> Algorithm Dynamics</a></li>
+<li class="chapter" data-level="1.3.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#transparency-granularity-and-all-data"><i class="fa fa-check"></i><b>1.3.4</b> Transparency, Granularity and All-Data</a></li>
+<li class="chapter" data-level="1.3.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#bytes"><i class="fa fa-check"></i><b>1.3.5</b> Bytes</a></li>
+<li class="chapter" data-level="1.3.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#vs"><i class="fa fa-check"></i><b>1.3.6</b> 5 “V’s”</a></li>
+<li class="chapter" data-level="1.3.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-analytics-types"><i class="fa fa-check"></i><b>1.3.7</b> Data analytics types</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html"><i class="fa fa-check"></i><b>2</b> Module 2 - Hardware Trends</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#overview-1"><i class="fa fa-check"></i><b>2.0.1</b> Overview</a></li>
+<li class="chapter" data-level="2.0.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#resources-1"><i class="fa fa-check"></i><b>2.0.2</b> Resources</a></li>
+<li class="chapter" data-level="2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#trends-in-computer-hardware"><i class="fa fa-check"></i><b>2.1</b> Trends in Computer Hardware</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#parts-of-a-computer"><i class="fa fa-check"></i><b>2.1.1</b> Parts of a Computer</a></li>
+<li class="chapter" data-level="2.1.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu"><i class="fa fa-check"></i><b>2.1.2</b> CPU</a></li>
+<li class="chapter" data-level="2.1.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#storing-information"><i class="fa fa-check"></i><b>2.1.3</b> Storing Information</a></li>
+<li class="chapter" data-level="2.1.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#level-of-closeness-to-look-up-a-byte"><i class="fa fa-check"></i><b>2.1.4</b> Level of closeness to look up a byte</a></li>
+<li class="chapter" data-level="2.1.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu-limits"><i class="fa fa-check"></i><b>2.1.5</b> CPU Limits</a></li>
+<li class="chapter" data-level="2.1.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#memory-physical-limits"><i class="fa fa-check"></i><b>2.1.6</b> Memory Physical Limits</a></li>
+<li class="chapter" data-level="2.1.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#hard-disk-physical-limits"><i class="fa fa-check"></i><b>2.1.7</b> Hard Disk Physical Limits</a></li>
+<li class="chapter" data-level="2.1.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-1"><i class="fa fa-check"></i><b>2.1.8</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#computer-architecture-for-big-data"><i class="fa fa-check"></i><b>2.2</b> Computer Architecture for Big Data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#big-data-performance"><i class="fa fa-check"></i><b>2.2.1</b> Big Data Performance</a></li>
+<li class="chapter" data-level="2.2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#discussion-questions"><i class="fa fa-check"></i><b>2.2.2</b> Discussion Questions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#strategies"><i class="fa fa-check"></i><b>2.2.3</b> Strategies</a></li>
+<li class="chapter" data-level="2.2.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#load-balancing"><i class="fa fa-check"></i><b>2.2.4</b> Load Balancing</a></li>
+<li class="chapter" data-level="2.2.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-masterworker-architecture"><i class="fa fa-check"></i><b>2.2.5</b> Databases for Big Data: Master/Worker Architecture</a></li>
+<li class="chapter" data-level="2.2.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-eventual-consistency"><i class="fa fa-check"></i><b>2.2.6</b> Databases for Big Data: Eventual Consistency</a></li>
+<li class="chapter" data-level="2.2.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#serving-multiple-customers"><i class="fa fa-check"></i><b>2.2.7</b> Serving Multiple Customers</a></li>
+<li class="chapter" data-level="2.2.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#sorting-a-big-list"><i class="fa fa-check"></i><b>2.2.8</b> Sorting a Big List</a></li>
+<li class="chapter" data-level="2.2.9" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-2"><i class="fa fa-check"></i><b>2.2.9</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#software-architecture-for-big-data"><i class="fa fa-check"></i><b>2.3</b> Software Architecture for Big Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html"><i class="fa fa-check"></i><b>3</b> Module 3 - Software Trends</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#overview-2"><i class="fa fa-check"></i><b>3.0.1</b> Overview</a></li>
+<li class="chapter" data-level="3.0.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#resources-2"><i class="fa fa-check"></i><b>3.0.2</b> Resources</a></li>
+<li class="chapter" data-level="3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#the-importance-of-software"><i class="fa fa-check"></i><b>3.1</b> The Importance of Software</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#how-would-you-make-a-search-engine"><i class="fa fa-check"></i><b>3.1.1</b> How Would You Make a Search Engine?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#indexing"><i class="fa fa-check"></i><b>3.1.2</b> Indexing</a></li>
+<li class="chapter" data-level="3.1.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-rankings"><i class="fa fa-check"></i><b>3.1.3</b> Relevance Rankings</a></li>
+<li class="chapter" data-level="3.1.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-indexing"><i class="fa fa-check"></i><b>3.1.4</b> Relevance + Indexing</a></li>
+<li class="chapter" data-level="3.1.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#purpose"><i class="fa fa-check"></i><b>3.1.5</b> Purpose</a></li>
+<li class="chapter" data-level="3.1.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-3"><i class="fa fa-check"></i><b>3.1.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-or-just-data"><i class="fa fa-check"></i><b>3.2</b> Big Data or Just Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-vs-data"><i class="fa fa-check"></i><b>3.2.1</b> Big Data vs Data?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#two-database-queries"><i class="fa fa-check"></i><b>3.2.2</b> Two Database Queries</a></li>
+<li class="chapter" data-level="3.2.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#current-database-world"><i class="fa fa-check"></i><b>3.2.3</b> Current Database World</a></li>
+<li class="chapter" data-level="3.2.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#databases"><i class="fa fa-check"></i><b>3.2.4</b> Databases</a></li>
+<li class="chapter" data-level="3.2.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#structured-query-language-sql"><i class="fa fa-check"></i><b>3.2.5</b> Structured Query Language (SQL)</a></li>
+<li class="chapter" data-level="3.2.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#key-value-stores"><i class="fa fa-check"></i><b>3.2.6</b> Key-Value Stores</a></li>
+<li class="chapter" data-level="3.2.7" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#document-oriented-database"><i class="fa fa-check"></i><b>3.2.7</b> Document Oriented Database</a></li>
+<li class="chapter" data-level="3.2.8" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#tabular-databases"><i class="fa fa-check"></i><b>3.2.8</b> Tabular Databases</a></li>
+<li class="chapter" data-level="3.2.9" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#other-big-data-databases"><i class="fa fa-check"></i><b>3.2.9</b> Other Big Data Databases</a></li>
+<li class="chapter" data-level="3.2.10" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-4"><i class="fa fa-check"></i><b>3.2.10</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-and-tradeoffs"><i class="fa fa-check"></i><b>3.3</b> Programming Languages and Tradeoffs</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#tradeoffs"><i class="fa fa-check"></i><b>3.3.1</b> Tradeoffs</a></li>
+<li class="chapter" data-level="3.3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#levels-of-programming-languages"><i class="fa fa-check"></i><b>3.3.2</b> Levels of Programming Languages</a></li>
+<li class="chapter" data-level="3.3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-performance"><i class="fa fa-check"></i><b>3.3.3</b> Programming Languages Performance</a></li>
+<li class="chapter" data-level="3.3.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#learn-rpython"><i class="fa fa-check"></i><b>3.3.4</b> Learn R/Python</a></li>
+<li class="chapter" data-level="3.3.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#python"><i class="fa fa-check"></i><b>3.3.5</b> Python</a></li>
+<li class="chapter" data-level="3.3.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#r"><i class="fa fa-check"></i><b>3.3.6</b> R</a></li>
+<li class="chapter" data-level="3.3.7" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-5"><i class="fa fa-check"></i><b>3.3.7</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="module-4-probability.html"><a href="module-4-probability.html"><i class="fa fa-check"></i><b>4</b> Module 4 Probability</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="module-4-probability.html"><a href="module-4-probability.html#overview-3"><i class="fa fa-check"></i><b>4.0.1</b> Overview</a></li>
+<li class="chapter" data-level="4.1" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-i-random-variables"><i class="fa fa-check"></i><b>4.1</b> Probability Part I: Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="module-4-probability.html"><a href="module-4-probability.html#probability"><i class="fa fa-check"></i><b>4.1.1</b> Probability</a></li>
+<li class="chapter" data-level="4.1.2" data-path="module-4-probability.html"><a href="module-4-probability.html#importance"><i class="fa fa-check"></i><b>4.1.2</b> Importance</a></li>
+<li class="chapter" data-level="4.1.3" data-path="module-4-probability.html"><a href="module-4-probability.html#random-variables"><i class="fa fa-check"></i><b>4.1.3</b> Random Variables</a></li>
+<li class="chapter" data-level="4.1.4" data-path="module-4-probability.html"><a href="module-4-probability.html#expectation-operator"><i class="fa fa-check"></i><b>4.1.4</b> Expectation Operator</a></li>
+<li class="chapter" data-level="4.1.5" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-6"><i class="fa fa-check"></i><b>4.1.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-ii-combining-random-variables"><i class="fa fa-check"></i><b>4.2</b> Probability Part II: Combining Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="module-4-probability.html"><a href="module-4-probability.html#distributions"><i class="fa fa-check"></i><b>4.2.1</b> Distributions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="module-4-probability.html"><a href="module-4-probability.html#definitions"><i class="fa fa-check"></i><b>4.2.2</b> Definitions</a></li>
+<li class="chapter" data-level="4.2.3" data-path="module-4-probability.html"><a href="module-4-probability.html#random-variables-1"><i class="fa fa-check"></i><b>4.2.3</b> Random Variables</a></li>
+<li class="chapter" data-level="4.2.4" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-7"><i class="fa fa-check"></i><b>4.2.4</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-iii-laws-of-probability"><i class="fa fa-check"></i><b>4.3</b> Probability Part III: Laws of Probability</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="module-4-probability.html"><a href="module-4-probability.html#sampling"><i class="fa fa-check"></i><b>4.3.1</b> Sampling</a></li>
+<li class="chapter" data-level="4.3.2" data-path="module-4-probability.html"><a href="module-4-probability.html#law-of-large-numbers"><i class="fa fa-check"></i><b>4.3.2</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="4.3.3" data-path="module-4-probability.html"><a href="module-4-probability.html#central-limit-theorem"><i class="fa fa-check"></i><b>4.3.3</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="4.3.4" data-path="module-4-probability.html"><a href="module-4-probability.html#simplified-implications-of-lln-and-clt"><i class="fa fa-check"></i><b>4.3.4</b> Simplified Implications of LLN and CLT</a></li>
+<li class="chapter" data-level="4.3.5" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-8"><i class="fa fa-check"></i><b>4.3.5</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html"><i class="fa fa-check"></i><b>5</b> Appendix A: Discussions</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-1"><i class="fa fa-check"></i><b>5.1</b> Discussion 1</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#big-data"><i class="fa fa-check"></i><b>5.1.1</b> Big Data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#data-analytics"><i class="fa fa-check"></i><b>5.1.2</b> Data Analytics</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-2"><i class="fa fa-check"></i><b>5.2</b> Discussion 2</a></li>
+<li class="chapter" data-level="5.3" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-3"><i class="fa fa-check"></i><b>5.3</b> Discussion 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes - Data Analytics and Security</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix-a-discussions" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Appendix A: Discussions<a href="appendix-a-discussions.html#appendix-a-discussions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="discussion-1" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Discussion 1<a href="appendix-a-discussions.html#discussion-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It’s easy to find the definitions to Big Data and Data Analytics,
+however, in your own words:</p>
+<ul>
+<li>What comes to mind when you think about Big Data?<br />
+</li>
+<li>What comes to mind when you think about Data Analytics?</li>
+</ul>
+<div id="big-data" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Big Data<a href="appendix-a-discussions.html#big-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>What comes to mind when thinking about Big Data:</strong></p>
+<p>When thinking about Big Data, the first consideration is the size and
+complexity of the data.
+Big Data needs to properly acquired, stored, processed and labeled prior to
+considering analyzing.
+The data can come from several different sources and is likely unstructured
+data with an enormous amount of attributes that need classification.
+Beyond thinking about the volume and variety, the velocity must present some
+challenges as the amount of data that can be produced in such a rapid time
+span can provide to be useful or lack quality and be rendered useless.
+There is also so many ways that data can be collected currently that a lot of
+consideration must be taken into what is necessary, nice to have and not
+needed at all.
+Big Data is very important in an effort for improvement in many industries
+that can help improve human lives but it needs to be considered carefully in
+large effort to avoid any errors or false discoveries.</p>
+</div>
+<div id="data-analytics" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Data Analytics<a href="appendix-a-discussions.html#data-analytics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>What comes to mind when thinking about Data Analytics:</strong></p>
+<p>Data analytics is very important as raw data is analyzed and provides
+insights or conclusions from the information. When considering data analytics,
+I think it is interesting how the conclusions are not only considered in
+numbers or simple answers, but the critical thinking and creativity in
+creating visual representations of the data, such as plots or graphics.
+Data analytics also provides insight into the relation of many different
+attributes that may not even appear relevant when initially approaching a
+problem.</p>
+<p>One specific area I personally have been fascinated by is the use of data
+analytics in sports. There is a wide array of topics that can be investigated
+such as improving performance, recruiting athletes that fit the culture of a
+team, creating matchup strategies, boosting fan engagement and improving health
+management based on historical data.</p>
+</div>
+</div>
+<div id="discussion-2" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Discussion 2<a href="appendix-a-discussions.html#discussion-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Imagine that instead of building a “Google Flu Trends” you were asked to
+build a “Google Terrorism Trends” index.<br />
+</li>
+<li>How is this similar from building Google Flu Trends? How is it different?</li>
+<li>What challenges might you face in building this index?</li>
+</ul>
+<p><strong>Similarities between Google Flu Trends and Google Terrorism Trends:</strong></p>
+<p>Building a Google Terrorism Trends index can have similarity to building
+Google Flu Trends by using information from search queries. In general, they
+both would analyze search data and can consider patterns from real-time search
+queries.
+In both cases, a predictive model can be developed using historical and
+real-time data to identify areas of concern and avoid dangerous outbreaks or
+scenarios.</p>
+<p><strong>Differences between Google Flu Trends and Google Terrorism Trends:</strong></p>
+<p>Contrary to building Google Flu Trends, a Google Terrorism Trends index must
+consider different topics, key words, and the availability of information.
+It is common for a large amount of people to acquire the flu and there is a
+large database from the CDC to assist with predictions for a model.
+In the case of terrorism trends, the data may be sparse and/or classified
+making it difficult to obtain. Terrorism trends may be difficult to predict
+when considering human factors, such as psychological issues from a potential
+terrorist and the possibility of bias from those identifying terrorists.
+When building a terrorism trends index the topics and key words will also
+differ as we must consider things such as weapons, actions, and acquiring
+materials.
+In addition, terrorism threats would not be as predictable compared to flu
+trends, as the flu is seasonal.</p>
+<p><strong>Challenges building a Google Terrorism Trends Index:</strong></p>
+<p>Building a Google Terrorism Trends index has several challenges to consider.
+Terrorism is not as predictable as the flu and not a common occurrence.
+Data collection could be a challenge considering the sensitivity of the data
+needed to predict potential acts, and the willingness of law enforcement and
+intelligence agencies willing to share the data.
+To identify a potential threat, there may be privacy concerns in the data that
+is necessary to collect.
+There may also be challenges obtaining data that is necessary in real-time
+when there could be a lag of considerable time from the different sources
+willing to provide the data.
+If the data is shared, there must also be consideration for potential misuse.
+Considering the potential of terrorism acts also could be influenced by a
+number of factors, such as social issues, politics, economics and
+psychological behavior.
+In addition, terrorism events that occur could create a spike in search
+queries with citizens who are concerned of the act and not necessarily
+looking to commit an act of their own.</p>
+</div>
+<div id="discussion-3" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Discussion 3<a href="appendix-a-discussions.html#discussion-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Consider the idea of having “all the data”.</li>
+</ol>
+<ul>
+<li>Name a situation where having “all the data” means you don’t need to rely on
+sampling and statistics and explain why this is true?<br />
+</li>
+<li>Name another situation where you still do need to rely on sampling statistics,
+even if you do have “all the data” and explain this case as well.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Identify another comment, and politely agree/disagree or clarify the situation.
+It can be a comment on just the “All the data is enough” scenario or the
+“All the data is not enough” scenario.</li>
+</ol>
+<p><strong>Idea of Having All Data:</strong></p>
+<p>Having “all the data” where you don’t need to rely on sampling and statistics</p>
+<p>In a situation where it is necessary to rely on sampling statistics even with
+“all the data”…</p>
+<p><strong>Opinion on another comment:</strong></p>
+<p>My opinion is</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-4-probability.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["INTA6450-Notes-Fall2024.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

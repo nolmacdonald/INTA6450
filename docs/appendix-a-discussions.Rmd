@@ -1,0 +1,218 @@
+# Appendix A: Discussions
+
+## Discussion 1
+
+It’s easy to find the definitions to Big Data and Data Analytics, 
+however, in your own words: 
+
+- What comes to mind when you think about Big Data?  
+- What comes to mind when you think about Data Analytics? 
+
+### Big Data
+
+**What comes to mind when thinking about Big Data:**
+
+When thinking about Big Data, the first consideration is the size and 
+complexity of the data. 
+Big Data needs to properly acquired, stored, processed and labeled prior to 
+considering analyzing. 
+The data can come from several different sources and is likely unstructured 
+data with an enormous amount of attributes that need classification. 
+Beyond thinking about the volume and variety, the velocity must present some 
+challenges as the amount of data that can be produced in such a rapid time 
+span can provide to be useful or lack quality and be rendered useless. 
+There is also so many ways that data can be collected currently that a lot of 
+consideration must be taken into what is necessary, nice to have and not 
+needed at all. 
+Big Data is very important in an effort for improvement in many industries 
+that can help improve human lives but it needs to be considered carefully in 
+large effort to avoid any errors or false discoveries.
+
+### Data Analytics
+
+**What comes to mind when thinking about Data Analytics:**
+
+ Data analytics is very important as raw data is analyzed and provides 
+ insights or conclusions from the information. When considering data analytics,
+ I think it is interesting how the conclusions are not only considered in 
+ numbers or simple answers, but the critical thinking and creativity in 
+ creating visual representations of the data, such as plots or graphics. 
+ Data analytics also provides insight into the relation of many different 
+ attributes that may not even appear relevant when initially approaching a 
+ problem.
+
+One specific area I personally have been fascinated by is the use of data 
+analytics in sports. There is a wide array of topics that can be investigated 
+such as improving performance, recruiting athletes that fit the culture of a 
+team, creating matchup strategies, boosting fan engagement and improving health
+management based on historical data.
+
+## Discussion 2
+
+- Imagine that instead of building a “Google Flu Trends” you were asked to 
+build a “Google Terrorism Trends” index.  
+- How is this similar from building Google Flu Trends? How is it different? 
+- What challenges might you face in building this index? 
+
+**Similarities between Google Flu Trends and Google Terrorism Trends:**
+
+Building a Google Terrorism Trends index can have similarity to building 
+Google Flu Trends by using information from search queries. In general, they 
+both would analyze search data and can consider patterns from real-time search
+queries. 
+In both cases, a predictive model can be developed using historical and 
+real-time data to identify areas of concern and avoid dangerous outbreaks or 
+scenarios.
+
+**Differences between Google Flu Trends and Google Terrorism Trends:**
+
+Contrary to building Google Flu Trends, a Google Terrorism Trends index must 
+consider different topics, key words, and the availability of information. 
+It is common for a large amount of people to acquire the flu and there is a 
+large database from the CDC to assist with predictions for a model. 
+In the case of terrorism trends, the data may be sparse and/or classified 
+making it difficult to obtain. Terrorism trends may be difficult to predict 
+when considering human factors, such as psychological issues from a potential 
+terrorist and the possibility of bias from those identifying terrorists. 
+When building a terrorism trends index the topics and key words will also 
+differ as we must consider things such as weapons, actions, and acquiring 
+materials. 
+In addition, terrorism threats would not be as predictable compared to flu 
+trends, as the flu is seasonal.
+
+**Challenges building a Google Terrorism Trends Index:**
+
+Building a Google Terrorism Trends index has several challenges to consider. 
+Terrorism is not as predictable as the flu and not a common occurrence. 
+Data collection could be a challenge considering the sensitivity of the data 
+needed to predict potential acts, and the willingness of law enforcement and 
+intelligence agencies willing to share the data. 
+To identify a potential threat, there may be privacy concerns in the data that 
+is necessary to collect. 
+There may also be challenges obtaining data that is necessary in real-time 
+when there could be a lag of considerable time from the different sources 
+willing to provide the data. 
+If the data is shared, there must also be consideration for potential misuse. 
+Considering the potential of terrorism acts also could be influenced by a 
+number of factors, such as social issues, politics, economics and 
+psychological behavior. 
+In addition, terrorism events that occur could create a spike in search 
+queries with citizens who are concerned of the act and not necessarily 
+looking to commit an act of their own.
+
+## Discussion 3
+
+### Prompt
+
+1. Consider the idea of having “all the data”.
+
+  - Name a situation where having “all the data” means you don’t need to rely on 
+sampling and statistics and explain why this is true?  
+  - Name another situation where you still do need to rely on sampling statistics, 
+even if you do have “all the data” and explain this case as well. 
+
+2. Identify another comment, and politely agree/disagree or clarify the situation. 
+It can be a comment on just the “All the data is enough” scenario or the 
+“All the data is not enough” scenario. 
+
+### Solution
+
+**Idea of Having All Data:**
+
+**No Reliance on Sampling and Statistics**
+
+*Example: NFL League Leaders in a Stats Category*
+
+Having "all the data" where you don't need to rely on sampling and statistics could occur
+when you have a finite, manageable dataset where all observations are available and
+can be directly analyzed.
+For example, determining the league leader in the NFL for a statistics category
+such as rushing yards. Determining who had the most rushing yards in a season
+with all the data doesn't require sampling and statistics because you
+have all the data, or exact rushing yards for every player in every game
+throughout the season.
+You don’t need to sample because you can directly compute the precise values 
+from the complete dataset.
+
+This is true because you have access to the entire population, meaning there
+is no uncertainty or error from missing data. In addition, the dataset is finite
+and complete, so results computed will reflect reality without
+need for approximation.
+
+**Relying on Sampling Statistics**
+
+*Example: Evaluating Quarterback Performance Based on NFL Defensive Schemes*
+
+Assuming that you have "all the data" but still require on sampling and statistical methods
+would be in a case where you're working with big data. For example, if you are
+working with continuous or real-time data.
+
+An example of this would be analyzing player performance in the NFL over an entire
+season. Assume that we have all the data from the season, including every play,
+every player's stats, every team's strategy, and all advanced metrics such as
+speed, distance covered or pass completion probability.
+Using this data to evaluate how a quarterback would perform against different
+types of defensive schemes (zone, man-to-man) would still require sampling and statistical
+methods.
+
+Relying on sampling statistics still may be required in this case due to the large
+amount of data to process. Data on every play for the quarterback still would
+not mean that they face every defensive scheme equally, so we would need to sample
+subsets of the plays based on defensive scheme and use statistics for analysis.
+
+In addition, we need to handle imbalances in data since the quarterback did
+not face all schemes equally, as well as all schemes and teams do not have the 
+same effectiveness. This requires normalizing data or applying statistical
+weighting. Finally, with all the data you still want to use this to predict future
+performance of the player or determine underlying trends that may be applicable
+beyond the current season. For example, determining how the quarterback could
+perform against a similar defensive scheme next season will require more than
+raw data. In this case, regression models, sampling and inference techniques
+would be used to make predictions based on patterns.
+
+In the case of relying on sampling statistics, this is true because
+despite having "all the data" from a full season.
+Sampling and statistics are still critical for deeper analysis, 
+adequate comparisons, and future predictions.
+
+**Opinion on another comment:**
+
+An example could be a business that tracks all its inventory in real-time using a fully integrated and accurate system. The systems can identify each product's exact count and location, providing accurate data for order fulfillment and restocking. Having this data about inventory can eliminate the need for sampling and statistics.
+
+I agree that this is an example of not needing to rely on sampling and statistics.
+This is true because business tracking all inventory in real-time with
+a fully integrated and accurate system has complete and exact data including
+exact product counts, item location, and time periods of items sold or restocked.
+The key is that all the data is provided without gaps or uncertainty so
+business decisions can be made on the entire dataset rather than estimates or projections.
+This removes the need to sample or estimate quantities with the full picture available.
+
+## Discussion 4
+
+In a linear regression model, we pick two variables (X and Y) to model 
+their relationship. 
+We also include the sampling frame, which is a 'row' in the data set.
+With this in mind, identify an example problem where a linear regression 
+model might make sense (such as wages and schooling). 
+What is your Y variable? Your X variables? 
+What is a “row” in your data set (include sample variables)?
+
+**Linear Regression Model:**
+
+## Discussion 5
+
+Identify an example problem where a probit model might sense 
+(such as in the labor force and kids under 6). 
+What is your Y variable? Your X variables? 
+What is a “row” in your data set? 
+
+**Probit Model:**
+
+## Discussion 6
+
+Identify an example problem where an outlier detection model might sense. 
+What are your variables? What is a “row” in your data set? 
+How do you define “normal” and what is “far”? 
+
+**Outlier Detection Model:**
+

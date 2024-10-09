@@ -3,10 +3,10 @@ output_dir: "./"  # Directory where the output will be saved
 delete_merged_file: true
 language:
   label:
-    fig: "Figure"
-    tab: "Table"
-    eq: "Equation"
-    thm: "Theorem"
+    fig: "Figure "
+    tab: "Table "
+    eq: "Equation "
+    thm: "Theorem "
 
 bibliography: ["references/references.bib"]
 csl: "references/ieee.csl"
@@ -16,4 +16,6 @@ rmd_files:
   - "m1-intro.Rmd"
   - "m2-hardware-trends.Rmd"
   - "m3-software-trends.Rmd"
+  - "m4-probability.Rmd"
+  - "appendix-a-discussions.Rmd"
   

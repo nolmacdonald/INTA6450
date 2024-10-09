@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Module 4 Probability | Course Notes - Data Analytics and Security</title>
+  <meta name="description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Module 4 Probability | Course Notes - Data Analytics and Security" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Module 4 Probability | Course Notes - Data Analytics and Security" />
+  
+  <meta name="twitter:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+<meta name="author" content="Nolan MacDonald" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="module-3---software-trends.html"/>
+<link rel="next" href="appendix-a-discussions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="module-1---introduction.html"><a href="module-1---introduction.html"><i class="fa fa-check"></i><b>1</b> Module 1 - Introduction</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#overview"><i class="fa fa-check"></i><b>1.0.1</b> Overview</a></li>
+<li class="chapter" data-level="1.0.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#resources"><i class="fa fa-check"></i><b>1.0.2</b> Resources</a></li>
+<li class="chapter" data-level="1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#what-is-big-data"><i class="fa fa-check"></i><b>1.1</b> What is Big Data?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#three-organizing-questions"><i class="fa fa-check"></i><b>1.1.1</b> Three Organizing Questions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---3-vs"><i class="fa fa-check"></i><b>1.1.2</b> Big Data - “3 V’s”</a></li>
+<li class="chapter" data-level="1.1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data"><i class="fa fa-check"></i><b>1.1.3</b> Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#volume"><i class="fa fa-check"></i><b>1.1.4</b> Volume</a></li>
+<li class="chapter" data-level="1.1.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#units-of-data"><i class="fa fa-check"></i><b>1.1.5</b> Units of Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#server-rack"><i class="fa fa-check"></i><b>1.1.6</b> Server Rack</a></li>
+<li class="chapter" data-level="1.1.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-center"><i class="fa fa-check"></i><b>1.1.7</b> Data Center</a></li>
+<li class="chapter" data-level="1.1.8" data-path="module-1---introduction.html"><a href="module-1---introduction.html#variety"><i class="fa fa-check"></i><b>1.1.8</b> Variety</a></li>
+<li class="chapter" data-level="1.1.9" data-path="module-1---introduction.html"><a href="module-1---introduction.html#aspects-of-life-recorded-in-2020"><i class="fa fa-check"></i><b>1.1.9</b> Aspects of life recorded in 2020</a></li>
+<li class="chapter" data-level="1.1.10" data-path="module-1---introduction.html"><a href="module-1---introduction.html#velocity"><i class="fa fa-check"></i><b>1.1.10</b> Velocity</a></li>
+<li class="chapter" data-level="1.1.11" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-in-real-time"><i class="fa fa-check"></i><b>1.1.11</b> Data in Real Time</a></li>
+<li class="chapter" data-level="1.1.12" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---a-broad-term"><i class="fa fa-check"></i><b>1.1.12</b> Big Data - A Broad Term</a></li>
+<li class="chapter" data-level="1.1.13" data-path="module-1---introduction.html"><a href="module-1---introduction.html#concepts-that-underlie-big-data"><i class="fa fa-check"></i><b>1.1.13</b> Concepts that underlie big data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends"><i class="fa fa-check"></i><b>1.2</b> Google Flu Trends</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends-gft"><i class="fa fa-check"></i><b>1.2.1</b> Google Flu Trends (GFT)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#number-of-top-queries-and-correlation"><i class="fa fa-check"></i><b>1.2.2</b> Number of top queries and correlation</a></li>
+<li class="chapter" data-level="1.2.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#issues"><i class="fa fa-check"></i><b>1.2.3</b> Issues</a></li>
+<li class="chapter" data-level="1.2.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#assumptions-and-issues"><i class="fa fa-check"></i><b>1.2.4</b> Assumptions and Issues</a></li>
+<li class="chapter" data-level="1.2.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#summary"><i class="fa fa-check"></i><b>1.2.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#required-reading-notes"><i class="fa fa-check"></i><b>1.3</b> Required Reading Notes</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#introduction"><i class="fa fa-check"></i><b>1.3.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.3.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data-hubris"><i class="fa fa-check"></i><b>1.3.2</b> Big data hubris</a></li>
+<li class="chapter" data-level="1.3.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#algorithm-dynamics"><i class="fa fa-check"></i><b>1.3.3</b> Algorithm Dynamics</a></li>
+<li class="chapter" data-level="1.3.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#transparency-granularity-and-all-data"><i class="fa fa-check"></i><b>1.3.4</b> Transparency, Granularity and All-Data</a></li>
+<li class="chapter" data-level="1.3.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#bytes"><i class="fa fa-check"></i><b>1.3.5</b> Bytes</a></li>
+<li class="chapter" data-level="1.3.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#vs"><i class="fa fa-check"></i><b>1.3.6</b> 5 “V’s”</a></li>
+<li class="chapter" data-level="1.3.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-analytics-types"><i class="fa fa-check"></i><b>1.3.7</b> Data analytics types</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html"><i class="fa fa-check"></i><b>2</b> Module 2 - Hardware Trends</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#overview-1"><i class="fa fa-check"></i><b>2.0.1</b> Overview</a></li>
+<li class="chapter" data-level="2.0.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#resources-1"><i class="fa fa-check"></i><b>2.0.2</b> Resources</a></li>
+<li class="chapter" data-level="2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#trends-in-computer-hardware"><i class="fa fa-check"></i><b>2.1</b> Trends in Computer Hardware</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#parts-of-a-computer"><i class="fa fa-check"></i><b>2.1.1</b> Parts of a Computer</a></li>
+<li class="chapter" data-level="2.1.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu"><i class="fa fa-check"></i><b>2.1.2</b> CPU</a></li>
+<li class="chapter" data-level="2.1.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#storing-information"><i class="fa fa-check"></i><b>2.1.3</b> Storing Information</a></li>
+<li class="chapter" data-level="2.1.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#level-of-closeness-to-look-up-a-byte"><i class="fa fa-check"></i><b>2.1.4</b> Level of closeness to look up a byte</a></li>
+<li class="chapter" data-level="2.1.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu-limits"><i class="fa fa-check"></i><b>2.1.5</b> CPU Limits</a></li>
+<li class="chapter" data-level="2.1.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#memory-physical-limits"><i class="fa fa-check"></i><b>2.1.6</b> Memory Physical Limits</a></li>
+<li class="chapter" data-level="2.1.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#hard-disk-physical-limits"><i class="fa fa-check"></i><b>2.1.7</b> Hard Disk Physical Limits</a></li>
+<li class="chapter" data-level="2.1.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-1"><i class="fa fa-check"></i><b>2.1.8</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#computer-architecture-for-big-data"><i class="fa fa-check"></i><b>2.2</b> Computer Architecture for Big Data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#big-data-performance"><i class="fa fa-check"></i><b>2.2.1</b> Big Data Performance</a></li>
+<li class="chapter" data-level="2.2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#discussion-questions"><i class="fa fa-check"></i><b>2.2.2</b> Discussion Questions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#strategies"><i class="fa fa-check"></i><b>2.2.3</b> Strategies</a></li>
+<li class="chapter" data-level="2.2.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#load-balancing"><i class="fa fa-check"></i><b>2.2.4</b> Load Balancing</a></li>
+<li class="chapter" data-level="2.2.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-masterworker-architecture"><i class="fa fa-check"></i><b>2.2.5</b> Databases for Big Data: Master/Worker Architecture</a></li>
+<li class="chapter" data-level="2.2.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-eventual-consistency"><i class="fa fa-check"></i><b>2.2.6</b> Databases for Big Data: Eventual Consistency</a></li>
+<li class="chapter" data-level="2.2.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#serving-multiple-customers"><i class="fa fa-check"></i><b>2.2.7</b> Serving Multiple Customers</a></li>
+<li class="chapter" data-level="2.2.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#sorting-a-big-list"><i class="fa fa-check"></i><b>2.2.8</b> Sorting a Big List</a></li>
+<li class="chapter" data-level="2.2.9" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-2"><i class="fa fa-check"></i><b>2.2.9</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#software-architecture-for-big-data"><i class="fa fa-check"></i><b>2.3</b> Software Architecture for Big Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html"><i class="fa fa-check"></i><b>3</b> Module 3 - Software Trends</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#overview-2"><i class="fa fa-check"></i><b>3.0.1</b> Overview</a></li>
+<li class="chapter" data-level="3.0.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#resources-2"><i class="fa fa-check"></i><b>3.0.2</b> Resources</a></li>
+<li class="chapter" data-level="3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#the-importance-of-software"><i class="fa fa-check"></i><b>3.1</b> The Importance of Software</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#how-would-you-make-a-search-engine"><i class="fa fa-check"></i><b>3.1.1</b> How Would You Make a Search Engine?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#indexing"><i class="fa fa-check"></i><b>3.1.2</b> Indexing</a></li>
+<li class="chapter" data-level="3.1.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-rankings"><i class="fa fa-check"></i><b>3.1.3</b> Relevance Rankings</a></li>
+<li class="chapter" data-level="3.1.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-indexing"><i class="fa fa-check"></i><b>3.1.4</b> Relevance + Indexing</a></li>
+<li class="chapter" data-level="3.1.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#purpose"><i class="fa fa-check"></i><b>3.1.5</b> Purpose</a></li>
+<li class="chapter" data-level="3.1.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-3"><i class="fa fa-check"></i><b>3.1.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-or-just-data"><i class="fa fa-check"></i><b>3.2</b> Big Data or Just Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-vs-data"><i class="fa fa-check"></i><b>3.2.1</b> Big Data vs Data?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#two-database-queries"><i class="fa fa-check"></i><b>3.2.2</b> Two Database Queries</a></li>
+<li class="chapter" data-level="3.2.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#current-database-world"><i class="fa fa-check"></i><b>3.2.3</b> Current Database World</a></li>
+<li class="chapter" data-level="3.2.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#databases"><i class="fa fa-check"></i><b>3.2.4</b> Databases</a></li>
+<li class="chapter" data-level="3.2.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#structured-query-language-sql"><i class="fa fa-check"></i><b>3.2.5</b> Structured Query Language (SQL)</a></li>
+<li class="chapter" data-level="3.2.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#key-value-stores"><i class="fa fa-check"></i><b>3.2.6</b> Key-Value Stores</a></li>
+<li class="chapter" data-level="3.2.7" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#document-oriented-database"><i class="fa fa-check"></i><b>3.2.7</b> Document Oriented Database</a></li>
+<li class="chapter" data-level="3.2.8" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#tabular-databases"><i class="fa fa-check"></i><b>3.2.8</b> Tabular Databases</a></li>
+<li class="chapter" data-level="3.2.9" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#other-big-data-databases"><i class="fa fa-check"></i><b>3.2.9</b> Other Big Data Databases</a></li>
+<li class="chapter" data-level="3.2.10" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-4"><i class="fa fa-check"></i><b>3.2.10</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-and-tradeoffs"><i class="fa fa-check"></i><b>3.3</b> Programming Languages and Tradeoffs</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#tradeoffs"><i class="fa fa-check"></i><b>3.3.1</b> Tradeoffs</a></li>
+<li class="chapter" data-level="3.3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#levels-of-programming-languages"><i class="fa fa-check"></i><b>3.3.2</b> Levels of Programming Languages</a></li>
+<li class="chapter" data-level="3.3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-performance"><i class="fa fa-check"></i><b>3.3.3</b> Programming Languages Performance</a></li>
+<li class="chapter" data-level="3.3.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#learn-rpython"><i class="fa fa-check"></i><b>3.3.4</b> Learn R/Python</a></li>
+<li class="chapter" data-level="3.3.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#python"><i class="fa fa-check"></i><b>3.3.5</b> Python</a></li>
+<li class="chapter" data-level="3.3.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#r"><i class="fa fa-check"></i><b>3.3.6</b> R</a></li>
+<li class="chapter" data-level="3.3.7" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-5"><i class="fa fa-check"></i><b>3.3.7</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="module-4-probability.html"><a href="module-4-probability.html"><i class="fa fa-check"></i><b>4</b> Module 4 Probability</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="module-4-probability.html"><a href="module-4-probability.html#overview-3"><i class="fa fa-check"></i><b>4.0.1</b> Overview</a></li>
+<li class="chapter" data-level="4.1" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-i-random-variables"><i class="fa fa-check"></i><b>4.1</b> Probability Part I: Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="module-4-probability.html"><a href="module-4-probability.html#probability"><i class="fa fa-check"></i><b>4.1.1</b> Probability</a></li>
+<li class="chapter" data-level="4.1.2" data-path="module-4-probability.html"><a href="module-4-probability.html#importance"><i class="fa fa-check"></i><b>4.1.2</b> Importance</a></li>
+<li class="chapter" data-level="4.1.3" data-path="module-4-probability.html"><a href="module-4-probability.html#random-variables"><i class="fa fa-check"></i><b>4.1.3</b> Random Variables</a></li>
+<li class="chapter" data-level="4.1.4" data-path="module-4-probability.html"><a href="module-4-probability.html#expectation-operator"><i class="fa fa-check"></i><b>4.1.4</b> Expectation Operator</a></li>
+<li class="chapter" data-level="4.1.5" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-6"><i class="fa fa-check"></i><b>4.1.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-ii-combining-random-variables"><i class="fa fa-check"></i><b>4.2</b> Probability Part II: Combining Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="module-4-probability.html"><a href="module-4-probability.html#multivariate-distributions"><i class="fa fa-check"></i><b>4.2.1</b> Multivariate Distributions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="module-4-probability.html"><a href="module-4-probability.html#more-complicated-distribution"><i class="fa fa-check"></i><b>4.2.2</b> More Complicated Distribution</a></li>
+<li class="chapter" data-level="4.2.3" data-path="module-4-probability.html"><a href="module-4-probability.html#more-realistic-distribution"><i class="fa fa-check"></i><b>4.2.3</b> More Realistic Distribution</a></li>
+<li class="chapter" data-level="4.2.4" data-path="module-4-probability.html"><a href="module-4-probability.html#definitions"><i class="fa fa-check"></i><b>4.2.4</b> Definitions</a></li>
+<li class="chapter" data-level="4.2.5" data-path="module-4-probability.html"><a href="module-4-probability.html#more-random-variables"><i class="fa fa-check"></i><b>4.2.5</b> More Random Variables</a></li>
+<li class="chapter" data-level="4.2.6" data-path="module-4-probability.html"><a href="module-4-probability.html#sum-of-coin-flips"><i class="fa fa-check"></i><b>4.2.6</b> Sum of Coin Flips</a></li>
+<li class="chapter" data-level="4.2.7" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-7"><i class="fa fa-check"></i><b>4.2.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-iii-laws-of-probability"><i class="fa fa-check"></i><b>4.3</b> Probability Part III: Laws of Probability</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="module-4-probability.html"><a href="module-4-probability.html#sampling"><i class="fa fa-check"></i><b>4.3.1</b> Sampling</a></li>
+<li class="chapter" data-level="4.3.2" data-path="module-4-probability.html"><a href="module-4-probability.html#creating-samples-draws-from-a-population"><i class="fa fa-check"></i><b>4.3.2</b> Creating Samples: Draws from a Population</a></li>
+<li class="chapter" data-level="4.3.3" data-path="module-4-probability.html"><a href="module-4-probability.html#modeling-and-sampling"><i class="fa fa-check"></i><b>4.3.3</b> Modeling and Sampling</a></li>
+<li class="chapter" data-level="4.3.4" data-path="module-4-probability.html"><a href="module-4-probability.html#sampling-and-big-data"><i class="fa fa-check"></i><b>4.3.4</b> Sampling and Big Data</a></li>
+<li class="chapter" data-level="4.3.5" data-path="module-4-probability.html"><a href="module-4-probability.html#law-of-large-numbers"><i class="fa fa-check"></i><b>4.3.5</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="4.3.6" data-path="module-4-probability.html"><a href="module-4-probability.html#what-does-law-of-large-numbers-mean-for-us"><i class="fa fa-check"></i><b>4.3.6</b> What Does Law of Large Numbers Mean for Us?</a></li>
+<li class="chapter" data-level="4.3.7" data-path="module-4-probability.html"><a href="module-4-probability.html#central-limit-theorem"><i class="fa fa-check"></i><b>4.3.7</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="4.3.8" data-path="module-4-probability.html"><a href="module-4-probability.html#simplified-implications-of-lln-and-clt"><i class="fa fa-check"></i><b>4.3.8</b> Simplified Implications of LLN and CLT</a></li>
+<li class="chapter" data-level="4.3.9" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-8"><i class="fa fa-check"></i><b>4.3.9</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html"><i class="fa fa-check"></i><b>5</b> Appendix A: Discussions</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-1"><i class="fa fa-check"></i><b>5.1</b> Discussion 1</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#big-data"><i class="fa fa-check"></i><b>5.1.1</b> Big Data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#data-analytics"><i class="fa fa-check"></i><b>5.1.2</b> Data Analytics</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-2"><i class="fa fa-check"></i><b>5.2</b> Discussion 2</a></li>
+<li class="chapter" data-level="5.3" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-3"><i class="fa fa-check"></i><b>5.3</b> Discussion 3</a></li>
+<li class="chapter" data-level="5.4" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-4"><i class="fa fa-check"></i><b>5.4</b> Discussion 4</a></li>
+<li class="chapter" data-level="5.5" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-5"><i class="fa fa-check"></i><b>5.5</b> Discussion 5</a></li>
+<li class="chapter" data-level="5.6" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-6"><i class="fa fa-check"></i><b>5.6</b> Discussion 6</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes - Data Analytics and Security</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-4-probability" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Module 4 Probability<a href="module-4-probability.html#module-4-probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-3" class="section level3 hasAnchor" number="4.0.1">
+<h3><span class="header-section-number">4.0.1</span> Overview<a href="module-4-probability.html#overview-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Big data fundamentally relies on the ability to analyze, draw conclusions,
+or make predictions from existing data and about new data.
+In this course, we will do a complete conceptual tour of the full taxonomy of
+data methods.
+The first part of this will be to focus on understanding probability and
+sampling, which always used, either implicitly or explicitly,
+in all data analysis.</p>
+<ul>
+<li>Identify sampling assumptions in statements about data</li>
+<li>Recall their knowledge of probability</li>
+<li>Recall their knowledge of how the law of large numbers applies to big data</li>
+</ul>
+</div>
+<div id="probability-part-i-random-variables" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Probability Part I: Random Variables<a href="module-4-probability.html#probability-part-i-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Module 4.1 - Probability Part I: Random Variables (7:04)</em></p>
+<div id="probability" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Probability<a href="module-4-probability.html#probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Study of uncertainty through the study of random variables
+<ul>
+<li>Has a <strong>set of potential outcomes</strong></li>
+<li>Has a <strong>probability distribution</strong> over outcomes</li>
+</ul></li>
+<li>Example: The outcome of a dice role as a random variable
+<ul>
+<li>Set of potential outcomes: 1, 2, 3, 4, 5, 6</li>
+<li>Probability distribution f (DICE VALUE)</li>
+<li>Probability f (DICE VALUE = x) is the chance that the die roll is x</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="figures/m4.1-prob-dist.png" alt="Probability Distribution" width="190" />
+<p class="caption">
+Figure 4.1: Probability Distribution
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="figures/m4.1-prob-dist-continuous.png" alt="Continuous Probability Distribution" width="202" />
+<p class="caption">
+Figure 4.2: Continuous Probability Distribution
+</p>
+</div>
+</div>
+<div id="importance" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Importance<a href="module-4-probability.html#importance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Probabilitity is the basic framework used to model data</p></li>
+<li><p>Flu Trends:</p>
+<ul>
+<li>Random variable: Number of flu cases in a state in a week</li>
+<li>Potential outcomes: 0, 146, 10m, etc</li>
+<li>Probability distribution: ???</li>
+</ul></li>
+<li><p>Consumer Modeling:</p>
+<ul>
+<li>Random variable: Did I purchase X book from Amazon?</li>
+<li>Potential outcomes: yes/no</li>
+<li>Probability distribution: ???</li>
+</ul></li>
+<li><p>Threat Modeling:</p>
+<ul>
+<li>Random variable: Is particular individual a threat?</li>
+<li>Potential outcomes: yes/no</li>
+<li>Probability distribution: ???</li>
+</ul></li>
+</ul>
+</div>
+<div id="random-variables" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Random Variables<a href="module-4-probability.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Mean: Average
+<ul>
+<li>Graph of probability distribution would balance</li>
+</ul></li>
+<li>Variance: Random variables have a variance
+<ul>
+<li>How spread out a distribution is</li>
+<li><span style="color:green">Green: Lowest Variance</span></li>
+<li><span style="color:orange">Orange: Highest Variance</span></li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="figures/m4.1-variance.png" alt="Random Variables Have a Variance" width="326" />
+<p class="caption">
+Figure 4.3: Random Variables Have a Variance
+</p>
+</div>
+<ul>
+<li>Quantiles: Random variables have quantiles
+<ul>
+<li>p-th quantile (q) of random variable X is the value of x where is a p-percent
+chance of X having a value at or below q</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+prob(X&lt;q)=p
+\]</span></p>
+<ul>
+<li>Example: The 83rd quantile of rolling a die is 5
+<ul>
+<li>5/6 of the time (83%) we role a number 1-5</li>
+</ul></li>
+<li>Example: 60th percentile of household income in US is $80,000
+<ul>
+<li>60% of household make less</li>
+<li>or if we draw a random household from the US, 60% chance makes less than $80,000</li>
+</ul></li>
+</ul>
+</div>
+<div id="expectation-operator" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Expectation Operator<a href="module-4-probability.html#expectation-operator" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>In addition to calculating mean and variance we can calculate the expected value of any function of the random variable X
+<ul>
+<li>Called E[g(x)] for the function g</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+E[f(x)] = \frac{1}{6}f(1) + \frac{1}{6}f(2) + \frac{1}{6}f(3) + \frac{1}{6}f(4) + \frac{1}{6}f(5) + \frac{1}{6}f(6)
+\]</span></p>
+<p><span class="math inline">\(E[f(x)]\)</span> is the <strong>expectation operator</strong></p>
+<ul>
+<li>The intuition is: What is the avg. value of the function when g depends on the outcome of the dice roll</li>
+<li>Example: Car salesperson wants to calculate her bonus
+<ul>
+<li>If she sell no cars, she gets $1K (Prob. 1/4)</li>
+<li>If she sell 1-5 cars, she gets $4K (Prob. 1/2)</li>
+<li>If she sell more than 5 cars, she gets $10K (Prob. 1/4)</li>
+<li>The expectation of he bonus is:</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+1000 (\frac{1}{4}) + 4000(\frac{1}{2}) + 10000(\frac{1}{4}) = 4,750
+\]</span></p>
+</div>
+<div id="summary-6" class="section level3 hasAnchor" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> Summary<a href="module-4-probability.html#summary-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Probability is the likelihood of a certain outcome</li>
+<li>Random variables:
+<ul>
+<li>Have a mean, which is located where the distribution curve would balance</li>
+<li>Have a variance, which is represented in how spread out the distribution is</li>
+<li>Function of random variables are <em>also random variables</em></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="probability-part-ii-combining-random-variables" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Probability Part II: Combining Random Variables<a href="module-4-probability.html#probability-part-ii-combining-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Module 4.2 - Probability Part II: Combining Random Variables (6:57)</em></p>
+<div id="multivariate-distributions" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Multivariate Distributions<a href="module-4-probability.html#multivariate-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>You can have multiple random variables described together</li>
+<li>They have a joint distribution f(x,y)</li>
+<li>For rolling two dice, the distribution is:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/6</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/6</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/6</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/6</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/6</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/36</td>
+<td>1/6</td>
+</tr>
+<tr class="odd">
+<td>Subtotal</td>
+<td>1/6</td>
+<td>1/6</td>
+<td>1/6</td>
+<td>1/6</td>
+<td>1/6</td>
+<td>1/6</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="more-complicated-distribution" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> More Complicated Distribution<a href="module-4-probability.html#more-complicated-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>What if every time one die was different than the other by 3 or more, we rerolled?</li>
+</ul>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>x/y</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>Subtotal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1/8</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>0</td>
+<td>0</td>
+<td>1/6</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>0</td>
+<td>5/24</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>5/24</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/6</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/24</td>
+<td>1/8</td>
+</tr>
+<tr class="odd">
+<td>Subtotal</td>
+<td>1/8</td>
+<td>1/6</td>
+<td>5/24</td>
+<td>5/25</td>
+<td>1/6</td>
+<td>1/8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Marginal distribution</strong> of second die roll f(y)? <strong>Bottom Row</strong></li>
+<li>Conditional on the first roll being 5, what is the <strong>conditional distribution</strong>
+of y given that:
+<ul>
+<li>x = 5 (denoted f(y|x = 5))? <strong>Fifth column to the right</strong></li>
+</ul></li>
+</ul>
+</div>
+<div id="more-realistic-distribution" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> More Realistic Distribution<a href="module-4-probability.html#more-realistic-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Distribution of wages for individuals, condition on years of schooling completed
+<ul>
+<li>What is the conditional distribution of wages given 12 years of education?</li>
+<li>What is the marginal distribution of wages?</li>
+</ul></li>
+</ul>
+<p><strong>Violin Plot:</strong> Relative amount of data that exists at each level of wages</p>
+<p><img src="INTA6450-Notes-Fall2024_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<ul>
+<li>Understand conditional distributions and dependence of random variables</li>
+</ul>
+</div>
+<div id="definitions" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Definitions<a href="module-4-probability.html#definitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>The initial two rolls of dice were independent, which means that the table entries
+equal the product of the two margin subtotal column values <span class="math inline">\(1/6\times1/6=1/36\)</span>
+<ul>
+<li>If two things don’t depend on each other then the probability of both events
+happening is the probability of one times the probability of the other</li>
+</ul></li>
+<li>Correlation
+<ul>
+<li>The correlation between X and Y is the expected amount by which X is above average
+when Y is above average:</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+E[(X-E[x])(Y-E[Y])]
+\]</span></p>
+<ul>
+<li>If X is high when Y is high - <strong>positively correlated</strong> (e.g. flu search terms and flu incidence)</li>
+<li>If X is high when Y is low - <strong>negatively correlated</strong> (e.g., hours studying and rainfall)</li>
+</ul>
+</div>
+<div id="more-random-variables" class="section level3 hasAnchor" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> More Random Variables<a href="module-4-probability.html#more-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>You can have functions of random variables, which are also random variables
+<ul>
+<li>The sum of rolls of two dice</li>
+<li>2 times the number that rolls on a single die</li>
+<li>Sum of heads</li>
+</ul></li>
+<li>Component random variables depend on their individual constituents</li>
+</ul>
+</div>
+<div id="sum-of-coin-flips" class="section level3 hasAnchor" number="4.2.6">
+<h3><span class="header-section-number">4.2.6</span> Sum of Coin Flips<a href="module-4-probability.html#sum-of-coin-flips" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Think of planko board similar to coin flips</li>
+<li>50/50 chance the ball goes left or right when it hits one of the pins</li>
+<li>50/50 chance for 1, 2, 3, 4, 5, 6th rows</li>
+<li>Sums of lefts and rights create distribution</li>
+</ul>
+<p><img src="figures/m4.2-sum_coin_flips.png" width="110" /></p>
+</div>
+<div id="summary-7" class="section level3 hasAnchor" number="4.2.7">
+<h3><span class="header-section-number">4.2.7</span> Summary<a href="module-4-probability.html#summary-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Random variables can have dependencies
+<ul>
+<li>Examples include constrained dice and wages/education</li>
+</ul></li>
+<li>Functions of random variables are also random variables</li>
+<li>With sum of coin flips, we’re starting to see how random variables relate to data</li>
+</ul>
+</div>
+</div>
+<div id="probability-part-iii-laws-of-probability" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Probability Part III: Laws of Probability<a href="module-4-probability.html#probability-part-iii-laws-of-probability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Module 4.3 - Probability Part III: Laws of Probability (9:37)</em></p>
+<div id="sampling" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Sampling<a href="module-4-probability.html#sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>The way we think about data to analyze is as a <strong>sample</strong>
+<ul>
+<li>This is the only game in town (only approach)</li>
+</ul></li>
+<li>We want to look at the distribution of a bunch of random variables</li>
+<li>So we observe the outcomes of that random sample a lot of times
+<ul>
+<li>Dice behavior - roll dice a bunch to get outcomes</li>
+<li>Backgrounds determine wages - survey a bunch of people</li>
+<li>Analyze customer behavior - survey a bunch of customers</li>
+</ul></li>
+<li>We usually assume that observations are <strong>independent</strong>
+<ul>
+<li>This isn’t strictly necessary, as long as you know specifically how things are independent</li>
+<li>For example, the Current Population Survey, which measure unemployment in the US</li>
+</ul></li>
+</ul>
+</div>
+<div id="creating-samples-draws-from-a-population" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Creating Samples: Draws from a Population<a href="module-4-probability.html#creating-samples-draws-from-a-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Population:</strong> Group of units from which each observation is drawn</li>
+<li>Term naturally applies to thinking about people or group of animals
+<ul>
+<li>All the people in the US</li>
+</ul></li>
+<li>When we roll dice what is our population?
+<ul>
+<li>Abstract random variable which generates dice rolls</li>
+<li>When you think about it, this is what we always want to know about
+<ul>
+<li>The abstract die-roll like even which generates flu?</li>
+</ul></li>
+</ul></li>
+<li>Our <strong>population</strong> in a lot of cases makes more sense to think of as a <strong>data generating process</strong>
+<ul>
+<li>We try to use the <strong>sample</strong> to decide about the data generating process</li>
+<li>If we know the data generating process, we can make predictions</li>
+</ul></li>
+</ul>
+</div>
+<div id="modeling-and-sampling" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Modeling and Sampling<a href="module-4-probability.html#modeling-and-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Typically want to understand something about the random variable X (or die rolls) from
+seeing a bunch of observation</li>
+<li>What does a model mean here?
+<ul>
+<li>Typically we think E[X] (expectations of a random variable) depends on some factors</li>
+<li>e.g., expectation of how much money I make depends on how long I went to school</li>
+<li>e.g., Expectation of how many flu cases depends on how many times people Google flu related symptoms</li>
+</ul></li>
+</ul>
+</div>
+<div id="sampling-and-big-data" class="section level3 hasAnchor" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Sampling and Big Data<a href="module-4-probability.html#sampling-and-big-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>In this framework, what does it mean to have “all” the data?</strong>
+<ul>
+<li>Nothing! What would it mean to have all the dice rolls?</li>
+</ul></li>
+<li>Possible exception: What if you only care about the model for people you have data for
+<ul>
+<li>You have a set of customers</li>
+<li>Your model has Y as whether a person buys a particular good, and X as whether you
+show them a blue or red website</li>
+</ul></li>
+</ul>
+</div>
+<div id="law-of-large-numbers" class="section level3 hasAnchor" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Law of Large Numbers<a href="module-4-probability.html#law-of-large-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>If you have a big sample of many draws from X, their avg. will eventually get arbitrarily close to E[X]</li>
+<li>This is true for the expectation of X in the population being sampled
+<ul>
+<li>If you survey e.g., only landline phones, how will your survey cover people w/o phones?</li>
+</ul></li>
+</ul>
+</div>
+<div id="what-does-law-of-large-numbers-mean-for-us" class="section level3 hasAnchor" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> What Does Law of Large Numbers Mean for Us?<a href="module-4-probability.html#what-does-law-of-large-numbers-mean-for-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Pretty much all statistics are based on the law of large numbers
+<ul>
+<li>The way you do this is use math to rewrite the model as a sum of random variables</li>
+</ul></li>
+<li>Law of large numbers says the average will converge to the expectation</li>
+<li>So what does the expectation mean?
+<ul>
+<li>We’re going to converge to the population average</li>
+<li>For dice, the population is really the process that’s the population</li>
+<li>In general, an important question to ask is what is the population you’re learning
+about with statistical analysis</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\epsilon_i = y_i - a - \beta x_i
+\]</span></p>
+<p><span class="math display">\[
+0 = \sum_i \epsilon_i = \sum_i y_i - a - \beta x_i
+\]</span></p>
+</div>
+<div id="central-limit-theorem" class="section level3 hasAnchor" number="4.3.7">
+<h3><span class="header-section-number">4.3.7</span> Central Limit Theorem<a href="module-4-probability.html#central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>If you have a bunch of big samples of many draws from X</li>
+<li>Then the average of each of these big samples is another random variable
+(functions of random variables are random variables)</li>
+<li>Distribution of these sample averages is <strong>normally distributed</strong> with:
+<ul>
+<li>Average: E[X]</li>
+<li>Variance: var(X)/N where N is number of observation in each sample</li>
+<li>Variance decreases with N</li>
+</ul></li>
+</ul>
+</div>
+<div id="simplified-implications-of-lln-and-clt" class="section level3 hasAnchor" number="4.3.8">
+<h3><span class="header-section-number">4.3.8</span> Simplified Implications of LLN and CLT<a href="module-4-probability.html#simplified-implications-of-lln-and-clt" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>LLN says that if our models are right, and we use enough data, our
+predictions will be right on average</li>
+<li>CLT says that if our models are right, we also know how accurately we
+know our predictions</li>
+</ul>
+</div>
+<div id="summary-8" class="section level3 hasAnchor" number="4.3.9">
+<h3><span class="header-section-number">4.3.9</span> Summary<a href="module-4-probability.html#summary-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Random samples are also utilized to represent the population and allow for a
+better understanding of a variable X</li>
+<li>The Law of Large Numbers states that the larger the sample and the more “draws”
+done, the closer the average will be to the expectation</li>
+<li>Central Limit Theorem puts the “draws” into a normal distribution with E(x)
+as the average and var(X)/N as the variance (N is number of samples)</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-3---software-trends.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix-a-discussions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["INTA6450-Notes-Fall2024.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
