@@ -206,6 +206,9 @@ What is a “row” in your data set (include sample variables)?
 
 **Linear Regression Model:**
 
+In linear regression consider american football or the National Football League (NFL) one could predict a player's points for fantasy football. The Y variable would be fantasy points, and for the sake of brevity let's assume one scoring format where a player receives one point per reception or otherwise known as PPR. Your X variables could be the number of targets or passes thrown the way of the receiver. It could also include receptions or number of catches made for one point each. Receiving yards could be included or the number of total yards from receptions. Reception touchdowns would be important as well as snap count for the number of offensive plays the player was on the field for. The "row" in the data set would be a single game performance such as X player in Week X scored X points from X targets, X receptions, X receiving yards, X touchdowns, and a percentage of the snap count.
+In this regression model, fantasy points is the dependent variable "Y" and the performance metrics are independent variables "X" including targets, receptions, reception yards, reception touchdowns, and snap count. This would help you represent a single game and the linear regression model would help understand performance metrics that contribute to a player's score.
+
 ## Discussion 5
 
 Identify an example problem where a probit model might sense 
@@ -215,6 +218,13 @@ What is a “row” in your data set?
 
 **Probit Model:**
 
+In american football or the National Football League (NFL) a probit model could make sense when predicting whether a team wins a game. Let's assume we want to preict the probability that a team wins a game based on in-game performance metrics.
+The "Y" variable would be a binary outcome that determines whether the team won a game, so, 1 is a win and 0 is a loss.
+The "X" variables could include total yards, turnovers, third down conversion rate, time of posession, penalties, and points scored. 
+A row in the data set would include:
+Team, Week of Game, Opponent, Total Yards, Turnovers, 3rd down conversion rate, time of possession, penalties, points scored, and the binary result of 1 if win, or 0 if lost.
+The probit model has a dependent variable "Y" of win which is binary (1 for win, 0 for loss) and the "X" independent variables include several NFL performance metrics. These all correspond to a single game played.
+
 ## Discussion 6
 
 Identify an example problem where an outlier detection model might sense. 
@@ -222,4 +232,13 @@ What are your variables? What is a “row” in your data set?
 How do you define “normal” and what is “far”? 
 
 **Outlier Detection Model:**
+
+Outlier detection could be useful in american football or the National Football League (NFL). Let's think about unsual performances that were poor or exceptional during an individual season. Outlier detection could be beneficial to identify performances that deviate from a player's typical game stats due to injury, exceptional circumstances, or game conditions.
+
+Let's assume we were identifying a quarterback who passes a ball on the offensive side. Variables could include passing yards, completion percentage, touchdowns, interceptions, passer rating or sacks taken. The data set would look like:
+Player, Team, Week, Opponent, Passing Yards, Completion Percentage, Touchdowns, Interceptions, Passer Rating, Sacks Taken all as individual columns.
+
+Normal performance would be based on the player's typical range for each of the variables over a set of games such as using the mean and standard deviation for player's performance metrics across several games.
+
+Far performance or outliers could refer to performances that deviate significantly from the typical performance. Depending on your assumption, this could be where the player's performance metrics vary more than 2-3 standard deviations from their average performance.
 

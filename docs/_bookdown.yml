@@ -17,5 +17,6 @@ rmd_files:
   - "m2-hardware-trends.Rmd"
   - "m3-software-trends.Rmd"
   - "m4-probability.Rmd"
+  - "m5-statistics.Rmd"
   - "appendix-a-discussions.Rmd"
   

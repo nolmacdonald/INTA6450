@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Module 5 - Statistics | Course Notes - Data Analytics and Security</title>
+  <meta name="description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Module 5 - Statistics | Course Notes - Data Analytics and Security" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Module 5 - Statistics | Course Notes - Data Analytics and Security" />
+  
+  <meta name="twitter:description" content="Course notes for Data Analytics and Security (INTA 6450)" />
+  
+
+<meta name="author" content="Nolan MacDonald" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="module-4-probability.html"/>
+<link rel="next" href="appendix-a-discussions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="module-1---introduction.html"><a href="module-1---introduction.html"><i class="fa fa-check"></i><b>1</b> Module 1 - Introduction</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#overview"><i class="fa fa-check"></i><b>1.0.1</b> Overview</a></li>
+<li class="chapter" data-level="1.0.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#resources"><i class="fa fa-check"></i><b>1.0.2</b> Resources</a></li>
+<li class="chapter" data-level="1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#what-is-big-data"><i class="fa fa-check"></i><b>1.1</b> What is Big Data?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#three-organizing-questions"><i class="fa fa-check"></i><b>1.1.1</b> Three Organizing Questions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---3-vs"><i class="fa fa-check"></i><b>1.1.2</b> Big Data - “3 V’s”</a></li>
+<li class="chapter" data-level="1.1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data"><i class="fa fa-check"></i><b>1.1.3</b> Data</a></li>
+<li class="chapter" data-level="1.1.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#volume"><i class="fa fa-check"></i><b>1.1.4</b> Volume</a></li>
+<li class="chapter" data-level="1.1.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#units-of-data"><i class="fa fa-check"></i><b>1.1.5</b> Units of Data</a></li>
+<li class="chapter" data-level="1.1.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#server-rack"><i class="fa fa-check"></i><b>1.1.6</b> Server Rack</a></li>
+<li class="chapter" data-level="1.1.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-center"><i class="fa fa-check"></i><b>1.1.7</b> Data Center</a></li>
+<li class="chapter" data-level="1.1.8" data-path="module-1---introduction.html"><a href="module-1---introduction.html#variety"><i class="fa fa-check"></i><b>1.1.8</b> Variety</a></li>
+<li class="chapter" data-level="1.1.9" data-path="module-1---introduction.html"><a href="module-1---introduction.html#aspects-of-life-recorded-in-2020"><i class="fa fa-check"></i><b>1.1.9</b> Aspects of life recorded in 2020</a></li>
+<li class="chapter" data-level="1.1.10" data-path="module-1---introduction.html"><a href="module-1---introduction.html#velocity"><i class="fa fa-check"></i><b>1.1.10</b> Velocity</a></li>
+<li class="chapter" data-level="1.1.11" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-in-real-time"><i class="fa fa-check"></i><b>1.1.11</b> Data in Real Time</a></li>
+<li class="chapter" data-level="1.1.12" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data---a-broad-term"><i class="fa fa-check"></i><b>1.1.12</b> Big Data - A Broad Term</a></li>
+<li class="chapter" data-level="1.1.13" data-path="module-1---introduction.html"><a href="module-1---introduction.html#concepts-that-underlie-big-data"><i class="fa fa-check"></i><b>1.1.13</b> Concepts that underlie big data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends"><i class="fa fa-check"></i><b>1.2</b> Google Flu Trends</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#google-flu-trends-gft"><i class="fa fa-check"></i><b>1.2.1</b> Google Flu Trends (GFT)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#number-of-top-queries-and-correlation"><i class="fa fa-check"></i><b>1.2.2</b> Number of top queries and correlation</a></li>
+<li class="chapter" data-level="1.2.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#issues"><i class="fa fa-check"></i><b>1.2.3</b> Issues</a></li>
+<li class="chapter" data-level="1.2.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#assumptions-and-issues"><i class="fa fa-check"></i><b>1.2.4</b> Assumptions and Issues</a></li>
+<li class="chapter" data-level="1.2.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#summary"><i class="fa fa-check"></i><b>1.2.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#required-reading-notes"><i class="fa fa-check"></i><b>1.3</b> Required Reading Notes</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="module-1---introduction.html"><a href="module-1---introduction.html#introduction"><i class="fa fa-check"></i><b>1.3.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.3.2" data-path="module-1---introduction.html"><a href="module-1---introduction.html#big-data-hubris"><i class="fa fa-check"></i><b>1.3.2</b> Big data hubris</a></li>
+<li class="chapter" data-level="1.3.3" data-path="module-1---introduction.html"><a href="module-1---introduction.html#algorithm-dynamics"><i class="fa fa-check"></i><b>1.3.3</b> Algorithm Dynamics</a></li>
+<li class="chapter" data-level="1.3.4" data-path="module-1---introduction.html"><a href="module-1---introduction.html#transparency-granularity-and-all-data"><i class="fa fa-check"></i><b>1.3.4</b> Transparency, Granularity and All-Data</a></li>
+<li class="chapter" data-level="1.3.5" data-path="module-1---introduction.html"><a href="module-1---introduction.html#bytes"><i class="fa fa-check"></i><b>1.3.5</b> Bytes</a></li>
+<li class="chapter" data-level="1.3.6" data-path="module-1---introduction.html"><a href="module-1---introduction.html#vs"><i class="fa fa-check"></i><b>1.3.6</b> 5 “V’s”</a></li>
+<li class="chapter" data-level="1.3.7" data-path="module-1---introduction.html"><a href="module-1---introduction.html#data-analytics-types"><i class="fa fa-check"></i><b>1.3.7</b> Data analytics types</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html"><i class="fa fa-check"></i><b>2</b> Module 2 - Hardware Trends</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#overview-1"><i class="fa fa-check"></i><b>2.0.1</b> Overview</a></li>
+<li class="chapter" data-level="2.0.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#resources-1"><i class="fa fa-check"></i><b>2.0.2</b> Resources</a></li>
+<li class="chapter" data-level="2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#trends-in-computer-hardware"><i class="fa fa-check"></i><b>2.1</b> Trends in Computer Hardware</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#parts-of-a-computer"><i class="fa fa-check"></i><b>2.1.1</b> Parts of a Computer</a></li>
+<li class="chapter" data-level="2.1.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu"><i class="fa fa-check"></i><b>2.1.2</b> CPU</a></li>
+<li class="chapter" data-level="2.1.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#storing-information"><i class="fa fa-check"></i><b>2.1.3</b> Storing Information</a></li>
+<li class="chapter" data-level="2.1.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#level-of-closeness-to-look-up-a-byte"><i class="fa fa-check"></i><b>2.1.4</b> Level of closeness to look up a byte</a></li>
+<li class="chapter" data-level="2.1.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#cpu-limits"><i class="fa fa-check"></i><b>2.1.5</b> CPU Limits</a></li>
+<li class="chapter" data-level="2.1.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#memory-physical-limits"><i class="fa fa-check"></i><b>2.1.6</b> Memory Physical Limits</a></li>
+<li class="chapter" data-level="2.1.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#hard-disk-physical-limits"><i class="fa fa-check"></i><b>2.1.7</b> Hard Disk Physical Limits</a></li>
+<li class="chapter" data-level="2.1.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-1"><i class="fa fa-check"></i><b>2.1.8</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#computer-architecture-for-big-data"><i class="fa fa-check"></i><b>2.2</b> Computer Architecture for Big Data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#big-data-performance"><i class="fa fa-check"></i><b>2.2.1</b> Big Data Performance</a></li>
+<li class="chapter" data-level="2.2.2" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#discussion-questions"><i class="fa fa-check"></i><b>2.2.2</b> Discussion Questions</a></li>
+<li class="chapter" data-level="2.2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#strategies"><i class="fa fa-check"></i><b>2.2.3</b> Strategies</a></li>
+<li class="chapter" data-level="2.2.4" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#load-balancing"><i class="fa fa-check"></i><b>2.2.4</b> Load Balancing</a></li>
+<li class="chapter" data-level="2.2.5" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-masterworker-architecture"><i class="fa fa-check"></i><b>2.2.5</b> Databases for Big Data: Master/Worker Architecture</a></li>
+<li class="chapter" data-level="2.2.6" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#databases-for-big-data-eventual-consistency"><i class="fa fa-check"></i><b>2.2.6</b> Databases for Big Data: Eventual Consistency</a></li>
+<li class="chapter" data-level="2.2.7" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#serving-multiple-customers"><i class="fa fa-check"></i><b>2.2.7</b> Serving Multiple Customers</a></li>
+<li class="chapter" data-level="2.2.8" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#sorting-a-big-list"><i class="fa fa-check"></i><b>2.2.8</b> Sorting a Big List</a></li>
+<li class="chapter" data-level="2.2.9" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#summary-2"><i class="fa fa-check"></i><b>2.2.9</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="module-2---hardware-trends.html"><a href="module-2---hardware-trends.html#software-architecture-for-big-data"><i class="fa fa-check"></i><b>2.3</b> Software Architecture for Big Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html"><i class="fa fa-check"></i><b>3</b> Module 3 - Software Trends</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#overview-2"><i class="fa fa-check"></i><b>3.0.1</b> Overview</a></li>
+<li class="chapter" data-level="3.0.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#resources-2"><i class="fa fa-check"></i><b>3.0.2</b> Resources</a></li>
+<li class="chapter" data-level="3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#the-importance-of-software"><i class="fa fa-check"></i><b>3.1</b> The Importance of Software</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#how-would-you-make-a-search-engine"><i class="fa fa-check"></i><b>3.1.1</b> How Would You Make a Search Engine?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#indexing"><i class="fa fa-check"></i><b>3.1.2</b> Indexing</a></li>
+<li class="chapter" data-level="3.1.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-rankings"><i class="fa fa-check"></i><b>3.1.3</b> Relevance Rankings</a></li>
+<li class="chapter" data-level="3.1.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#relevance-indexing"><i class="fa fa-check"></i><b>3.1.4</b> Relevance + Indexing</a></li>
+<li class="chapter" data-level="3.1.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#purpose"><i class="fa fa-check"></i><b>3.1.5</b> Purpose</a></li>
+<li class="chapter" data-level="3.1.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-3"><i class="fa fa-check"></i><b>3.1.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-or-just-data"><i class="fa fa-check"></i><b>3.2</b> Big Data or Just Data</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#big-data-vs-data"><i class="fa fa-check"></i><b>3.2.1</b> Big Data vs Data?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#two-database-queries"><i class="fa fa-check"></i><b>3.2.2</b> Two Database Queries</a></li>
+<li class="chapter" data-level="3.2.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#current-database-world"><i class="fa fa-check"></i><b>3.2.3</b> Current Database World</a></li>
+<li class="chapter" data-level="3.2.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#databases"><i class="fa fa-check"></i><b>3.2.4</b> Databases</a></li>
+<li class="chapter" data-level="3.2.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#structured-query-language-sql"><i class="fa fa-check"></i><b>3.2.5</b> Structured Query Language (SQL)</a></li>
+<li class="chapter" data-level="3.2.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#key-value-stores"><i class="fa fa-check"></i><b>3.2.6</b> Key-Value Stores</a></li>
+<li class="chapter" data-level="3.2.7" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#document-oriented-database"><i class="fa fa-check"></i><b>3.2.7</b> Document Oriented Database</a></li>
+<li class="chapter" data-level="3.2.8" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#tabular-databases"><i class="fa fa-check"></i><b>3.2.8</b> Tabular Databases</a></li>
+<li class="chapter" data-level="3.2.9" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#other-big-data-databases"><i class="fa fa-check"></i><b>3.2.9</b> Other Big Data Databases</a></li>
+<li class="chapter" data-level="3.2.10" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-4"><i class="fa fa-check"></i><b>3.2.10</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-and-tradeoffs"><i class="fa fa-check"></i><b>3.3</b> Programming Languages and Tradeoffs</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#tradeoffs"><i class="fa fa-check"></i><b>3.3.1</b> Tradeoffs</a></li>
+<li class="chapter" data-level="3.3.2" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#levels-of-programming-languages"><i class="fa fa-check"></i><b>3.3.2</b> Levels of Programming Languages</a></li>
+<li class="chapter" data-level="3.3.3" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#programming-languages-performance"><i class="fa fa-check"></i><b>3.3.3</b> Programming Languages Performance</a></li>
+<li class="chapter" data-level="3.3.4" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#learn-rpython"><i class="fa fa-check"></i><b>3.3.4</b> Learn R/Python</a></li>
+<li class="chapter" data-level="3.3.5" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#python"><i class="fa fa-check"></i><b>3.3.5</b> Python</a></li>
+<li class="chapter" data-level="3.3.6" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#r"><i class="fa fa-check"></i><b>3.3.6</b> R</a></li>
+<li class="chapter" data-level="3.3.7" data-path="module-3---software-trends.html"><a href="module-3---software-trends.html#summary-5"><i class="fa fa-check"></i><b>3.3.7</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="module-4-probability.html"><a href="module-4-probability.html"><i class="fa fa-check"></i><b>4</b> Module 4 Probability</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="module-4-probability.html"><a href="module-4-probability.html#overview-3"><i class="fa fa-check"></i><b>4.0.1</b> Overview</a></li>
+<li class="chapter" data-level="4.1" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-i-random-variables"><i class="fa fa-check"></i><b>4.1</b> Probability Part I: Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="module-4-probability.html"><a href="module-4-probability.html#probability"><i class="fa fa-check"></i><b>4.1.1</b> Probability</a></li>
+<li class="chapter" data-level="4.1.2" data-path="module-4-probability.html"><a href="module-4-probability.html#importance"><i class="fa fa-check"></i><b>4.1.2</b> Importance</a></li>
+<li class="chapter" data-level="4.1.3" data-path="module-4-probability.html"><a href="module-4-probability.html#random-variables"><i class="fa fa-check"></i><b>4.1.3</b> Random Variables</a></li>
+<li class="chapter" data-level="4.1.4" data-path="module-4-probability.html"><a href="module-4-probability.html#expectation-operator"><i class="fa fa-check"></i><b>4.1.4</b> Expectation Operator</a></li>
+<li class="chapter" data-level="4.1.5" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-6"><i class="fa fa-check"></i><b>4.1.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-ii-combining-random-variables"><i class="fa fa-check"></i><b>4.2</b> Probability Part II: Combining Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="module-4-probability.html"><a href="module-4-probability.html#multivariate-distributions"><i class="fa fa-check"></i><b>4.2.1</b> Multivariate Distributions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="module-4-probability.html"><a href="module-4-probability.html#more-complicated-distribution"><i class="fa fa-check"></i><b>4.2.2</b> More Complicated Distribution</a></li>
+<li class="chapter" data-level="4.2.3" data-path="module-4-probability.html"><a href="module-4-probability.html#more-realistic-distribution"><i class="fa fa-check"></i><b>4.2.3</b> More Realistic Distribution</a></li>
+<li class="chapter" data-level="4.2.4" data-path="module-4-probability.html"><a href="module-4-probability.html#definitions"><i class="fa fa-check"></i><b>4.2.4</b> Definitions</a></li>
+<li class="chapter" data-level="4.2.5" data-path="module-4-probability.html"><a href="module-4-probability.html#more-random-variables"><i class="fa fa-check"></i><b>4.2.5</b> More Random Variables</a></li>
+<li class="chapter" data-level="4.2.6" data-path="module-4-probability.html"><a href="module-4-probability.html#sum-of-coin-flips"><i class="fa fa-check"></i><b>4.2.6</b> Sum of Coin Flips</a></li>
+<li class="chapter" data-level="4.2.7" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-7"><i class="fa fa-check"></i><b>4.2.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="module-4-probability.html"><a href="module-4-probability.html#probability-part-iii-laws-of-probability"><i class="fa fa-check"></i><b>4.3</b> Probability Part III: Laws of Probability</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="module-4-probability.html"><a href="module-4-probability.html#sampling"><i class="fa fa-check"></i><b>4.3.1</b> Sampling</a></li>
+<li class="chapter" data-level="4.3.2" data-path="module-4-probability.html"><a href="module-4-probability.html#creating-samples-draws-from-a-population"><i class="fa fa-check"></i><b>4.3.2</b> Creating Samples: Draws from a Population</a></li>
+<li class="chapter" data-level="4.3.3" data-path="module-4-probability.html"><a href="module-4-probability.html#modeling-and-sampling"><i class="fa fa-check"></i><b>4.3.3</b> Modeling and Sampling</a></li>
+<li class="chapter" data-level="4.3.4" data-path="module-4-probability.html"><a href="module-4-probability.html#sampling-and-big-data"><i class="fa fa-check"></i><b>4.3.4</b> Sampling and Big Data</a></li>
+<li class="chapter" data-level="4.3.5" data-path="module-4-probability.html"><a href="module-4-probability.html#law-of-large-numbers"><i class="fa fa-check"></i><b>4.3.5</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="4.3.6" data-path="module-4-probability.html"><a href="module-4-probability.html#what-does-law-of-large-numbers-mean-for-us"><i class="fa fa-check"></i><b>4.3.6</b> What Does Law of Large Numbers Mean for Us?</a></li>
+<li class="chapter" data-level="4.3.7" data-path="module-4-probability.html"><a href="module-4-probability.html#central-limit-theorem"><i class="fa fa-check"></i><b>4.3.7</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="4.3.8" data-path="module-4-probability.html"><a href="module-4-probability.html#simplified-implications-of-lln-and-clt"><i class="fa fa-check"></i><b>4.3.8</b> Simplified Implications of LLN and CLT</a></li>
+<li class="chapter" data-level="4.3.9" data-path="module-4-probability.html"><a href="module-4-probability.html#summary-8"><i class="fa fa-check"></i><b>4.3.9</b> Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="module-5---statistics.html"><a href="module-5---statistics.html"><i class="fa fa-check"></i><b>5</b> Module 5 - Statistics</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="module-5---statistics.html"><a href="module-5---statistics.html#overview-4"><i class="fa fa-check"></i><b>5.0.1</b> Overview</a></li>
+<li class="chapter" data-level="5.1" data-path="module-5---statistics.html"><a href="module-5---statistics.html#module-5.1-linear-regression"><i class="fa fa-check"></i><b>5.1</b> Module 5.1 Linear Regression</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="module-5---statistics.html"><a href="module-5---statistics.html#regressions"><i class="fa fa-check"></i><b>5.1.1</b> Regressions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="module-5---statistics.html"><a href="module-5---statistics.html#the-regression-model"><i class="fa fa-check"></i><b>5.1.2</b> The Regression Model</a></li>
+<li class="chapter" data-level="5.1.3" data-path="module-5---statistics.html"><a href="module-5---statistics.html#predictions"><i class="fa fa-check"></i><b>5.1.3</b> Predictions</a></li>
+<li class="chapter" data-level="5.1.4" data-path="module-5---statistics.html"><a href="module-5---statistics.html#wages-and-education"><i class="fa fa-check"></i><b>5.1.4</b> Wages and Education</a></li>
+<li class="chapter" data-level="5.1.5" data-path="module-5---statistics.html"><a href="module-5---statistics.html#what-can-we-model"><i class="fa fa-check"></i><b>5.1.5</b> What Can We Model?</a></li>
+<li class="chapter" data-level="5.1.6" data-path="module-5---statistics.html"><a href="module-5---statistics.html#examples"><i class="fa fa-check"></i><b>5.1.6</b> Examples</a></li>
+<li class="chapter" data-level="5.1.7" data-path="module-5---statistics.html"><a href="module-5---statistics.html#summary-9"><i class="fa fa-check"></i><b>5.1.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="module-5---statistics.html"><a href="module-5---statistics.html#module-5.2-assumptions-for-linear-regression"><i class="fa fa-check"></i><b>5.2</b> Module 5.2 Assumptions for Linear Regression</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="module-5---statistics.html"><a href="module-5---statistics.html#assumptions"><i class="fa fa-check"></i><b>5.2.1</b> Assumptions</a></li>
+<li class="chapter" data-level="5.2.2" data-path="module-5---statistics.html"><a href="module-5---statistics.html#thinking-about-bias"><i class="fa fa-check"></i><b>5.2.2</b> Thinking about Bias</a></li>
+<li class="chapter" data-level="5.2.3" data-path="module-5---statistics.html"><a href="module-5---statistics.html#extrapolation"><i class="fa fa-check"></i><b>5.2.3</b> Extrapolation</a></li>
+<li class="chapter" data-level="5.2.4" data-path="module-5---statistics.html"><a href="module-5---statistics.html#assumption-data-drawn-from-population"><i class="fa fa-check"></i><b>5.2.4</b> Assumption: Data Drawn from Population</a></li>
+<li class="chapter" data-level="5.2.5" data-path="module-5---statistics.html"><a href="module-5---statistics.html#causality-and-correlation"><i class="fa fa-check"></i><b>5.2.5</b> Causality and Correlation</a></li>
+<li class="chapter" data-level="5.2.6" data-path="module-5---statistics.html"><a href="module-5---statistics.html#causality"><i class="fa fa-check"></i><b>5.2.6</b> Causality</a></li>
+<li class="chapter" data-level="5.2.7" data-path="module-5---statistics.html"><a href="module-5---statistics.html#summary-10"><i class="fa fa-check"></i><b>5.2.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="module-5---statistics.html"><a href="module-5---statistics.html#module-5.3-generalizing-linear-regression"><i class="fa fa-check"></i><b>5.3</b> Module 5.3 Generalizing Linear Regression</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="module-5---statistics.html"><a href="module-5---statistics.html#linear-regression-model"><i class="fa fa-check"></i><b>5.3.1</b> Linear Regression Model</a></li>
+<li class="chapter" data-level="5.3.2" data-path="module-5---statistics.html"><a href="module-5---statistics.html#find-line-of-best-fit"><i class="fa fa-check"></i><b>5.3.2</b> Find Line of Best Fit</a></li>
+<li class="chapter" data-level="5.3.3" data-path="module-5---statistics.html"><a href="module-5---statistics.html#least-squares"><i class="fa fa-check"></i><b>5.3.3</b> Least Squares</a></li>
+<li class="chapter" data-level="5.3.4" data-path="module-5---statistics.html"><a href="module-5---statistics.html#law-of-large-numbers-1"><i class="fa fa-check"></i><b>5.3.4</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="5.3.5" data-path="module-5---statistics.html"><a href="module-5---statistics.html#an-aside-on-estimation"><i class="fa fa-check"></i><b>5.3.5</b> An Aside on Estimation</a></li>
+<li class="chapter" data-level="5.3.6" data-path="module-5---statistics.html"><a href="module-5---statistics.html#least-squares-generalization"><i class="fa fa-check"></i><b>5.3.6</b> Least Squares Generalization</a></li>
+<li class="chapter" data-level="5.3.7" data-path="module-5---statistics.html"><a href="module-5---statistics.html#least-squares-vs.-maximum-likelihood"><i class="fa fa-check"></i><b>5.3.7</b> Least Squares vs. Maximum Likelihood</a></li>
+<li class="chapter" data-level="5.3.8" data-path="module-5---statistics.html"><a href="module-5---statistics.html#why-least-squares"><i class="fa fa-check"></i><b>5.3.8</b> Why Least Squares?</a></li>
+<li class="chapter" data-level="5.3.9" data-path="module-5---statistics.html"><a href="module-5---statistics.html#does-linear-make-sense"><i class="fa fa-check"></i><b>5.3.9</b> Does Linear Make Sense?</a></li>
+<li class="chapter" data-level="5.3.10" data-path="module-5---statistics.html"><a href="module-5---statistics.html#summary-11"><i class="fa fa-check"></i><b>5.3.10</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="module-5---statistics.html"><a href="module-5---statistics.html#module-5.4-generalizing-linear-regression-to-binary-outcomes"><i class="fa fa-check"></i><b>5.4</b> Module 5.4 Generalizing Linear Regression to Binary Outcomes</a></li>
+<li class="chapter" data-level="5.5" data-path="module-5---statistics.html"><a href="module-5---statistics.html#module-5.5-generalizations-of-parametric-part-i"><i class="fa fa-check"></i><b>5.5</b> Module 5.5 Generalizations of Parametric, Part I</a></li>
+<li class="chapter" data-level="5.6" data-path="module-5---statistics.html"><a href="module-5---statistics.html#module-5.6-generalizations-of-parametric-part-ii"><i class="fa fa-check"></i><b>5.6</b> Module 5.6 Generalizations of Parametric, Part II</a></li>
+<li class="chapter" data-level="5.7" data-path="module-5---statistics.html"><a href="module-5---statistics.html#module-5.7-anomaly-detection"><i class="fa fa-check"></i><b>5.7</b> Module 5.7 Anomaly Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html"><i class="fa fa-check"></i><b>6</b> Appendix A: Discussions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-1"><i class="fa fa-check"></i><b>6.1</b> Discussion 1</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#big-data"><i class="fa fa-check"></i><b>6.1.1</b> Big Data</a></li>
+<li class="chapter" data-level="6.1.2" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#data-analytics"><i class="fa fa-check"></i><b>6.1.2</b> Data Analytics</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-2"><i class="fa fa-check"></i><b>6.2</b> Discussion 2</a></li>
+<li class="chapter" data-level="6.3" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-3"><i class="fa fa-check"></i><b>6.3</b> Discussion 3</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#prompt"><i class="fa fa-check"></i><b>6.3.1</b> Prompt</a></li>
+<li class="chapter" data-level="6.3.2" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-idea-of-having-all-data"><i class="fa fa-check"></i><b>6.3.2</b> Discussion: Idea of Having “All Data”</a></li>
+<li class="chapter" data-level="6.3.3" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-opinion-on-peers-comment-for-all-data"><i class="fa fa-check"></i><b>6.3.3</b> Discussion: Opinion on Peers Comment for “All Data”</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-4"><i class="fa fa-check"></i><b>6.4</b> Discussion 4</a></li>
+<li class="chapter" data-level="6.5" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-5"><i class="fa fa-check"></i><b>6.5</b> Discussion 5</a></li>
+<li class="chapter" data-level="6.6" data-path="appendix-a-discussions.html"><a href="appendix-a-discussions.html#discussion-6"><i class="fa fa-check"></i><b>6.6</b> Discussion 6</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes - Data Analytics and Security</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module-5---statistics" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Module 5 - Statistics<a href="module-5---statistics.html#module-5---statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overview-4" class="section level3 hasAnchor" number="5.0.1">
+<h3><span class="header-section-number">5.0.1</span> Overview<a href="module-5---statistics.html#overview-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are many different types of statistical models. The vast majority are “parametric”, which means they have an assumption about how data are generated that depends on a number of different unknown variables or “parameters”. This includes linear regression, logistic regression, and a bunch of other things through to deep neural networks. In this module, we identify the common mathematical themes in all these models. We then talk about how to think about how these models intuitively and understand how they fail.</p>
+</div>
+<div id="module-5.1-linear-regression" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Module 5.1 Linear Regression<a href="module-5---statistics.html#module-5.1-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="regressions" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Regressions<a href="module-5---statistics.html#regressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>How do we determine the relationship between variables?
+<ul>
+<li>Think about it like a function: X goes in, Y comes out</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="figures/m5.1-regression.png" alt="Function of X and Y" width="70%" />
+<p class="caption">
+Figure 5.1: Function of X and Y
+</p>
+</div>
+<ul>
+<li>Instead of a nice functional relationship, we have messy clouds of data</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="figures/m5.1-scatter.png" alt="Scatter Plot with Data Points" width="70%" />
+<p class="caption">
+Figure 5.2: Scatter Plot with Data Points
+</p>
+</div>
+<ul>
+<li>The goal is to pick a function that fits the data “well”</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="figures/m5.1-fit.png" alt="Linear Regression Fit" width="70%" />
+<p class="caption">
+Figure 5.3: Linear Regression Fit
+</p>
+</div>
+<ul>
+<li>What does it mean for this line to fit “better” than the last?</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="figures/m5.1-better-fit.png" alt="Linear Regression Better Fit" width="70%" />
+<p class="caption">
+Figure 5.4: Linear Regression Better Fit
+</p>
+</div>
+<ul>
+<li>The main model we use is called “linear regression”
+<ul>
+<li>We will take a straight line (hence linear)</li>
+<li>We want it to be near the data</li>
+<li>The line which was “bad” was further away than seemed necessary</li>
+</ul></li>
+<li>We use an equation like:
+<ul>
+<li><span class="math inline">\(Y = \alpha + \beta X + \epsilon\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="the-regression-model" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> The Regression Model<a href="module-5---statistics.html#the-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>This is not a math course, but let’s look at what goes into this model
+<ul>
+<li>X, Y - random variables. We have draws of this data out of some population.</li>
+<li><span class="math inline">\(alpha\)</span>, <span class="math inline">\(\beta\)</span> - Parameters. These parameters represent the relationship
+between X and Y</li>
+<li><span class="math inline">\(\epsilon\)</span> - This is the error terms. The other things which are not in X
+but affect Y</li>
+</ul></li>
+<li>More intuitively
+<ul>
+<li>If Y is education, X is schooling</li>
+<li><span class="math inline">\(\Beta\)</span> is the amount that an extra unit of schooling is associated with
+higher wages</li>
+<li><span class="math inline">\(\epsilon\)</span> represents other facts which are not school that also affect wages</li>
+</ul></li>
+</ul>
+</div>
+<div id="predictions" class="section level3 hasAnchor" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Predictions<a href="module-5---statistics.html#predictions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>How does this relate to prediction</li>
+<li>We are trying to predict <span class="math inline">\(y_i\)</span> with <span class="math inline">\(x_i\)</span></li>
+<li>How do we do this?
+<ul>
+<li>We know the formula for <span class="math inline">\(y_i\)</span> from our model
+<ul>
+<li><span class="math inline">\(y_i = \alpha + \beta x_i + \epsilon_i\)</span></li>
+</ul></li>
+<li>But if we don’t know <span class="math inline">\(y_i\)</span>, we don’t know <span class="math inline">\(\epsilon_i\)</span> either</li>
+<li>The best we can do is:
+<ul>
+<li><span class="math inline">\(\hat{y}^i = \alpha + \beta x_i\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\hat{y}^i\)</span> is called the predicted value of y</li>
+</ul></li>
+</ul>
+</div>
+<div id="wages-and-education" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Wages and Education<a href="module-5---statistics.html#wages-and-education" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>X is years of schooling, Y is wages</li>
+<li>Prediction</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="figures/m5.1-violin.png" alt="Wages and Education Fit" width="70%" />
+<p class="caption">
+Figure 5.5: Wages and Education Fit
+</p>
+</div>
+</div>
+<div id="what-can-we-model" class="section level3 hasAnchor" number="5.1.5">
+<h3><span class="header-section-number">5.1.5</span> What Can We Model?<a href="module-5---statistics.html#what-can-we-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>What is Y?</li>
+<li>What is X?</li>
+</ul>
+</div>
+<div id="examples" class="section level3 hasAnchor" number="5.1.6">
+<h3><span class="header-section-number">5.1.6</span> Examples<a href="module-5---statistics.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Crime and Policing at the State Level
+<ul>
+<li>What is the sampling frame?</li>
+<li>What is X, Y?</li>
+</ul></li>
+<li>Crime as a function of income from survey data
+<ul>
+<li>What is the sampling frame?</li>
+<li>What is X, Y?</li>
+</ul></li>
+</ul>
+</div>
+<div id="summary-9" class="section level3 hasAnchor" number="5.1.7">
+<h3><span class="header-section-number">5.1.7</span> Summary<a href="module-5---statistics.html#summary-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Next
+<ul>
+<li>Assumptions</li>
+<li>Linear regression is a very simple model</li>
+<li>We can discuss a wide variety of extension now that we know this model</li>
+</ul></li>
+<li>We try to predict an outcome random variable Y with an input random variable X</li>
+<li>To do this, we use a sample of pairs of <span class="math inline">\((x_i, y_i)\)</span> observation</li>
+<li>We choose the “best” parameters to fit the model</li>
+<li>We get a relationship between X and Y that can be used for prediction or analysis</li>
+</ul>
+</div>
+</div>
+<div id="module-5.2-assumptions-for-linear-regression" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Module 5.2 Assumptions for Linear Regression<a href="module-5---statistics.html#module-5.2-assumptions-for-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="assumptions" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Assumptions<a href="module-5---statistics.html#assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>In the least squares model, beyond some technical assumptions, the following
+assumptions are sufficient for ordinary least squares (OLS) to work:
+<ul>
+<li>Data is random, independent draws from the population of X and Y</li>
+<li>X is uncorrelated with <span class="math inline">\(\epsilon\)</span> (this actually is like assuming the model
+is “right”, at least in the important ways)</li>
+</ul></li>
+<li>What does “work” mean?
+<ul>
+<li>It means your estimate of <span class="math inline">\(\beta\)</span> will be the right one</li>
+<li>and hence, your predictions of <span class="math inline">\(\hat{y}\)</span> will also be good on average</li>
+</ul></li>
+</ul>
+</div>
+<div id="thinking-about-bias" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Thinking about Bias<a href="module-5---statistics.html#thinking-about-bias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>What happens when your model is wrong (aka every time)?</li>
+<li>There’s a simple relationship in a simple linear regression</li>
+<li>Consider the case of schooling:</li>
+</ul>
+<p><span class="math display">\[
+  wage = \alpha + \beta educ + \epsilon
+\]</span>
+- But what if smart people go to school more and get more education?
+- Because we don’t measure IQ, highly educated people will also have high IQ
+- Their wages will be extra high
+- Thus, the line of best fit will have a bigger slope, and it will look like
+educ is more strongly related to wages than is in fact true</p>
+</div>
+<div id="extrapolation" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Extrapolation<a href="module-5---statistics.html#extrapolation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Extrapolation means using predictions outside the range of data where you fit
+your model</li>
+<li>When would this work?
+<ul>
+<li>If your model is still “right” for new data</li>
+<li>Regress wages on GPA for GA Tech grads in 2012 and 2013: Should be OK
+<ul>
+<li>Regress wages on GPA for GA Tech grads in 2012 and grads in France in
+2013: Problems</li>
+</ul></li>
+<li>Typically we warn against extrapolation</li>
+</ul></li>
+<li>Extrapolation to new X
+<ul>
+<li>Can be OK if the model is right</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="figures/m5.1-extrapolation.png" alt="Extrapolation" width="70%" />
+<p class="caption">
+Figure 5.6: Extrapolation
+</p>
+</div>
+<ul>
+<li>But if your model isn’t right you will have trouble</li>
+<li>Your model can be wrong for one of two reasons
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>The relationship you found in the data doesn’t hold for different values
+of X</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li>Unobserved factors which you can’t control are different in a new sample</li>
+</ol></li>
+</ul></li>
+</ul>
+</div>
+<div id="assumption-data-drawn-from-population" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Assumption: Data Drawn from Population<a href="module-5---statistics.html#assumption-data-drawn-from-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Sometimes, this is a hard assumption to believe</li>
+<li>Example: Tweets
+<ul>
+<li>You want to look at the relationship between Tweet mood and the stock
+market</li>
+<li>You create an average daily twitter mood and a stock market return variable</li>
+</ul></li>
+<li>Financial crisis vignette
+<ul>
+<li>A big problem was that the mortage backed secruities were split up and
+rated as AAA (very high quality)</li>
+<li>To rate these securities, agencies look at the historical performance of
+comparable securities</li>
+<li>Intuitively, a problem with this is that you have to assume that these
+sliced up securities were drawn from the same distribution as whether
+e.g., states repay loans</li>
+</ul></li>
+</ul>
+</div>
+<div id="causality-and-correlation" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Causality and Correlation<a href="module-5---statistics.html#causality-and-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>“Correlation does not imply causality”</li>
+<li><span class="math inline">\(\beta\)</span> is a measure of the correlation between X and Y</li>
+<li>When X is high, how high might we expect Y to be?</li>
+<li>What does this mean in the contect of education/earnings?
+<ul>
+<li>People who to school longer tend to make more money</li>
+<li>But we don’t know whether that’s because they actually are more productive
+(assuming that productivity is related to pay)</li>
+<li>Or whether there’s another trait which predicts schooling and income
+(Ambition? Family background?)</li>
+</ul></li>
+</ul>
+</div>
+<div id="causality" class="section level3 hasAnchor" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> Causality<a href="module-5---statistics.html#causality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>How should we think about causality?
+<ul>
+<li>Imagine assigning a different value of X to an individual
+<ul>
+<li>Instead of me getting 21 years of education, maybe I got 16 instead</li>
+</ul></li>
+<li>What would be the difference in my wages if I drew a different education
+level?</li>
+</ul></li>
+<li>Why do we care about this?
+<ul>
+<li>If we know the true relationship between X and Y, then we can safely
+extrapolate if we think that relationship should still hold</li>
+</ul></li>
+</ul>
+</div>
+<div id="summary-10" class="section level3 hasAnchor" number="5.2.7">
+<h3><span class="header-section-number">5.2.7</span> Summary<a href="module-5---statistics.html#summary-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Bias exists in models and is harder to think through if the model is more
+complex</li>
+<li>Extrapolation is when predictions are made outside of the range of data the
+model was fitted in
+<ul>
+<li>Extrapolation is typically warned against</li>
+</ul></li>
+<li>“Causation does not imply correlation”</li>
+</ul>
+</div>
+</div>
+<div id="module-5.3-generalizing-linear-regression" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Module 5.3 Generalizing Linear Regression<a href="module-5---statistics.html#module-5.3-generalizing-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="linear-regression-model" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Linear Regression Model<a href="module-5---statistics.html#linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>X is years of schooling, Y is wages</li>
+</ul>
+<p><span class="math display">\[
+  wage = \alpha + \beta educ + \epsilon
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="figures/m5.1-violin.png" alt="Wages and Education Fit" width="70%" />
+<p class="caption">
+Figure 5.7: Wages and Education Fit
+</p>
+</div>
+</div>
+<div id="find-line-of-best-fit" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Find Line of Best Fit<a href="module-5---statistics.html#find-line-of-best-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Think about what the residuals would look like if we moved the line around
+<ul>
+<li>They would grow!</li>
+</ul></li>
+<li>What we’re doing is moving the line around (changing <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>)
+to minimize these squared residuals</li>
+<li>Another name for this linear regression model is “least squares”</li>
+<li>For each data point you can write the equation:</li>
+</ul>
+<p><span class="math display">\[
+  y_i = \alpha + \beta x_i + \epsilon_i
+\]</span></p>
+<ul>
+<li>So if you pick a particular <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, you can calculate your
+error, <span class="math inline">\(\epsilon_i\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+  \epsilon_i = y_i - \alpha - \beta x_i
+\]</span></p>
+</div>
+<div id="least-squares" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Least Squares<a href="module-5---statistics.html#least-squares" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>So you have your expression for each residual, <span class="math inline">\(\epsilon_i\)</span></p>
+<ol style="list-style-type: decimal">
+<li>Square each one: <span class="math inline">\(\epsilon_i^2\)</span></li>
+<li>Add them all up: <span class="math inline">\(\sum_i \epsilon_i^2\)</span></li>
+<li>This is just a function that depends on your data and your parameters of
+interest:</li>
+</ol>
+<p><span class="math display">\[
+  F(\alpha, \beta) = \sum_i \epsilon_i^2 = \sum_i (y_i - \alpha - \beta x_i)^2
+\]</span>
+4. Find <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> to minimize <span class="math inline">\(F(\alpha, \beta)\)</span></p>
+<p><strong>These are your estimates.</strong></p>
+</div>
+<div id="law-of-large-numbers-1" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Law of Large Numbers<a href="module-5---statistics.html#law-of-large-numbers-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="an-aside-on-estimation" class="section level3 hasAnchor" number="5.3.5">
+<h3><span class="header-section-number">5.3.5</span> An Aside on Estimation<a href="module-5---statistics.html#an-aside-on-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="least-squares-generalization" class="section level3 hasAnchor" number="5.3.6">
+<h3><span class="header-section-number">5.3.6</span> Least Squares Generalization<a href="module-5---statistics.html#least-squares-generalization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="least-squares-vs.-maximum-likelihood" class="section level3 hasAnchor" number="5.3.7">
+<h3><span class="header-section-number">5.3.7</span> Least Squares vs. Maximum Likelihood<a href="module-5---statistics.html#least-squares-vs.-maximum-likelihood" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="why-least-squares" class="section level3 hasAnchor" number="5.3.8">
+<h3><span class="header-section-number">5.3.8</span> Why Least Squares?<a href="module-5---statistics.html#why-least-squares" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="does-linear-make-sense" class="section level3 hasAnchor" number="5.3.9">
+<h3><span class="header-section-number">5.3.9</span> Does Linear Make Sense?<a href="module-5---statistics.html#does-linear-make-sense" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="summary-11" class="section level3 hasAnchor" number="5.3.10">
+<h3><span class="header-section-number">5.3.10</span> Summary<a href="module-5---statistics.html#summary-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="module-5.4-generalizing-linear-regression-to-binary-outcomes" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Module 5.4 Generalizing Linear Regression to Binary Outcomes<a href="module-5---statistics.html#module-5.4-generalizing-linear-regression-to-binary-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="module-5.5-generalizations-of-parametric-part-i" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Module 5.5 Generalizations of Parametric, Part I<a href="module-5---statistics.html#module-5.5-generalizations-of-parametric-part-i" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="module-5.6-generalizations-of-parametric-part-ii" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Module 5.6 Generalizations of Parametric, Part II<a href="module-5---statistics.html#module-5.6-generalizations-of-parametric-part-ii" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="module-5.7-anomaly-detection" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Module 5.7 Anomaly Detection<a href="module-5---statistics.html#module-5.7-anomaly-detection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module-4-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix-a-discussions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["INTA6450-Notes-Fall2024.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

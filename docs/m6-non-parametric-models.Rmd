@@ -1,0 +1,11 @@
+# Module 6 Overview
+
+While a large number of models can be expressed as parametric models, 
+a big problem with them is that they require knowing or making an assumption about the “correct” model. 
+Non-parametric statistics allow us to avoid some of these assumptions. 
+We talk about how the types of nonparametric models work and the intuition behind them. 
+We also talk about what assumptions we avoid and what we don’t.
+
+# 6.1 Local Regression
+
+K-Nearest-Neighbors (KNN) is a non-parametric model that is used for regression and classification.
