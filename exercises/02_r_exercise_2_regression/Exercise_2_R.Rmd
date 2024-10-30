@@ -56,7 +56,96 @@ If it does not, you will need to re-export or manually include the graphs in
 your final pdf, doc or html file*
 
 \newpage
-# Solution
+# Solution Summary
 
+The solution first inspected residuals to check the model fit.
+The purpose was to understand the residuals or differences between
+observed and predicted values to assess the fit for both OLS and IV models.
+The Distributions are inspected which follow a normal distribution with
+most values centered around zero. This indicated a good fit.
 
+Second, the results for `ols` with a linear regression model is evaluated.
+By using `ols.robust` we can see that education, marital status, age and
+experience are all positive impact on wages. They are also statistically
+significant. In addition, `black` has a significant effect on wages.
+The small standard errors for most coefficients indicate that the estimates are 
+adequate and precise, and the high t-values and small p-values confirm the 
+statistical significance of these relationships. The overall summary is that 
+education and experience are particularly 
+important drivers of wages, with a negative impact associated with race (Black) 
+and a positive impact from marital status.
+
+**Original code is attached in submission for reference or to run, as it is
+fully functional.**
+
+### Original Working Code
+
+```{r, eval = TRUE, message=FALSE, warning=FALSE}
+# Instrumental Variables example
+library(sem)
+#If gets error, add code< install.packages("Hmisc",dependecies=T)> or 
+# download a new version R studio
+wages<-read.csv('http://inta.gatech.s3.amazonaws.com/wage2.csv')
+iv.results<-tsls(lwage ~ educ + age + married + black + exper, ~ feduc + age +
+                   married + black + exper, data=wages)
+# Run an instrumental variables regression. Note that father's education is
+# used for an instrument, and is not in the first set of variables. Age,
+# marital, status, and race are assumed to be less related to underlying
+# ability and so are controlled for in the "first stage" regression too.
+
+ols.results<-lm(lwage ~ educ + age + married + black + exper, data=wages)
+# Run the analogous OLS regression without father's education
+
+print(summary(ols.results))
+print(summary(iv.results))
+# Note that the point estimate for education has now gone up. This suggests
+# that people who have higher education in a way that's correlated with
+# their father having higher education, even holding fixed age, marital
+# status, and race, receive ~13% higher wages for every year of education.
+# Also note that the standard error on education is higher for the iv than
+# ols results. The reason for this is that in IV, we're using only some of
+# the variation in education: only the part related to father's education,
+# so it's like there's less variation overall
+
+# Stepwise regression
+library(MASS)
+start.model<-lm(wage ~ hours + IQ + KWW + educ + exper + tenure + age + married + black + south + urban + sibs, data=wages)
+# Give an initial model, which will be the most coefficients we'd want to ever use
+summary(start.model)
+stepwise.model<- step(start.model)
+# The command "step" adds and subtracts coefficients to maximize a measure of
+# goodness of fit
+summary(stepwise.model)
+
+stepwise.model.interactions <- step(start.model, scope=wage~.^2)
+# The command "step" adds and subtracts coefficients to maximize a measure of
+# goodness of fit. 
+summary(stepwise.model.interactions)
+```
+
+### Inspect Residuals
+
+```{r, eval = TRUE, message=FALSE, warning=FALSE}
+# Residuals for OLS model
+ols.residuals <- residuals(ols.results)
+hist(ols.residuals, main = "Histogram of OLS Residuals", 
+     xlab = "Residuals", col = "blue")
+
+# Residuals for IV model
+iv.residuals <- residuals(iv.results)
+hist(iv.residuals, main = "Histogram of IV Residuals", 
+     xlab = "Residuals", col = "red")
+```
+
+### Evaluating Results
+
+```{r, eval = TRUE, message=FALSE, warning=FALSE}
+# Load sandwich package
+library(sandwich)
+library(lmtest) # coeftest
+
+# Robust standard errors for OLS
+ols.robust <- coeftest(ols.results, vcov = vcovHC(ols.results, type = "HC1"))
+print(ols.robust)
+```
 
