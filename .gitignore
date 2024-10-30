@@ -57,3 +57,4 @@ exercises/00_crime_and_punishment/nltk_data
 # Ignore caching in .Rmd files
 *_files/
 *_cache/
+
