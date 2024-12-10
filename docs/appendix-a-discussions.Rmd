@@ -242,3 +242,86 @@ Normal performance would be based on the player's typical range for each of the 
 
 Far performance or outliers could refer to performances that deviate significantly from the typical performance. Depending on your assumption, this could be where the player's performance metrics vary more than 2-3 standard deviations from their average performance.
 
+## Discussion 7
+
+Andrew Gelman is a statistician at Columbia.
+[How do we evaluate a new and wacky claim?](https://statmodeling.stat.columbia.edu/2011/07/11/how_do_we_evalu/)
+
+Questions:
+- Describe the claim made about "The effect of rain on July 4th" and the calculation Gelman wants to do in the 4th of July example  
+- How does Gelman want to incorporate Bayes’ rule into evaluating the studies?  
+- Do you think this is a good idea? Why or why not? 
+
+__Claim on 4th of July Effect from Rain:__
+
+The article discusses a claim regarding the effect of rain on July 4th celebrations.
+The claim proposes rain on the 4th of July negatively impacts the number of people who attend fireworks displays.
+Andrew Gelman wants to evaluate the claim by comparing attendance rates at fireworks shows on rainy and non-rainy days on July 4th.
+Gelman discusses the important of considering various data such as historical weather data and attendance records for fireworks shows.
+
+__Incoporating Bayes' Rule:__
+
+Gelman suggests calculating the probability of observing the data given the null hypothesis that rain has no effect on attendance. 
+He also discusses incorporating Bayes' rule into evaluating the studies by considering the prior probability of the null hypothesis 
+and the likelihood of the data given the null hypothesis.
+
+__Is this a Good Idea?__
+
+Incorporating Bayes' rule into evaluating the studies is a good idea as the approach can enhance the depth of the analysis.
+Bayes' rule can be beneficial as it allows for the consideration of prior knowledge when evaluating new claims.
+Bayesian methods also allow for a more flexible approach and provides additional interpretation of the results with uncertainty quantification.
+Careful consideration must be taken however when considering subjectivity.
+The determination of the prior probability of the null hypothesis can be subjective and may vary between analysts.
+
+
+## Discussion 8
+
+Read [selecting bias in the reporting of shaky research](https://statmodeling.stat.columbia.edu/2014/03/07/selection-bias-reporting-shaky-research/)
+
+Questions:
+- What are the conclusions of the paper "Money, Status, and the Ovulatory Cycle"?  
+- What issues does Gelman raise about the paper?  
+- How does Gelman reason about the potential for multiple hypothesis testing here?  
+- How is this related to Bayesian reasoning?  
+- How would you say these issues relate to “big data” analyses more broadly? 
+
+__Conclusions of the Paper:__
+
+The paper "Money, Status, and the Ovulatory Cycle" concludes that women's ovulatory cycles influence their economic behaviors.
+The paper specifically suggest that women are more likely to seek relative gains in competitive situations when they are ovulating. 
+The authors claim that ovulation influences women's behaviors, implying a shift in competitive dynamics based on hormonal changes.
+
+__Issues:__
+
+Gelman is a skeptic of the research conclusions due to several inconsistencies in the data and the potential for multiple hypothesis testing.
+First, the authors inconsistently define low fertility days, using days 8-14 (7-14 in pervious paper), which could lead to biased results.
+Second, numerous analyses were conducted on the data without clear pre-defined hypotheses, 
+increasing the likelihood of finding a significant result that fit the narrative.
+Third, the study compares different women at various cycle stages rather than tracking 
+the same women over their cycles. This leads to high variability and difficulty in drawing reliable conclusions.
+
+__Reasoning:__
+
+Gelman reasons about the potential for multiple hypothesis testing by highlighting the dangers of data dredging.
+Data dredging or "p-hacking," is where researchers might find statistically significant results 
+by testing many variables without proper controls. In this case, the authors do not specify how many hypotheses were tested beforehand.
+
+__Bayesian Reasoning:__
+
+This is related to Bayesian reasoning as Gelman suggests that the authors should have used a Bayesian approach to evaluate the data.
+Gelman suggests that without a clear prior distribution or hypothesis testing framework, the findings can be seen as arbitrary interpretations of data.
+Bayesian methods require researchers to specify their prior beliefs about expected outcomes before analyzing data, 
+providing a more structured approach to interpreting results and mitigating biases.
+
+__Issues in Relation to "Big Data":__
+
+Issues that were discussed by Gelman in this paper are relevant to big data analyses more broadly because 
+they highlight the risk of selection bias and misinterpretation. 
+Researchers may unintentionally emphasize findings that align with their hypotheses while neglecting non-significant results. 
+This can lead to inflated claims about effects that may not withstand close examination. 
+Overall Gelman emphasizes the importance of methodology standards and reporting with transparency to ensure the validity of research findings.
+
+
+
+
+
